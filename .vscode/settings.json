@@ -1,0 +1,8 @@
+{
+    "cmake.environment": {
+        "PICO_SDK_PATH": "/home/acid/Clones/pico/pico-sdk"
+    },
+    "files.associations": {
+        "spi.h": "c"
+    }
+}

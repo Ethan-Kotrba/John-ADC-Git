@@ -1,7 +1,7 @@
 bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o: \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bintool/mbedtls_wrapper.c \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bintool/mbedtls_wrapper.c \
  /usr/include/stdc-predef.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bintool/mbedtls_wrapper.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bintool/mbedtls_wrapper.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -33,7 +33,7 @@ bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o: \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/sha256.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/private_access.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/build_info.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \

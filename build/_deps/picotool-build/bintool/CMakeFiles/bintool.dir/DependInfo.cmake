@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bintool/mbedtls_wrapper.c" "bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o" "gcc" "bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o.d"
-  "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bintool/bintool.cpp" "bintool/CMakeFiles/bintool.dir/bintool.cpp.o" "gcc" "bintool/CMakeFiles/bintool.dir/bintool.cpp.o.d"
+  "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bintool/mbedtls_wrapper.c" "bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o" "gcc" "bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o.d"
+  "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bintool/bintool.cpp" "bintool/CMakeFiles/bintool.dir/bintool.cpp.o" "gcc" "bintool/CMakeFiles/bintool.dir/bintool.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

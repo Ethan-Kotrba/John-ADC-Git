@@ -3,7 +3,7 @@ lib/CMakeFiles/mbedtls.dir/home/acid/Clones/pico/pico-sdk/lib/mbedtls/library/de
  /usr/include/stdc-predef.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/library/common.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/build_info.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h \
  /usr/include/limits.h /usr/include/bits/libc-header-start.h \

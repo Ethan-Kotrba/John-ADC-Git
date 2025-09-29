@@ -1,5 +1,5 @@
 CMakeFiles/picotool.dir/no_otp.cpp.o: \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/no_otp.cpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/no_otp.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/15.2.1/algorithm \
  /usr/include/c++/15.2.1/bits/stl_algobase.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -75,7 +75,7 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: \
  /usr/include/c++/15.2.1/bits/stl_multimap.h \
  /usr/include/c++/15.2.1/bits/range_access.h \
  /usr/include/c++/15.2.1/bits/erase_if.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/otp.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/otp.h \
  /usr/include/c++/15.2.1/string /usr/include/c++/15.2.1/bits/stringfwd.h \
  /usr/include/c++/15.2.1/bits/char_traits.h \
  /usr/include/c++/15.2.1/bits/postypes.h /usr/include/c++/15.2.1/cwchar \
@@ -116,7 +116,7 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/nlohmann_json/single_include/nlohmann/json.hpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/nlohmann_json/single_include/nlohmann/json.hpp \
  /usr/include/c++/15.2.1/cstddef /usr/include/c++/15.2.1/functional \
  /usr/include/c++/15.2.1/bits/std_function.h \
  /usr/include/c++/15.2.1/typeinfo /usr/include/c++/15.2.1/iterator \

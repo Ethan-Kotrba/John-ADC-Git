@@ -1,7 +1,7 @@
 CMakeFiles/picotool.dir/lib/whereami/whereami++.cpp.o: \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/whereami/whereami++.cpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/whereami/whereami++.cpp \
  /usr/include/stdc-predef.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/whereami/whereami++.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/whereami/whereami++.h \
  /usr/include/c++/15.2.1/string \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -139,7 +139,7 @@ CMakeFiles/picotool.dir/lib/whereami/whereami++.cpp.o: \
  /usr/include/c++/15.2.1/bits/locale_facets.tcc \
  /usr/include/c++/15.2.1/bits/basic_ios.tcc \
  /usr/include/c++/15.2.1/bits/ostream.tcc \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/whereami/whereami.c \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/whereami/whereami.c \
  /usr/include/c++/15.2.1/stdlib.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/linux/limits.h \
  /usr/include/inttypes.h \

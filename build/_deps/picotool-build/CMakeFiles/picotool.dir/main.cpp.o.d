@@ -1,7 +1,7 @@
 CMakeFiles/picotool.dir/main.cpp.o: \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/main.cpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/cli.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/cli.h \
  /usr/include/c++/15.2.1/algorithm \
  /usr/include/c++/15.2.1/bits/stl_algobase.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -174,7 +174,7 @@ CMakeFiles/picotool.dir/main.cpp.o: \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/clipp/clipp.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/clipp/clipp.h \
  /usr/include/c++/15.2.1/cstring /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/15.2.1/stack \
  /usr/include/c++/15.2.1/deque /usr/include/c++/15.2.1/bits/stl_deque.h \
@@ -242,22 +242,22 @@ CMakeFiles/picotool.dir/main.cpp.o: \
  /home/acid/Clones/pico/pico-sdk/src/host/pico_platform/include/pico/platform.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/platform_defs.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/get_enc_bootloader.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/get_enc_bootloader.h \
  /usr/include/c++/15.2.1/fstream \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.2.1/bits/fstream.tcc \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/picoboot_connection/picoboot_connection.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/picoboot_connection/picoboot_connection.h \
  /home/acid/Clones/pico/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot.h \
  /home/acid/Clones/pico/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot_constants.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/addresses.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bintool/bintool.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bintool/mbedtls_wrapper.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/addresses.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bintool/bintool.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bintool/mbedtls_wrapper.h \
  /usr/include/c++/15.2.1/stdlib.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/sha256.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/private_access.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/build_info.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
@@ -281,11 +281,11 @@ CMakeFiles/picotool.dir/main.cpp.o: \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/entropy.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/pk.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/version.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/elf_file.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/elf.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/addresses.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bintool/metadata.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/elf_file.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/elf.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/addresses.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bintool/metadata.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/boot_bootrom_headers/include/boot/bootrom_constants.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
@@ -293,9 +293,9 @@ CMakeFiles/picotool.dir/main.cpp.o: \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb/reset_interface.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_usb_reset_interface_headers/include/pico/usb_reset_interface.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/elf.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/otp.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/nlohmann_json/single_include/nlohmann/json.hpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/elf.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/otp.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/nlohmann_json/single_include/nlohmann/json.hpp \
  /usr/include/c++/15.2.1/cstddef /usr/include/c++/15.2.1/forward_list \
  /usr/include/c++/15.2.1/bits/forward_list.h \
  /usr/include/c++/15.2.1/bits/forward_list.tcc \
@@ -315,7 +315,7 @@ CMakeFiles/picotool.dir/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/mask_array.h \
  /usr/include/c++/15.2.1/bits/indirect_array.h \
  /usr/include/c++/15.2.1/version \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/errors/errors.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/errors/errors.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/otp_data.h \
  /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
  /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \

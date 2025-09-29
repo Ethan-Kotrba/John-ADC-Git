@@ -28,7 +28,6 @@ events:
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/opt/android-sdk/platform-tools/"
       - "/bin/"
     searched_directories:
       - "/usr/local/sbin/uname"
@@ -44,12 +43,11 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/opt/android-sdk/platform-tools"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:16 (project)"
     message: |
-      The system is: Linux - 6.15.2-arch1-1 - x86_64
+      The system is: Linux - 6.16.8-arch3-1 - x86_64
 ...

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src
+CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build
+CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build
 
 # Utility rule file for embedded_data.
 
@@ -68,13 +68,13 @@ CMakeFiles/embedded_data: xip_ram_perms_elf.h
 CMakeFiles/embedded_data: flash_id_bin.h
 
 flash_id_bin.h: flash_id
-	/usr/bin/cmake -D BINARY_FILE= -D OUTPUT_NAME=flash_id_bin -P /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/cmake/binh.cmake
+	/usr/bin/cmake -D BINARY_FILE= -D OUTPUT_NAME=flash_id_bin -P /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/cmake/binh.cmake
 
 rp2350.rom.h:
-	/usr/bin/cmake -D BINARY_FILE=/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/bootrom.end.bin -D OUTPUT_NAME=rp2350.rom -P /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/cmake/binh.cmake
+	/usr/bin/cmake -D BINARY_FILE=/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/bootrom.end.bin -D OUTPUT_NAME=rp2350.rom -P /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/cmake/binh.cmake
 
-xip_ram_perms_elf.h: /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/xip_ram_perms
-	/usr/bin/cmake -D BINARY_FILE= -D OUTPUT_NAME=xip_ram_perms_elf -P /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/cmake/binh.cmake
+xip_ram_perms_elf.h: /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/xip_ram_perms
+	/usr/bin/cmake -D BINARY_FILE= -D OUTPUT_NAME=xip_ram_perms_elf -P /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/cmake/binh.cmake
 
 CMakeFiles/embedded_data.dir/codegen:
 .PHONY : CMakeFiles/embedded_data.dir/codegen
@@ -95,6 +95,6 @@ CMakeFiles/embedded_data.dir/clean:
 .PHONY : CMakeFiles/embedded_data.dir/clean
 
 CMakeFiles/embedded_data.dir/depend:
-	cd /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/CMakeFiles/embedded_data.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/CMakeFiles/embedded_data.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/embedded_data.dir/depend
 

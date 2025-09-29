@@ -19,7 +19,7 @@ lib/CMakeFiles/mbedtls.dir/home/acid/Clones/pico/pico-sdk/lib/mbedtls/library/co
  /usr/include/bits/pthread_stack_min.h /usr/include/bits/posix2_lim.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/library/common.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/build_info.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/include/picotool_mbedtls_config.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/config_adjust_legacy_crypto.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/config_adjust_x509.h \
  /home/acid/Clones/pico/pico-sdk/lib/mbedtls/include/mbedtls/config_adjust_ssl.h \

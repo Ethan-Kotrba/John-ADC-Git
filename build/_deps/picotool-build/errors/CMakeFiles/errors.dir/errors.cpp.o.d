@@ -1,5 +1,5 @@
 errors/CMakeFiles/errors.dir/errors.cpp.o: \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/errors/errors.cpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/errors/errors.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/15.2.1/cstdarg \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -9,7 +9,7 @@ errors/CMakeFiles/errors.dir/errors.cpp.o: \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/errors/errors.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/errors/errors.h \
  /usr/include/c++/15.2.1/string \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/bits/stringfwd.h \

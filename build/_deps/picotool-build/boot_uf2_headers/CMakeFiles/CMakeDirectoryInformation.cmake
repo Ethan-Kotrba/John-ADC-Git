@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/acid/Clones/pico/pico-sdk/src/common/boot_uf2_headers")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

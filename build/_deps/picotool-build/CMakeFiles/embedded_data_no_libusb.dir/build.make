@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src
+CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build
+CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build
 
 # Utility rule file for embedded_data_no_libusb.
 
@@ -67,10 +67,10 @@ CMakeFiles/embedded_data_no_libusb: enc_bootloader_elf.h
 CMakeFiles/embedded_data_no_libusb: enc_bootloader_mbedtls_elf.h
 
 enc_bootloader_elf.h:
-	/usr/bin/cmake -D BINARY_FILE=/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/enc_bootloader.elf -D OUTPUT_NAME=enc_bootloader_elf -P /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/cmake/binh.cmake
+	/usr/bin/cmake -D BINARY_FILE=/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/enc_bootloader.elf -D OUTPUT_NAME=enc_bootloader_elf -P /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/cmake/binh.cmake
 
 enc_bootloader_mbedtls_elf.h:
-	/usr/bin/cmake -D BINARY_FILE=/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader_mbedtls/enc_bootloader.elf -D OUTPUT_NAME=enc_bootloader_mbedtls_elf -P /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/cmake/binh.cmake
+	/usr/bin/cmake -D BINARY_FILE=/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader_mbedtls/enc_bootloader.elf -D OUTPUT_NAME=enc_bootloader_mbedtls_elf -P /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/cmake/binh.cmake
 
 CMakeFiles/embedded_data_no_libusb.dir/codegen:
 .PHONY : CMakeFiles/embedded_data_no_libusb.dir/codegen
@@ -90,6 +90,6 @@ CMakeFiles/embedded_data_no_libusb.dir/clean:
 .PHONY : CMakeFiles/embedded_data_no_libusb.dir/clean
 
 CMakeFiles/embedded_data_no_libusb.dir/depend:
-	cd /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/CMakeFiles/embedded_data_no_libusb.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/CMakeFiles/embedded_data_no_libusb.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/embedded_data_no_libusb.dir/depend
 

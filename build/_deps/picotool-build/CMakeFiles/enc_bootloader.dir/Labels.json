@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/CMakeFiles/enc_bootloader"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/CMakeFiles/enc_bootloader"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/CMakeFiles/enc_bootloader.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/CMakeFiles/enc_bootloader.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/CMakeFiles/enc_bootloader-complete.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/CMakeFiles/enc_bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-build.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-build.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-configure.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-download.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-download.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-install.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-install.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-mkdir.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-patch.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-update.rule"
+			"file" : "/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader/src/enc_bootloader-stamp/enc_bootloader-update.rule"
 		}
 	],
 	"target" : 

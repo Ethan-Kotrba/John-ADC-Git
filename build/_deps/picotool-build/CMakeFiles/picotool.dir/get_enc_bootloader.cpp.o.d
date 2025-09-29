@@ -1,5 +1,5 @@
 CMakeFiles/picotool.dir/get_enc_bootloader.cpp.o: \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/get_enc_bootloader.cpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/get_enc_bootloader.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/15.2.1/algorithm \
  /usr/include/c++/15.2.1/bits/stl_algobase.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -163,11 +163,11 @@ CMakeFiles/picotool.dir/get_enc_bootloader.cpp.o: \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.2.1/bits/fstream.tcc \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/get_enc_bootloader.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader_elf.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader_mbedtls_elf.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/data_locs.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/get_enc_bootloader.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader_elf.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader_mbedtls_elf.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/data_locs.h \
  /usr/include/c++/15.2.1/vector /usr/include/c++/15.2.1/bits/stl_vector.h \
  /usr/include/c++/15.2.1/bits/stl_bvector.h \
  /usr/include/c++/15.2.1/bits/vector.tcc \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/lib/whereami/whereami++.h
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/lib/whereami/whereami++.h

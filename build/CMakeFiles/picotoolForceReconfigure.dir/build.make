@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ACD-Code
+CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ADC-Git
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ACD-Code/build
+CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ADC-Git/build
 
 # Utility rule file for picotoolForceReconfigure.
 
@@ -67,7 +67,7 @@ include CMakeFiles/picotoolForceReconfigure.dir/compiler_depend.make
 include CMakeFiles/picotoolForceReconfigure.dir/progress.make
 
 CMakeFiles/picotoolForceReconfigure:
-	/usr/bin/cmake -E touch_nocreate /home/acid/Clones/pico/John-ACD-Code/CMakeLists.txt
+	/usr/bin/cmake -E touch_nocreate /home/acid/Clones/pico/John-ADC-Git/CMakeLists.txt
 
 CMakeFiles/picotoolForceReconfigure.dir/codegen:
 .PHONY : CMakeFiles/picotoolForceReconfigure.dir/codegen
@@ -85,6 +85,6 @@ CMakeFiles/picotoolForceReconfigure.dir/clean:
 .PHONY : CMakeFiles/picotoolForceReconfigure.dir/clean
 
 CMakeFiles/picotoolForceReconfigure.dir/depend:
-	cd /home/acid/Clones/pico/John-ACD-Code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acid/Clones/pico/John-ACD-Code /home/acid/Clones/pico/John-ACD-Code /home/acid/Clones/pico/John-ACD-Code/build /home/acid/Clones/pico/John-ACD-Code/build /home/acid/Clones/pico/John-ACD-Code/build/CMakeFiles/picotoolForceReconfigure.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/acid/Clones/pico/John-ADC-Git/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acid/Clones/pico/John-ADC-Git /home/acid/Clones/pico/John-ADC-Git /home/acid/Clones/pico/John-ADC-Git/build /home/acid/Clones/pico/John-ADC-Git/build /home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/picotoolForceReconfigure.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/picotoolForceReconfigure.dir/depend
 

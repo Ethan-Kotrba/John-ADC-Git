@@ -1,5 +1,5 @@
 elf2uf2/CMakeFiles/elf2uf2.dir/elf2uf2.cpp.o: \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf2uf2/elf2uf2.cpp \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf2uf2/elf2uf2.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/15.2.1/cstdio \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -137,7 +137,7 @@ elf2uf2/CMakeFiles/elf2uf2.dir/elf2uf2.cpp.o: \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /usr/include/inttypes.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf2uf2/elf2uf2.h \
  /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/istream \
  /usr/include/c++/15.2.1/ios /usr/include/c++/15.2.1/bits/char_traits.h \
  /usr/include/c++/15.2.1/bits/localefwd.h \
@@ -180,9 +180,9 @@ elf2uf2/CMakeFiles/elf2uf2.dir/elf2uf2.cpp.o: \
  /usr/include/c++/15.2.1/bits/fstream.tcc \
  /home/acid/Clones/pico/pico-sdk/src/common/boot_uf2_headers/include/boot/uf2.h \
  /usr/include/assert.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/elf_file.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/elf_file.h \
  /usr/include/c++/15.2.1/iostream \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/elf.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/elf.h \
  /usr/include/c++/15.2.1/sstream /usr/include/c++/15.2.1/bits/sstream.tcc \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/elf/addresses.h \
- /home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-src/errors/errors.h
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/elf/addresses.h \
+ /home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-src/errors/errors.h

@@ -4,322 +4,185 @@
 #include "hardware/spi.h"
 #include "hardware/dma.h"
 #include "hardware/gpio.h"
-#include "tusb_config.h"
-#include "tusb.h"
+#include "hardware/sync.h"
+#include "pico/multicore.h"
 
-// Pin definitions
+// Pin definitions (adjust as needed for your setup)
 #define SPI_INST spi0
-#define PIN_MISO 16
-#define PIN_MOSI 19
-#define PIN_SCLK 18
-#define PIN_CS1  17
-#define PIN_CS2  20
+#define PIN_MISO 4
+#define PIN_CS   5
+#define PIN_SCK  6
+#define PIN_MOSI 7
+#define PIN_DRDY 3  // Data Ready pin (active low)
 
-// Buffer size
-#define BUFFER_SIZE 1024
-uint16_t buffer[BUFFER_SIZE * 2];
-uint32_t buffer_index = 0;
+// SPI baud rate (MCP3564 supports up to 20 MHz)
+#define SPI_BAUD 20000000
+
+// MCP3564 constants
+#define DEVICE_ADDR 0b01
+#define CMD_STATIC_READ(reg) ((DEVICE_ADDR << 6) | ((reg) << 2) | 0b01)
+#define CMD_INC_WRITE(reg) ((DEVICE_ADDR << 6) | ((reg) << 2) | 0b10)
+
+#define REG_LOCK     0xD
+#define REG_CONFIG0  0x1
+#define REG_CONFIG1  0x2
+#define REG_CONFIG2  0x3
+#define REG_CONFIG3  0x4
+#define REG_SCAN     0x7
+
+// Buffer for data transfer between cores (4 bytes per sample, 1024 samples = 4KB)
+#define BUF_SIZE (1024 * 4)
+uint8_t data_buf[BUF_SIZE];
+volatile uint32_t wr_idx = 0;
+volatile uint32_t rd_idx = 0;
+spin_lock_t *buf_lock;
 
 // DMA channels
-int tx_dma_chan;
-int rx_dma_chan;
+int tx_dma;
+int rx_dma;
 
-// SPI command for MCP3008
-uint8_t tx_cmd[3] = {0x01, 0x80, 0x00};
-uint8_t rx_data[3];
+// Function to write to MCP3564 registers (handles 1-3 byte registers)
+void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
+    uint8_t cmd = CMD_INC_WRITE(reg);
+    uint8_t buf[3] = {(value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF};
 
-// TinyUSB Device Descriptor
-tusb_desc_device_t const desc_device = {
-    .bLength            = sizeof(tusb_desc_device_t),
-    .bDescriptorType    = TUSB_DESC_DEVICE,
-    .bcdUSB             = 0x0200,
-    .bDeviceClass       = TUSB_CLASS_CDC,
-    .bDeviceSubClass    = 2,
-    .bDeviceProtocol    = 0,
-    .bMaxPacketSize0    = CFG_TUD_ENDPOINT0_SIZE,
-    .idVendor           = 0x1234,
-    .idProduct          = 0x5678,
-    .bcdDevice          = 0x0100,
-    .iManufacturer      = 0x01,
-    .iProduct           = 0x02,
-    .iSerialNumber      = 0x03,
-    .bNumConfigurations = 0x01
-};
-
-// TinyUSB callbacks
-void tud_mount_cb(void) {}
-void tud_umount_cb(void) {}
-void tud_suspend_cb(bool remote_wakeup_en) {}
-void tud_resume_cb(void) {}
-
-// USB Configuration Descriptor
-uint8_t const desc_configuration[] = {
-    TUD_CONFIG_DESCRIPTOR(1, 2, 0, 64, 0, 100),
-    TUD_CDC_DESCRIPTOR(0, 4, 0x81, 8, 0x02, 0x82, 64),
-};
-
-// Descriptor callbacks
-uint8_t const * tud_descriptor_device_cb(void) {
-    return (uint8_t const *)&desc_device;
+    gpio_put(PIN_CS, 0);
+    spi_write_blocking(SPI_INST, &cmd, 1);
+    spi_write_blocking(SPI_INST, buf + (3 - num_bytes), num_bytes);
+    gpio_put(PIN_CS, 1);
 }
 
-uint8_t const * tud_descriptor_configuration_cb(uint8_t index) {
-    (void)index;
-    return desc_configuration;
-}
+// Core 1: Dedicated to reading from ADC using DMA for SPI transfers
+void core1_main() {
+    // Preconfigure DMA channels (done once)
+    dma_channel_config tx_config = dma_channel_get_default_config(tx_dma);
+    channel_config_set_transfer_data_size(&tx_config, DMA_SIZE_8);
+    channel_config_set_dreq(&tx_config, spi_get_dreq(SPI_INST, true));  // TX DREQ
+    channel_config_set_read_increment(&tx_config, true);
+    channel_config_set_write_increment(&tx_config, false);
 
-static char const* string_desc_arr[] = {
-    (const char[]){0x09, 0x04},  // Language ID: US English
-    "Example Manufacturer",
-    "Pico ADC Device",
-    "123456789",
-    "CDC Interface",
-};
+    dma_channel_config rx_config = dma_channel_get_default_config(rx_dma);
+    channel_config_set_transfer_data_size(&rx_config, DMA_SIZE_8);
+    channel_config_set_dreq(&rx_config, spi_get_dreq(SPI_INST, false));  // RX DREQ
+    channel_config_set_read_increment(&rx_config, false);
+    channel_config_set_write_increment(&rx_config, true);
 
-uint16_t const* tud_descriptor_string_cb(uint8_t index, uint16_t langid) {
-    (void)langid;
-    static uint16_t desc_str[32];
-    uint8_t len;
+    // TX buffer: command + 4 dummies (0xFF keeps SDO active)
+    uint8_t tx_buf[5] = {CMD_STATIC_READ(0x0), 0xFF, 0xFF, 0xFF, 0xFF};
+    uint8_t rx_buf[5];
 
-    if (index == 0) {
-        desc_str[1] = 0x0409;  // US English (2 bytes)
-        desc_str[0] = (TUSB_DESC_STRING << 8) | 4;  // Length: 4 bytes (2 + 2)
-        return desc_str;
+    while (true) {
+        // Poll for DRDY falling edge (active low) - tight loop for minimal latency
+        while (gpio_get(PIN_DRDY) == 1);
+        // No need for debounce, assume clean signal
+
+        // Start SPI transaction
+        gpio_put(PIN_CS, 0);
+
+        // Configure and start DMA channels
+        dma_channel_set_config(tx_dma, &tx_config, false);
+        dma_channel_set_read_addr(tx_dma, tx_buf, false);
+        dma_channel_set_write_addr(tx_dma, &spi_get_hw(SPI_INST)->dr, false);
+        dma_channel_set_trans_count(tx_dma, 5, false);
+
+        dma_channel_set_config(rx_dma, &rx_config, false);
+        dma_channel_set_read_addr(rx_dma, &spi_get_hw(SPI_INST)->dr, false);
+        dma_channel_set_write_addr(rx_dma, rx_buf, false);
+        dma_channel_set_trans_count(rx_dma, 5, false);
+
+        // Start RX first, then TX for simultaneous transfer
+        dma_channel_start(rx_dma);
+        dma_channel_start(tx_dma);
+
+        // Wait for completion
+        dma_channel_wait_for_finish_blocking(rx_dma);
+        dma_channel_wait_for_finish_blocking(tx_dma);
+
+        gpio_put(PIN_CS, 1);
+
+        // Copy data (rx_buf[1..4]) to shared buffer if space available
+        uint32_t next_wr = (wr_idx + 4) % BUF_SIZE;
+        if (next_wr != rd_idx) {  // Buffer not full
+            uint32_t irq_state = spin_lock_blocking(buf_lock);
+            memcpy(&data_buf[wr_idx], &rx_buf[1], 4);
+            wr_idx = next_wr;
+            spin_unlock(buf_lock, irq_state);
+        }  // Else drop sample (overflow)
     }
-
-    const char* str = string_desc_arr[index];
-    len = strlen(str);
-    if (len > 31) len = 31;
-
-    for (uint8_t i = 0; i < len; i++) {
-        desc_str[i + 1] = (uint16_t)(str[i]);
-    }
-    desc_str[0] = (TUSB_DESC_STRING << 8) | (2 * len + 2);
-
-    return desc_str;
-}
-
-// Read ADC sample via DMA
-uint16_t read_adc_dma(uint cs_pin) {
-    gpio_put(cs_pin, 0);
-
-    dma_channel_config tx_conf = dma_channel_get_default_config(tx_dma_chan);
-    channel_config_set_dreq(&tx_conf, spi_get_dreq(SPI_INST, true));
-    channel_config_set_transfer_data_size(&tx_conf, DMA_SIZE_8);
-    channel_config_set_read_increment(&tx_conf, true);
-    channel_config_set_write_increment(&tx_conf, false);
-    dma_channel_configure(tx_dma_chan, &tx_conf, &spi_get_hw(SPI_INST)->dr, tx_cmd, 3, false);
-
-    dma_channel_config rx_conf = dma_channel_get_default_config(rx_dma_chan);
-    channel_config_set_dreq(&rx_conf, spi_get_dreq(SPI_INST, false));
-    channel_config_set_transfer_data_size(&rx_conf, DMA_SIZE_8);
-    channel_config_set_read_increment(&rx_conf, false);
-    channel_config_set_write_increment(&rx_conf, true);
-    dma_channel_configure(rx_dma_chan, &rx_conf, rx_data, &spi_get_hw(SPI_INST)->dr, 3, false);
-
-    dma_start_channel_mask((1u << rx_dma_chan) | (1u << tx_dma_chan));
-    dma_channel_wait_for_finish_blocking(rx_dma_chan);
-
-    gpio_put(cs_pin, 1);
-    return ((rx_data[1] & 0x03) << 8) | rx_data[2];
 }
 
 int main() {
+    // Initialize stdio (USB CDC for output to laptop)
     stdio_init_all();
-    tusb_init();
 
-    while (!tud_cdc_connected()) {
-        tud_task();
-    }
-
-    spi_init(SPI_INST, 10000000);
+    // Initialize SPI
+    spi_init(SPI_INST, SPI_BAUD);
+    spi_set_format(SPI_INST, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
     gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
+    gpio_set_function(PIN_SCK, GPIO_FUNC_SPI);
     gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
-    gpio_set_function(PIN_SCLK, GPIO_FUNC_SPI);
 
-    gpio_init(PIN_CS1);
-    gpio_set_dir(PIN_CS1, GPIO_OUT);
-    gpio_put(PIN_CS1, 1);
-    gpio_init(PIN_CS2);
-    gpio_set_dir(PIN_CS2, GPIO_OUT);
-    gpio_put(PIN_CS2, 1);
+    // Initialize CS and DRDY
+    gpio_init(PIN_CS);
+    gpio_set_dir(PIN_CS, GPIO_OUT);
+    gpio_put(PIN_CS, 1);
+    gpio_init(PIN_DRDY);
+    gpio_set_dir(PIN_DRDY, GPIO_IN);
+    // gpio_pull_up(PIN_DRDY);  // Uncomment if needed based on hardware
 
-    tx_dma_chan = dma_claim_unused_channel(true);
-    rx_dma_chan = dma_claim_unused_channel(true);
+    // Claim DMA channels
+    tx_dma = dma_claim_unused_channel(true);
+    rx_dma = dma_claim_unused_channel(true);
 
+    // Claim spin lock for buffer synchronization
+    buf_lock = spin_lock_init(spin_lock_claim_unused(true));
+
+    // Configure MCP3564 for 2-channel SCAN (single-ended CH0 and CH1 vs AGND),
+    // continuous conversion, OSR=32 for max data rate (~76.8 ksps per channel),
+    // gain=1x, data format=32-bit with channel ID
+    write_reg(REG_LOCK, 0xA5, 1);              // Unlock registers
+    write_reg(REG_CONFIG0, 0x63, 1);           // Internal clock, ADC conversion mode
+    write_reg(REG_CONFIG1, 0x00, 1);           // OSR=32, PRE=1 (AMCLK=MCLK)
+    write_reg(REG_CONFIG2, 0x88, 1);           // Gain=1x, boost=x1
+    write_reg(REG_CONFIG3, 0xF0, 1);           // Continuous conv, 32-bit w/ CH ID
+    write_reg(REG_SCAN, 0x000003, 3);          // Scan CH0 and CH1 (single-ended)
+
+    // Launch core 1 for ADC reading
+    multicore_launch_core1(core1_main);
+
+    // Core 0: Send buffered data to USB
     while (true) {
-        tud_task();
+        uint32_t avail = 0;
+        {
+            uint32_t irq_state = spin_lock_blocking(buf_lock);
+            avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
+            spin_unlock(buf_lock, irq_state);
+        }
 
-        uint16_t sample1 = read_adc_dma(PIN_CS1);
-        uint16_t sample2 = read_adc_dma(PIN_CS2);
+        if (avail >= 64) {  // Send in 64-byte chunks for efficiency
+            uint8_t send_buf[64];
+            uint32_t to_send = (avail > 64) ? 64 : avail;
+            to_send -= to_send % 4;  // Align to sample size
 
-        buffer[buffer_index++] = sample1;
-        buffer[buffer_index++] = sample2;
-
-        if (buffer_index >= BUFFER_SIZE * 2) {
-            uint32_t bytes_to_send = BUFFER_SIZE * 2 * sizeof(uint16_t);
-            const uint8_t* data_ptr = (const uint8_t*)buffer;
-            uint32_t sent = 0;
-
-            while (sent < bytes_to_send) {
-                while (tud_cdc_write_available() == 0) {
-                    tud_task();
-                }
-
-                uint32_t avail = tud_cdc_write_available();
-                uint32_t chunk = (bytes_to_send - sent > avail) ? avail : (bytes_to_send - sent);
-                uint32_t written = tud_cdc_write(data_ptr + sent, chunk);
-                sent += written;
-
-                tud_cdc_write_flush();
+            uint32_t irq_state = spin_lock_blocking(buf_lock);
+            if (rd_idx + to_send > BUF_SIZE) {
+                uint32_t part1 = BUF_SIZE - rd_idx;
+                memcpy(send_buf, &data_buf[rd_idx], part1);
+                memcpy(send_buf + part1, data_buf, to_send - part1);
+                rd_idx = to_send - part1;
+            } else {
+                memcpy(send_buf, &data_buf[rd_idx], to_send);
+                rd_idx = (rd_idx + to_send) % BUF_SIZE;
             }
+            spin_unlock(buf_lock, irq_state);
 
-            buffer_index = 0;
+            // Send over USB (binary data)
+            fwrite(send_buf, 1, to_send, stdout);
+            fflush(stdout);  // Flush to ensure timely delivery
+        } else {
+            sleep_ms(1);  // Yield if no data
         }
     }
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-// #include <stdio.h>
-// #include "pico/stdlib.h"
-// #include "hardware/spi.h"
-// #include "hardware/dma.h"
-// #include "hardware/gpio.h"
-// #include "tusb_config.h"
-// #include "tusb.h"
-
-// // Pin definitions (adjust as needed)
-// #define SPI_INST spi0
-// #define PIN_MISO 16
-// #define PIN_MOSI 19
-// #define PIN_SCLK 18
-// #define PIN_CS1  17  // CS for sensor 1
-// #define PIN_CS2  20  // CS for sensor 2
-
-// // Buffer size (number of samples per sensor)
-// #define BUFFER_SIZE 1024
-// uint16_t buffer[BUFFER_SIZE * 2];  // Interleaved: sensor1[0], sensor2[0], sensor1[1], ...
-// uint32_t buffer_index = 0;
-
-// // DMA channels
-// int tx_dma_chan;
-// int rx_dma_chan;
-
-// // SPI command for MCP3008 channel 0 (single-ended): start bit, single-ended, channel 0
-// uint8_t tx_cmd[3] = {0x01, 0x80, 0x00};  // Adjust if your ADC differs
-// uint8_t rx_data[3];
-
-// // Function to read a single sample from a sensor using DMA
-// uint16_t read_adc_dma(uint cs_pin) {
-//     // Set CS low
-//     gpio_put(cs_pin, 0);
-
-//     // Configure TX DMA: send command buffer to SPI TX FIFO
-//     dma_channel_config tx_conf = dma_channel_get_default_config(tx_dma_chan);
-//     channel_config_set_dreq(&tx_conf, spi_get_dreq(SPI_INST, true));  // TX DREQ
-//     channel_config_set_transfer_data_size(&tx_conf, DMA_SIZE_8);
-//     channel_config_set_read_increment(&tx_conf, true);
-//     channel_config_set_write_increment(&tx_conf, false);
-//     dma_channel_configure(tx_dma_chan, &tx_conf, &spi_get_hw(SPI_INST)->dr, tx_cmd, 3, false);
-
-//     // Configure RX DMA: read from SPI RX FIFO to rx_data
-//     dma_channel_config rx_conf = dma_channel_get_default_config(rx_dma_chan);
-//     channel_config_set_dreq(&rx_conf, spi_get_dreq(SPI_INST, false));  // RX DREQ
-//     channel_config_set_transfer_data_size(&rx_conf, DMA_SIZE_8);
-//     channel_config_set_read_increment(&rx_conf, false);
-//     channel_config_set_write_increment(&rx_conf, true);
-//     dma_channel_configure(rx_dma_chan, &rx_conf, rx_data, &spi_get_hw(SPI_INST)->dr, 3, false);
-
-//     // Start RX first (waits for data), then TX (generates clocks)
-//     dma_start_channel_mask((1u << rx_dma_chan) | (1u << tx_dma_chan));
-
-//     // Wait for RX to finish
-//     dma_channel_wait_for_finish_blocking(rx_dma_chan);
-
-//     // Set CS high
-//     gpio_put(cs_pin, 1);
-
-//     // Parse 10-bit ADC value (adjust for your ADC bit depth)
-//     return ((rx_data[1] & 0x03) << 8) | rx_data[2];
-// }
-
-// int main() {
-//     // Initialize stdio (for debugging via UART if needed)
-//     stdio_init_all();
-
-//     // Initialize TinyUSB
-//     tusb_init();
-
-//     // Wait for USB connection
-//     while (!tud_cdc_connected()) {
-//         tud_task();
-//     }
-
-//     // Initialize SPI at 10 MHz
-//     spi_init(SPI_INST, 10000000);
-//     gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
-//     gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
-//     gpio_set_function(PIN_SCLK, GPIO_FUNC_SPI);
-
-//     // Initialize CS pins as GPIO (manual control)
-//     gpio_init(PIN_CS1);
-//     gpio_set_dir(PIN_CS1, GPIO_OUT);
-//     gpio_put(PIN_CS1, 1);
-//     gpio_init(PIN_CS2);
-//     gpio_set_dir(PIN_CS2, GPIO_OUT);
-//     gpio_put(PIN_CS2, 1);
-
-//     // Claim DMA channels
-//     tx_dma_chan = dma_claim_unused_channel(true);
-//     rx_dma_chan = dma_claim_unused_channel(true);
-
-//     while (true) {
-//         // Run USB tasks
-//         tud_task();
-
-//         // Read samples from both sensors
-//         uint16_t sample1 = read_adc_dma(PIN_CS1);
-//         uint16_t sample2 = read_adc_dma(PIN_CS2);
-
-//         // Add to buffer (interleaved)
-//         buffer[buffer_index++] = sample1;
-//         buffer[buffer_index++] = sample2;
-
-//         // If buffer full, send via USB CDC
-//         if (buffer_index >= BUFFER_SIZE * 2) {
-//             uint32_t bytes_to_send = BUFFER_SIZE * 2 * sizeof(uint16_t);
-//             const uint8_t* data_ptr = (const uint8_t*)buffer;
-//             uint32_t sent = 0;
-
-//             while (sent < bytes_to_send) {
-//                 // Wait for space in USB TX buffer
-//                 while (tud_cdc_write_available() == 0) {
-//                     tud_task();
-//                 }
-
-//                 // Send as much as possible
-//                 uint32_t avail = tud_cdc_write_available();
-//                 uint32_t chunk = (bytes_to_send - sent > avail) ? avail : (bytes_to_send - sent);
-//                 uint32_t written = tud_cdc_write(data_ptr + sent, chunk);
-//                 sent += written;
-
-//                 // Flush to send immediately
-//                 tud_cdc_write_flush();
-//             }
-
-//             // Reset buffer index
-//             buffer_index = 0;
-//         }
-//     }
-
-//     return 0;
-// }

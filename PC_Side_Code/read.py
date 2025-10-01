@@ -5,7 +5,7 @@ import csv
 import os
 
 # Configuration
-SERIAL_PORT = 'COM3'  # Change to '/dev/ttyACM0' or similar on Linux/macOS
+SERIAL_PORT = '/dev/ttyACM0'  # Change to '/dev/ttyACM0' or similar on Linux/macOS
 BAUD_RATE = 115200    # USB CDC doesn't strictly use baud, but set for compatibility
 OUTPUT_FILE = 'adc_data.csv'
 SAMPLE_RATE = 153600  # Total samples/sec (76.8 ksps per channel)
@@ -19,6 +19,7 @@ GAIN = 1             # Gain setting from CONFIG2
 def open_serial_port():
     try:
         ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=READ_TIMEOUT)
+        time.sleep(2)  # Wait for USB CDC to initialize
         print(f"Connected to {SERIAL_PORT}")
         return ser
     except serial.SerialException as e:
@@ -42,6 +43,8 @@ def main():
     sample_count = 0
     last_print = start_time
 
+
+    #Ideally would just safe the data using pandas then convert to .csv file, but whatever grok
     # Open CSV file for writing
     with open(OUTPUT_FILE, 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)

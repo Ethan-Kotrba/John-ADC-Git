@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/John-ADC-Git.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "RP2040",
+            "configFiles": [
+                "interface/picoprobe.cfg",
+                "target/rp2040.cfg"
+            ],
+            "gdbPath": "arm-none-eabi-gdb", // Adjust if not in PATH
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "Build",
+            "showDevDebugOutput": "parsed",
+            "openOCDLaunchCommands": [
+                "adapter speed 5000" // Optional: adjust for stability
+            ]
+        }
+    ]
+}

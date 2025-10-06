@@ -30,55 +30,55 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 104,
+				"line" : 101,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 44,
+				"line" : 38,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 52,
+				"line" : 46,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 53,
+				"line" : 47,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 60,
+				"line" : 54,
 				"parent" : 1
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 64,
+				"line" : 58,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 79,
+				"line" : 80,
 				"parent" : 6
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 59,
+				"line" : 53,
 				"parent" : 1
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 57,
+				"line" : 51,
 				"parent" : 1
 			}
 		]
@@ -94,10 +94,6 @@
 			],
 			"defines" : 
 			[
-				{
-					"backtrace" : 8,
-					"define" : "LIB_BOOT_STAGE2_HEADERS=1"
-				},
 				{
 					"backtrace" : 8,
 					"define" : "PICO_32BIT=1"
@@ -162,11 +158,6 @@
 				{
 					"backtrace" : 8,
 					"isSystem" : true,
-					"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/include"
-				},
-				{
-					"backtrace" : 8,
-					"isSystem" : true,
 					"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_compiler/include"
 				},
 				{
@@ -222,7 +213,7 @@
 			},
 			{
 				"backtrace" : 7,
-				"fragment" : "-Wl,-Map=/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.elf.map",
+				"fragment" : "-Wl,-Map=bs2_default.elf.map",
 				"role" : "flags"
 			}
 		],

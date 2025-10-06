@@ -20,19 +20,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 104,
+				"line" : 101,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 71,
+				"line" : 69,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 72,
+				"line" : 66,
 				"parent" : 1
 			}
 		]
@@ -44,8 +44,8 @@
 			"id" : "bs2_default::@efaae0dfea37ab6992ce"
 		}
 	],
-	"id" : "bs2_default_bin::@efaae0dfea37ab6992ce",
-	"name" : "bs2_default_bin",
+	"id" : "bs2_default_padded_checksummed_asm::@efaae0dfea37ab6992ce",
+	"name" : "bs2_default_padded_checksummed_asm",
 	"paths" : 
 	{
 		"build" : "pico-sdk/src/rp2040/boot_stage2",
@@ -65,7 +65,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -74,13 +75,19 @@
 		{
 			"backtrace" : 2,
 			"isGenerated" : true,
-			"path" : "build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin",
+			"path" : "build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.rule",
+			"path" : "build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S.rule",
 			"sourceGroupIndex" : 1
 		},
 		{

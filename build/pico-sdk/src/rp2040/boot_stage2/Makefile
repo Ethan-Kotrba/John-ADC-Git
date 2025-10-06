@@ -145,34 +145,26 @@ bs2_default_bin/fast:
 .PHONY : bs2_default_bin/fast
 
 # Convenience name for target.
-pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
-.PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
+pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule:
+	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule
+.PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule
 
 # Convenience name for target.
-bs2_default_library: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
-.PHONY : bs2_default_library
+bs2_default_padded_checksummed_asm: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/rule
+.PHONY : bs2_default_padded_checksummed_asm
 
 # fast build rule for target.
-bs2_default_library/fast:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
-.PHONY : bs2_default_library/fast
+bs2_default_padded_checksummed_asm/fast:
+	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
+.PHONY : bs2_default_padded_checksummed_asm/fast
 
-bs2_default_padded_checksummed.o: bs2_default_padded_checksummed.S.o
-.PHONY : bs2_default_padded_checksummed.o
-
-# target to build an object file
-bs2_default_padded_checksummed.S.o:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-.PHONY : bs2_default_padded_checksummed.S.o
-
-compile_time_choice.o: compile_time_choice.S.o
-.PHONY : compile_time_choice.o
+compile_time_choice.obj: compile_time_choice.S.obj
+.PHONY : compile_time_choice.obj
 
 # target to build an object file
-compile_time_choice.S.o:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o
-.PHONY : compile_time_choice.S.o
+compile_time_choice.S.obj:
+	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj
+.PHONY : compile_time_choice.S.obj
 
 # Help Target
 help:
@@ -183,10 +175,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
+	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... bs2_default"
-	@echo "... bs2_default_library"
-	@echo "... bs2_default_padded_checksummed.o"
-	@echo "... compile_time_choice.o"
+	@echo "... compile_time_choice.obj"
 .PHONY : help
 
 

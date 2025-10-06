@@ -1,16 +1,10 @@
 {
-	"artifacts" : 
-	[
-		{
-			"path" : "pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o"
-		}
-	],
 	"backtrace" : 2,
 	"backtraceGraph" : 
 	{
 		"commands" : 
 		[
-			"add_library",
+			"add_custom_target",
 			"pico_define_boot_stage2",
 			"add_custom_command"
 		],
@@ -26,39 +20,23 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 104,
+				"line" : 101,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 79,
+				"line" : 65,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 72,
+				"line" : 66,
 				"parent" : 1
 			}
 		]
 	},
-	"compileGroups" : 
-	[
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
-				}
-			],
-			"language" : "ASM",
-			"sourceIndexes" : 
-			[
-				0
-			]
-		}
-	],
 	"dependencies" : 
 	[
 		{
@@ -66,8 +44,8 @@
 			"id" : "bs2_default::@efaae0dfea37ab6992ce"
 		}
 	],
-	"id" : "bs2_default_library::@efaae0dfea37ab6992ce",
-	"name" : "bs2_default_library",
+	"id" : "bs2_default_bin::@efaae0dfea37ab6992ce",
+	"name" : "bs2_default_bin",
 	"paths" : 
 	{
 		"build" : "pico-sdk/src/rp2040/boot_stage2",
@@ -95,15 +73,14 @@
 	[
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S",
+			"path" : "build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S.rule",
+			"path" : "build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -113,5 +90,5 @@
 			"sourceGroupIndex" : 1
 		}
 	],
-	"type" : "OBJECT_LIBRARY"
+	"type" : "UTILITY"
 }

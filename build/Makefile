@@ -156,17 +156,17 @@ bs2_default_bin/fast:
 .PHONY : bs2_default_bin/fast
 
 #=============================================================================
-# Target rules for targets named bs2_default_library
+# Target rules for targets named bs2_default_padded_checksummed_asm
 
 # Build rule for target.
-bs2_default_library: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_library
-.PHONY : bs2_default_library
+bs2_default_padded_checksummed_asm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bs2_default_padded_checksummed_asm
+.PHONY : bs2_default_padded_checksummed_asm
 
 # fast build rule for target.
-bs2_default_library/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/build
-.PHONY : bs2_default_library/fast
+bs2_default_padded_checksummed_asm/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
+.PHONY : bs2_default_padded_checksummed_asm/fast
 
 #=============================================================================
 # Target rules for targets named pioasmBuild
@@ -194,26 +194,13 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
-#=============================================================================
-# Target rules for targets named pico_status_led_ws2812_pio_h
-
-# Build rule for target.
-pico_status_led_ws2812_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_status_led_ws2812_pio_h
-.PHONY : pico_status_led_ws2812_pio_h
-
-# fast build rule for target.
-pico_status_led_ws2812_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build
-.PHONY : pico_status_led_ws2812_pio_h/fast
-
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
@@ -231,13 +218,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i
@@ -255,13 +242,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i
@@ -279,13 +266,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i
@@ -303,13 +290,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i
@@ -327,13 +314,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i
@@ -351,13 +338,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i
@@ -375,13 +362,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i
@@ -399,13 +386,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i
@@ -423,13 +410,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i
@@ -447,13 +434,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i
@@ -471,13 +458,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i
@@ -495,13 +482,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i
@@ -519,13 +506,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.i
@@ -543,13 +530,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i
@@ -567,13 +554,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i
@@ -591,13 +578,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_r
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
@@ -615,13 +602,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp204
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.i
@@ -639,13 +626,13 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.o: home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.o
+home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.obj: home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.i: home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.i
@@ -663,13 +650,13 @@ home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.i
@@ -687,13 +674,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.i
@@ -711,13 +698,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.i
@@ -735,13 +722,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.i
@@ -759,13 +746,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.o: home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.i: home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.i
@@ -783,13 +770,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.o: home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.i
@@ -807,13 +794,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.o: home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.i: home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.i
@@ -831,13 +818,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.o: home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.i: home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.i
@@ -855,13 +842,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
-home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.o: home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.obj: home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o
+home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.i: home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.i
@@ -879,13 +866,13 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.o: home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.o
+home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.obj: home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.i: home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.i
@@ -903,13 +890,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i
@@ -927,13 +914,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
@@ -951,21 +938,21 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i
@@ -983,13 +970,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i
@@ -1007,13 +994,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i
@@ -1031,13 +1018,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i
@@ -1055,21 +1042,21 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i
@@ -1087,13 +1074,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i
@@ -1111,13 +1098,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i
@@ -1135,13 +1122,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i
@@ -1159,13 +1146,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i
@@ -1183,13 +1170,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i
@@ -1207,13 +1194,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i
@@ -1231,13 +1218,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i
@@ -1255,13 +1242,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i
@@ -1279,37 +1266,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i
-
-# target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s
-
-# target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i
@@ -1327,13 +1290,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i
@@ -1351,21 +1314,21 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i
@@ -1383,13 +1346,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i
@@ -1407,13 +1370,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i
@@ -1431,21 +1394,21 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interfa
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i
@@ -1463,29 +1426,29 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i
@@ -1503,13 +1466,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.i
@@ -1527,21 +1490,21 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i
@@ -1559,45 +1522,21 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumera
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.i
-
-# target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.s
-
-# target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i
@@ -1615,13 +1554,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.i
@@ -1639,29 +1578,29 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i
@@ -1679,21 +1618,21 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i
@@ -1711,37 +1650,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.i
-
-# target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.s
-
-# target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i
@@ -1759,13 +1674,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.i
@@ -1783,13 +1698,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i
@@ -1807,13 +1722,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i
@@ -1831,13 +1746,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i
@@ -1855,13 +1770,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clo
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i
@@ -1879,13 +1794,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_sta
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i
@@ -1903,13 +1818,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i
@@ -1927,13 +1842,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
@@ -1951,13 +1866,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
@@ -1975,13 +1890,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
@@ -1999,13 +1914,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descripto
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i
@@ -2023,13 +1938,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
@@ -2047,13 +1962,13 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-main.o: main.c.o
-.PHONY : main.o
+main.obj: main.c.obj
+.PHONY : main.obj
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/main.c.o
-.PHONY : main.c.o
+main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/main.c.obj
+.PHONY : main.c.obj
 
 main.i: main.c.i
 .PHONY : main.i
@@ -2080,243 +1995,233 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
+	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
-	@echo "... pico_status_led_ws2812_pio_h"
 	@echo "... pioasmBuild"
 	@echo "... John-ADC-Git"
 	@echo "... bs2_default"
-	@echo "... bs2_default_library"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
-	@echo "... main.o"
+	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
 .PHONY : help

@@ -36,6 +36,10 @@
 			"path" : "/home/acid/Clones/pico/pico-sdk/cmake/pico_pre_load_toolchain.cmake"
 		},
 		{
+			"isExternal" : true,
+			"path" : "/home/acid/Clones/pico/pico-sdk/pico_sdk_init.cmake"
+		},
+		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake"
@@ -63,7 +67,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/4.1.1/CMakeSystem.cmake"
+			"path" : "build/CMakeFiles/4.1.2/CMakeSystem.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -598,7 +602,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/4.1.1/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/4.1.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1077,7 +1081,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/4.1.1/CMakeCXXCompiler.cmake"
+			"path" : "build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1116,7 +1120,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/4.1.1/CMakeASMCompiler.cmake"
+			"path" : "build/CMakeFiles/4.1.2/CMakeASMCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1136,11 +1140,6 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/cmake/Platform/PICO.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1170,11 +1169,6 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/cmake/Platform/PICO.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1243,7 +1237,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/4.1.1/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/4.1.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1288,11 +1282,6 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/cmake/Platform/PICO.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1361,7 +1350,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/4.1.1/CMakeCXXCompiler.cmake"
+			"path" : "build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1559,6 +1548,32 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/FetchContent.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/picotool/picotoolConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/picotool/picotoolConfig.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/picotool/picotoolTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/picotool/picotoolTargets-release.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "/usr/share/cmake/Modules/FindPython3.cmake"
 		},
 		{
@@ -1678,19 +1693,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/CMakeLists.txt"
-		},
-		{
-			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/CMakeLists.txt"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/boot_bootrom_headers/CMakeLists.txt"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/CMakeLists.txt"
+			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/CMakeLists.txt"
 		},
 		{
 			"isExternal" : true,
@@ -1707,10 +1714,6 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_aon_timer/CMakeLists.txt"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/CMakeLists.txt"
 		},
 		{
 			"isExternal" : true,
@@ -1803,15 +1806,15 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/boards/pico_sdk/board.cmake"
-		},
-		{
-			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/pico_sdk_import.cmake"
 		},
 		{
 			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/pico_sdk_init.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/boards/pico_sdk/board.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -1882,10 +1885,6 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mbedtls/CMakeLists.txt"
-		},
-		{
-			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_lwip/CMakeLists.txt"
 		},
 		{
@@ -1895,6 +1894,10 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cyw43_arch/CMakeLists.txt"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mbedtls/CMakeLists.txt"
 		},
 		{
 			"isExternal" : true,
@@ -1931,10 +1934,6 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/CMakeLists.txt"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_status_led/CMakeLists.txt"
 		},
 		{
 			"isExternal" : true,

@@ -13,9 +13,8 @@
 		"files" : 
 		[
 			"/home/acid/Clones/pico/pico-sdk/tools/CMakeLists.txt",
-			"/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_status_led/CMakeLists.txt",
-			"/home/acid/Clones/pico/pico-sdk/tools/Findpioasm.cmake",
-			"/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeLists.txt"
+			"/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeLists.txt",
+			"/home/acid/Clones/pico/pico-sdk/tools/Findpioasm.cmake"
 		],
 		"nodes" : 
 		[
@@ -25,61 +24,52 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 20,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 252,
+				"line" : 175,
 				"parent" : 1
-			},
-			{
-				"file" : 3
-			},
-			{
-				"command" : 1,
-				"file" : 3,
-				"line" : 51,
-				"parent" : 3
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 224,
-				"parent" : 4
+				"line" : 152,
+				"parent" : 1
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 121,
-				"parent" : 5
+				"line" : 91,
+				"parent" : 3
 			},
 			{
 				"file" : 2,
-				"parent" : 6
+				"parent" : 4
 			},
 			{
 				"command" : 2,
 				"file" : 2,
-				"line" : 52,
-				"parent" : 7
+				"line" : 51,
+				"parent" : 5
 			}
 		]
 	},
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 8,
+			"backtrace" : 6,
 			"id" : "pioasmBuild::@c2fb4f534018e64680d5"
 		}
 	],
-	"id" : "pico_status_led_ws2812_pio_h::@c2e5f126dae27421b95b",
-	"name" : "pico_status_led_ws2812_pio_h",
+	"id" : "cyw43_driver_picow_cyw43_bus_pio_spi_pio_h::@c2fb4f534018e64680d5",
+	"name" : "cyw43_driver_picow_cyw43_bus_pio_spi_pio_h",
 	"paths" : 
 	{
-		"build" : "pico-sdk/src/rp2_common/pico_status_led",
-		"source" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_status_led"
+		"build" : "pico-sdk/src/rp2_common/pico_cyw43_driver",
+		"source" : "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cyw43_driver"
 	},
 	"sourceGroups" : 
 	[
@@ -104,19 +94,19 @@
 		{
 			"backtrace" : 2,
 			"isGenerated" : true,
-			"path" : "build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h",
+			"path" : "build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.rule",
+			"path" : "build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h.rule",
+			"path" : "build/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.pio.h.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

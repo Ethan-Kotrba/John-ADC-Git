@@ -2,33 +2,44 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_s
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdbool.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h \
- /usr/arm-none-eabi/include/stdint.h \
- /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/arm-none-eabi/include/sys/features.h \
- /usr/arm-none-eabi/include/_newlib_version.h \
- /usr/arm-none-eabi/include/sys/_intsup.h \
- /usr/arm-none-eabi/include/sys/_stdint.h \
- /usr/arm-none-eabi/include/inttypes.h \
- /usr/arm-none-eabi/include/newlib.h \
- /usr/arm-none-eabi/include/sys/config.h \
- /usr/arm-none-eabi/include/machine/ieeefp.h \
- /usr/arm-none-eabi/include/_ansi.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stddef.h \
- /usr/arm-none-eabi/include/sys/_locale.h \
- /usr/arm-none-eabi/include/string.h \
- /usr/arm-none-eabi/include/sys/reent.h \
- /usr/arm-none-eabi/include/_ansi.h \
- /usr/arm-none-eabi/include/sys/cdefs.h \
- /usr/arm-none-eabi/include/sys/_types.h \
- /usr/arm-none-eabi/include/machine/_types.h \
- /usr/arm-none-eabi/include/sys/lock.h \
- /usr/arm-none-eabi/include/strings.h \
- /usr/arm-none-eabi/include/sys/string.h \
- /usr/arm-none-eabi/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdarg.h \
- /usr/arm-none-eabi/include/sys/stdio.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/inttypes.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/endian.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_endian.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/select.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_sigset.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timeval.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/timespec.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_timespec.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/sched.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
@@ -37,7 +48,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_s
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
- /usr/arm-none-eabi/include/assert.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/assert.h \
  /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/version.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
  /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/config_autogen.h \
@@ -92,5 +103,4 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_s
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
- /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
- /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h

@@ -1,3 +1,0 @@
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-subbuild/CMakeFiles/picotool-populate.dir
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-subbuild/CMakeFiles/edit_cache.dir
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-subbuild/CMakeFiles/rebuild_cache.dir

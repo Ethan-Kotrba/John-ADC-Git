@@ -249,12 +249,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/hardware_xip_cache/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/hardware_xosc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_bootrom/cmake_install.cmake")
+  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/boot_bootrom_headers/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_platform_common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -275,6 +285,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_aon_timer/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_bootrom/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -399,17 +414,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_mbedtls/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_lwip/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_cyw43_arch/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -445,6 +460,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_fix/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_status_led/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

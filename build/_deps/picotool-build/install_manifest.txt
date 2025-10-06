@@ -1,7 +1,0 @@
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool/picotool
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool/picotoolTargets.cmake
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool/picotoolTargets-release.cmake
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool/picotoolConfig.cmake
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool/picotoolConfigVersion.cmake
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool/enc_bootloader.elf
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool/enc_bootloader_mbedtls.elf

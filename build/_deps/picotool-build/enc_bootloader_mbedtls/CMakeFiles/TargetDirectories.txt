@@ -1,2 +1,0 @@
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader_mbedtls/CMakeFiles/edit_cache.dir
-/home/acid/Clones/pico/John-ADC-Git/build/_deps/picotool-build/enc_bootloader_mbedtls/CMakeFiles/rebuild_cache.dir

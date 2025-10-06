@@ -1,30 +1,31 @@
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c \
- /usr/arm-none-eabi/include/stdlib.h \
- /usr/arm-none-eabi/include/machine/ieeefp.h \
- /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
- /usr/arm-none-eabi/include/_newlib_version.h \
- /usr/arm-none-eabi/include/sys/config.h \
- /usr/arm-none-eabi/include/sys/features.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stddef.h \
- /usr/arm-none-eabi/include/sys/reent.h \
- /usr/arm-none-eabi/include/_ansi.h \
- /usr/arm-none-eabi/include/sys/cdefs.h \
- /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/arm-none-eabi/include/sys/_types.h \
- /usr/arm-none-eabi/include/machine/_types.h \
- /usr/arm-none-eabi/include/sys/lock.h \
- /usr/arm-none-eabi/include/machine/stdlib.h \
- /usr/arm-none-eabi/include/alloca.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/stdlib.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/alloca.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdbool.h \
- /usr/arm-none-eabi/include/assert.h \
- /usr/lib/gcc/arm-none-eabi/14.2.0/include/stdint.h \
- /usr/arm-none-eabi/include/stdint.h \
- /usr/arm-none-eabi/include/sys/_intsup.h \
- /usr/arm-none-eabi/include/sys/_stdint.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/assert.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
  /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/version.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
  /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/config_autogen.h \

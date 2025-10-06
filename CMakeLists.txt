@@ -11,3 +11,6 @@ pico_enable_stdio_usb(John-ADC-Git 1)
 pico_enable_stdio_uart(John-ADC-Git 0)
 target_link_libraries(John-ADC-Git pico_stdlib hardware_spi hardware_dma hardware_gpio hardware_sync pico_multicore)
 pico_add_extra_outputs(John-ADC-Git)
+# Force Thumb mode
+target_compile_options(John-ADC-Git PRIVATE -mcpu=cortex-m0plus -mthumb)
+target_link_options(John-ADC-Git PRIVATE -mcpu=cortex-m0plus -mthumb)

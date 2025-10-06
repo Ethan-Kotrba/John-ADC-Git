@@ -13,7 +13,7 @@ READ_TIMEOUT = 1      # Seconds
 
 # MCP3564 settings (match Pico code)
 VREF = 3.3           # Reference voltage (adjust if different in your setup)
-RESOLUTION = 24      # 24-bit ADC
+RESOLUTION = 32      # 24-bit ADC
 GAIN = 1             # Gain setting from CONFIG2
 
 def open_serial_port():

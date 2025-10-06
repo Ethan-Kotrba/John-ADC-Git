@@ -1,9 +1,21 @@
 {
-    "cmake.environment": {
-        "PICO_SDK_PATH": "/home/acid/Clones/pico/pico-sdk"
-    },
-    "files.associations": {
-        "spi.h": "c"
-    },
-
+    "cmake.configureArgs": [
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DPICO_BOARD=pico",
+        "-DPICO_SDK_PATH=/home/acid/Clones/pico/pico-sdk",
+        "-DCMAKE_C_COMPILER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc",
+        "-CMAKE_CXX_COMPILER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++",
+        "-CMAKE_C_FLAGS=-mcpu=cortex-m0plus -mthumb",
+        "-CMAKE_CXX_FLAGS=-mcpu=cortex-m0plus -mthumb",
+        "-CMAKE_ASM_FLAGS=-mcpu=cortex-m0plus -mthumb",
+        "-CMAKE_EXPORT_COMPILE_COMMANDS=ON"
+    ],
+    "C_Cpp.default.includePath": [
+        "/home/acid/Clones/pico/pico-sdk/src/common/pico_base/include/**",
+        "/home/acid/Clones/pico/pico-sdk/src/boards/include/**",
+        "/home/acid/Clones/pico/pico-sdk/src/rp2040/**",
+        "/home/acid/Clones/pico/pico-sdk/src/rp2_common/**",
+        "/home/acid/Clones/pico/pico-sdk/lib/**",
+        "${workspaceFolder}/src"
+    ]
 }

@@ -258,6 +258,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake"
   "/usr/share/cmake/Modules/Internal/FeatureTesting.cmake"
   "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/pico-sdk/pico_sdk_init.cmake"
   )
 
 # The corresponding makefile is:

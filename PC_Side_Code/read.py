@@ -6,7 +6,7 @@ import os
 
 # Configuration
 SERIAL_PORT = '/dev/ttyACM0'  # Change to '/dev/ttyACM0' or similar on Linux/macOS
-BAUD_RATE = 115200    # USB CDC doesn't strictly use baud, but set for compatibility
+BAUD_RATE = 5000000    # USB CDC doesn't strictly use baud, but set for compatibility
 OUTPUT_FILE = 'adc_data.csv'
 SAMPLE_RATE = 153600  # Total samples/sec (76.8 ksps per channel)
 READ_TIMEOUT = 1      # Seconds
@@ -60,7 +60,7 @@ def main():
                         timestamp = time.time() - start_time
                         sample_count += 1
                         # Write to CSV
-                        csv_writer.writerow([timestamp, channel_id, f"{voltage:.6f}"])
+                        # csv_writer.writerow([timestamp, channel_id, f"{voltage:.6f}"])
                         # Periodically print status
                         if time.time() - last_print >= 1:
                             rate = sample_count / (time.time() - start_time)

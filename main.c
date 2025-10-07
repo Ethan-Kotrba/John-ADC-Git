@@ -29,6 +29,7 @@
 #define REG_CONFIG2  0x3
 #define REG_CONFIG3  0x4
 #define REG_SCAN     0x7
+#define SAMPLE_SIZE 32
 
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
 #define BUF_SIZE (4096 * 4)
@@ -148,9 +149,10 @@ void core1_main() {
     gpio_set_irq_enabled_with_callback(PIN_DRDY, GPIO_IRQ_EDGE_FALL, true, &drdy_handler);
 
     // Keep core alive, interrupt handles DRDY
-    while (true) {
-        sleep_ms(1000);
-    }
+    __wfi();
+    // while (true) {
+    //     sleep_ms(1000);
+    // }
 }
 
 int main() {
@@ -174,10 +176,10 @@ int main() {
     gpio_put(PIN_CS, 1);
     gpio_init(PIN_DRDY);
     gpio_set_dir(PIN_DRDY, GPIO_IN);
-    // gpio_pull_up(PIN_DRDY);  // Uncomment if needed based on hardware
+    gpio_pull_up(PIN_DRDY);  // Uncomment if needed based on hardware
 
     // Allow ADC to stabilize after power-on (MCP3564 datasheet Section 6.3)
-    sleep_ms(10);
+    sleep_ms(100);
 
     // Claim DMA channels
     tx_dma = dma_claim_unused_channel(true);
@@ -208,6 +210,7 @@ int main() {
     multicore_launch_core1(core1_main);
 
     // Core 0: Send buffered data to USB
+    __wfi();
     while (true) {
         uint32_t avail = 0;
         {

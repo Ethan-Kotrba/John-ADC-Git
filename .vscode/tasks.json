@@ -50,3 +50,22 @@
 //         }
 //     ]
 // }
+
+{
+       "version": "2.0.0",
+       "tasks": [
+           {
+               "label": "Build Pico Project",
+               "type": "shell",
+               "command": "rm -rf build/ && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug -DPICO_BOARD=pico -DPICO_SDK_PATH=/home/acid/Clones/pico/pico-sdk -DCMAKE_C_COMPILER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -DCMAKE_CXX_COMPILER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ -DPICO_MBEDTLS=OFF && make -j12",
+               "group": {
+                   "kind": "build",
+                   "isDefault": true
+               },
+               "problemMatcher": [
+                   "$gcc"
+               ],
+               "detail": "Builds the Pico project with cmake and make"
+           }
+       ]
+   }

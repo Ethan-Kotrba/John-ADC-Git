@@ -17,5 +17,9 @@
         "/home/acid/Clones/pico/pico-sdk/src/rp2_common/**",
         "/home/acid/Clones/pico/pico-sdk/lib/**",
         "${workspaceFolder}/src"
-    ]
+    ],
+    "files.associations": {
+        "stdlib.h": "c",
+        "spi.h": "c"
+    }
 }

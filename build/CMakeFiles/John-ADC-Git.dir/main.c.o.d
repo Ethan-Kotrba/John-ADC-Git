@@ -33,7 +33,10 @@ CMakeFiles/John-ADC-Git.dir/main.c.o: \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h \
- /home/acid/Clones/pico/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/unistd.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/unistd.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -57,11 +60,14 @@ CMakeFiles/John-ADC-Git.dir/main.c.o: \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
- /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h \
+ /home/acid/Clones/pico/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
- /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
@@ -84,7 +90,6 @@ CMakeFiles/John-ADC-Git.dir/main.c.o: \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
- /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \

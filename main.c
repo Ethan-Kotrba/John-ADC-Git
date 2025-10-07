@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>  // For write()
+#include "pico/stdio_usb.h"  // Explicitly include for stdio_usb
+#include "hardware/vreg.h"   // For VREG_VOLTAGE_1_20
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
 #include "hardware/dma.h"
@@ -7,13 +10,14 @@
 #include "hardware/sync.h"
 #include "pico/multicore.h"
 
-// Pin definitions (adjust as needed for your setup)
+// Pin definitions
 #define SPI_INST spi0
 #define PIN_MISO 4
 #define PIN_CS   5
 #define PIN_SCK  6
 #define PIN_MOSI 7
 #define PIN_DRDY 3  // Data Ready pin (active low)
+#define PIN_MCLK 8  // MCLK pin
 
 // SPI baud rate (MCP3564 supports up to 20 MHz)
 #define SPI_BAUD 20000000
@@ -31,8 +35,9 @@
 #define REG_SCAN     0x7
 #define SAMPLE_SIZE 32
 
-// Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
-#define BUF_SIZE (4096 * 4)
+
+// Buffer for data transfer (4 bytes per sample, 8192 samples = 32KB)
+#define BUF_SIZE (8192 * 4)
 uint8_t data_buf[BUF_SIZE];
 volatile uint32_t wr_idx = 0;
 volatile uint32_t rd_idx = 0;
@@ -43,18 +48,17 @@ spin_lock_t *buf_lock;
 int tx_dma;
 int rx_dma;
 
-// Function to write to MCP3564 registers (handles 1-3 byte registers)
-void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
-    uint8_t cmd = CMD_INC_WRITE(reg);
-    uint8_t buf[3] = {(value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF};
-
-    gpio_put(PIN_CS, 0);
-    spi_write_blocking(SPI_INST, &cmd, 1);
-    spi_write_blocking(SPI_INST, buf + (3 - num_bytes), num_bytes);
-    gpio_put(PIN_CS, 1);
+// Send debug string with marker and length
+void send_debug_string(const char *str) {
+    uint8_t len = strlen(str);
+    if (len > 255) len = 255;  // Cap at 255 bytes
+    uint8_t header[2] = {0xFF, len};  // Marker + length
+    write(1, header, 2);  // Send header
+    write(1, str, len);   // Send string
+    fflush(stdout);       // Immediate flush for debug
 }
 
-// Function to read MCP3564 registers (handles 1-3 byte registers)
+// Function to read MCP3564 registers
 uint32_t read_reg(uint8_t reg, uint8_t num_bytes) {
     uint8_t cmd = CMD_STATIC_READ(reg);
     uint8_t rx_buf[3] = {0};
@@ -72,65 +76,107 @@ uint32_t read_reg(uint8_t reg, uint8_t num_bytes) {
     return value;
 }
 
+// Function to write to MCP3564 registers
+void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
+    uint8_t cmd = CMD_INC_WRITE(reg);
+    uint8_t buf[3] = {(value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF};
+    uint32_t readback;
+    int retries = 5;
+    char debug_str[64];
+    do {
+        gpio_put(PIN_CS, 0);
+        spi_write_blocking(SPI_INST, &cmd, 1);
+        spi_write_blocking(SPI_INST, buf + (3 - num_bytes), num_bytes);
+        gpio_put(PIN_CS, 1);
+        sleep_us(100);
+        readback = read_reg(reg, num_bytes);
+        if (readback != value) {
+            snprintf(debug_str, sizeof(debug_str), "Write reg 0x%X failed: wrote 0x%X, read 0x%X\n", reg, value, readback);
+            send_debug_string(debug_str);
+        }
+    } while (readback != value && --retries > 0);
+    if (retries == 0) {
+        snprintf(debug_str, sizeof(debug_str), "Failed to write reg 0x%X after retries\n", reg);
+        send_debug_string(debug_str);
+    }
+}
+
+
+
 // Verify ADC configuration
 void verify_config() {
-    printf("Verifying MCP3564 configuration:\n");
-    printf("CONFIG0: 0x%02X (expected 0x63)\n", read_reg(REG_CONFIG0, 1));
-    printf("CONFIG1: 0x%02X (expected 0x00)\n", read_reg(REG_CONFIG1, 1));
-    printf("CONFIG2: 0x%02X (expected 0x88)\n", read_reg(REG_CONFIG2, 1));
-    printf("CONFIG3: 0x%02X (expected 0xF0)\n", read_reg(REG_CONFIG3, 1));
-    printf("SCAN: 0x%06X (expected 0x000003)\n", read_reg(REG_SCAN, 3));
+    char debug_str[64];
+    snprintf(debug_str, sizeof(debug_str), "CONFIG0: 0x%02X (expected 0x63)\n", read_reg(REG_CONFIG0, 1));
+    send_debug_string(debug_str);
+    snprintf(debug_str, sizeof(debug_str), "CONFIG1: 0x%02X (expected 0x40)\n", read_reg(REG_CONFIG1, 1));
+    send_debug_string(debug_str);
+    snprintf(debug_str, sizeof(debug_str), "CONFIG2: 0x%02X (expected 0x88)\n", read_reg(REG_CONFIG2, 1));
+    send_debug_string(debug_str);
+    snprintf(debug_str, sizeof(debug_str), "CONFIG3: 0x%02X (expected 0xF0)\n", read_reg(REG_CONFIG3, 1));
+    send_debug_string(debug_str);
+    snprintf(debug_str, sizeof(debug_str), "SCAN: 0x%06X (expected 0x000003)\n", read_reg(REG_SCAN, 3));
+    send_debug_string(debug_str);
 }
 
 // DRDY interrupt handler
 void drdy_handler(uint gpio, uint32_t events) {
+    static uint64_t last_time = 0;
+    uint64_t now = time_us_64();
+    static uint32_t count = 0;
+    char debug_str[64];
+    if (++count % 1000 == 0) {
+        snprintf(debug_str, sizeof(debug_str), "DRDY interval: %llu us, freq: %.1f Hz\n", now - last_time, 1000000.0 / (now - last_time));
+        send_debug_string(debug_str);
+    }
+    last_time = now;
+
     static uint8_t tx_buf[5] = {CMD_STATIC_READ(0x0), 0xFF, 0xFF, 0xFF, 0xFF};
     static uint8_t rx_buf[5];
 
-    // Start SPI transaction
     gpio_put(PIN_CS, 0);
-
-    // Start DMA transfers
     dma_channel_set_read_addr(tx_dma, tx_buf, false);
     dma_channel_set_write_addr(rx_dma, rx_buf, false);
     dma_channel_start(rx_dma);
     dma_channel_start(tx_dma);
-
-    // Wait for completion
     dma_channel_wait_for_finish_blocking(rx_dma);
     dma_channel_wait_for_finish_blocking(tx_dma);
-
     gpio_put(PIN_CS, 1);
 
-    // Check for DMA errors (read/write error flags in ctrl_trig register)
     uint32_t rx_status = dma_hw->ch[rx_dma].ctrl_trig;
     if (rx_status & (DMA_CH0_CTRL_TRIG_READ_ERROR_BITS | DMA_CH0_CTRL_TRIG_WRITE_ERROR_BITS)) {
-        printf("DMA RX error: status 0x%08X\n", rx_status);
-        // Clear error flags
+        snprintf(debug_str, sizeof(debug_str), "DMA RX error: status 0x%08X\n", rx_status);
+        send_debug_string(debug_str);
         dma_hw->ch[rx_dma].ctrl_trig = rx_status & ~(DMA_CH0_CTRL_TRIG_READ_ERROR_BITS | DMA_CH0_CTRL_TRIG_WRITE_ERROR_BITS);
         return;
     }
 
-    // Validate channel ID and copy to shared buffer
     uint32_t next_wr = (wr_idx + 4) % BUF_SIZE;
     uint32_t irq_state = spin_lock_blocking(buf_lock);
     if (next_wr != rd_idx) {
-        uint8_t ch_id = (rx_buf[1] >> 4) & 0x0F;  // Channel ID in bits 7:4
-        if (ch_id == 0 || ch_id == 1) {  // Validate CH0 or CH1
+        uint8_t ch_id = (rx_buf[1] >> 4) & 0x0F;
+        if (ch_id == 0 || ch_id == 1) {
+            if (count % 1000 == 0) {
+                snprintf(debug_str, sizeof(debug_str), "CH%d, sample: 0x%02X%02X%02X%02X\n", ch_id, rx_buf[1], rx_buf[2], rx_buf[3], rx_buf[4]);
+                send_debug_string(debug_str);
+            }
             memcpy(&data_buf[wr_idx], &rx_buf[1], 4);
             wr_idx = next_wr;
         } else {
-            printf("Invalid channel ID: %u\n", ch_id);
+            snprintf(debug_str, sizeof(debug_str), "Invalid channel ID: %u\n", ch_id);
+            send_debug_string(debug_str);
         }
     } else {
         dropped_samples++;
+        if (count % 1000 == 0) {
+            snprintf(debug_str, sizeof(debug_str), "Dropped %u samples\n", dropped_samples);
+            send_debug_string(debug_str);
+        }
     }
     spin_unlock(buf_lock, irq_state);
 }
 
-// Core 1: Dedicated to reading from ADC using DMA and interrupts
+// Core 1: Dedicated to reading from ADC
 void core1_main() {
-    // Configure DMA channels once
     dma_channel_config tx_config = dma_channel_get_default_config(tx_dma);
     channel_config_set_transfer_data_size(&tx_config, DMA_SIZE_8);
     channel_config_set_dreq(&tx_config, spi_get_dreq(SPI_INST, true));
@@ -145,72 +191,59 @@ void core1_main() {
     channel_config_set_write_increment(&rx_config, true);
     dma_channel_configure(rx_dma, &rx_config, NULL, &spi_get_hw(SPI_INST)->dr, 5, false);
 
-    // Enable DRDY interrupt (falling edge)
     gpio_set_irq_enabled_with_callback(PIN_DRDY, GPIO_IRQ_EDGE_FALL, true, &drdy_handler);
-
-    // Keep core alive, interrupt handles DRDY
     __wfi();
-    // while (true) {
-    //     sleep_ms(1000);
-    // }
 }
 
 int main() {
-    // Initialize stdio (USB CDC for output to laptop)
     stdio_init_all();
+    stdio_set_translate_crlf(&stdio_usb, false);  // Disable CRLF for binary
+    // vreg_set_voltage(VREG_VOLTAGE_1_20);  // For overclocking
+    // set_sys_clock_khz(250000, true);      // Overclock to 250 MHz
 
-    // Initialize SPI
     if (spi_init(SPI_INST, SPI_BAUD) == 0) {
-        printf("SPI initialization failed\n");
+        send_debug_string("SPI initialization failed\n");
         while (true);
     }
-    // SPI Mode 0,0 (CPOL=0, CPHA=0) as per MCP3564 datasheet Section 6.2
     spi_set_format(SPI_INST, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
     gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
     gpio_set_function(PIN_SCK, GPIO_FUNC_SPI);
     gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
 
-    // Initialize CS and DRDY
     gpio_init(PIN_CS);
     gpio_set_dir(PIN_CS, GPIO_OUT);
     gpio_put(PIN_CS, 1);
     gpio_init(PIN_DRDY);
     gpio_set_dir(PIN_DRDY, GPIO_IN);
-    gpio_pull_up(PIN_DRDY);  // Uncomment if needed based on hardware
+    gpio_pull_up(PIN_DRDY);
+    gpio_init(PIN_MCLK);
+    gpio_set_dir(PIN_MCLK, GPIO_IN);
+    gpio_pull_up(PIN_MCLK);  // Stabilize MCLK
 
-    // Allow ADC to stabilize after power-on (MCP3564 datasheet Section 6.3)
     sleep_ms(100);
 
-    // Claim DMA channels
     tx_dma = dma_claim_unused_channel(true);
     rx_dma = dma_claim_unused_channel(true);
     if (tx_dma < 0 || rx_dma < 0) {
-        printf("Failed to allocate DMA channels\n");
+        send_debug_string("Failed to allocate DMA channels\n");
         while (true);
     }
 
-    // Claim spin lock for buffer synchronization
     buf_lock = spin_lock_init(spin_lock_claim_unused(true));
 
-    // Configure MCP3564 for 2-channel SCAN (single-ended CH0 and CH1 vs AGND),
-    // continuous conversion, OSR=32 for max data rate (~76.8 ksps per channel),
-    // gain=1x, data format=32-bit with channel ID
-    write_reg(REG_LOCK, 0xA5, 1);              // Unlock registers
-    // CONFIG0: Internal 3.6864 MHz clock, ADC conversion mode (~76.8 ksps/channel, OSR=32)
-    write_reg(REG_CONFIG0, 0x63, 1);           // Internal clock, ADC conversion mode
-    write_reg(REG_CONFIG1, 0x00, 1);           // OSR=32, PRE=1 (AMCLK=MCLK)
-    write_reg(REG_CONFIG2, 0x88, 1);           // Gain=1x, boost=x1
-    write_reg(REG_CONFIG3, 0xF0, 1);           // Continuous conv, 32-bit w/ CH ID
-    write_reg(REG_SCAN, 0x000003, 3);          // Scan CH0 and CH1 (single-ended)
-
-    // Verify ADC configuration
+    write_reg(REG_LOCK, 0xA5, 1);
+    
+    write_reg(REG_CONFIG1, 0x00, 1);  // OSR=32
+    write_reg(0x05, 0x06, 1);
+    // write_reg(REG_CONFIG2, 0x88, 1);
+    write_reg(REG_CONFIG3, 0xF0, 1);
+    write_reg(REG_SCAN, 0x000003, 3);
+    write_reg(REG_CONFIG0, 0xE3, 1);  // Internal clock
     verify_config();
 
-    // Launch core 1 for ADC reading
     multicore_launch_core1(core1_main);
 
-    // Core 0: Send buffered data to USB
-    __wfi();
+    absolute_time_t last_flush = get_absolute_time();
     while (true) {
         uint32_t avail = 0;
         {
@@ -219,10 +252,10 @@ int main() {
             spin_unlock(buf_lock, irq_state);
         }
 
-        if (avail >= 256) {  // Send in 256-byte chunks for USB efficiency
-            uint8_t send_buf[256];
-            uint32_t to_send = (avail > 256) ? 256 : avail;
-            to_send -= to_send % 4;  // Align to sample size
+        if (avail >= 1024) {
+            uint8_t send_buf[1024];
+            uint32_t to_send = (avail > 1024) ? 1024 : avail;
+            to_send -= to_send % 4;
 
             uint32_t irq_state = spin_lock_blocking(buf_lock);
             if (rd_idx + to_send > BUF_SIZE) {
@@ -236,19 +269,25 @@ int main() {
             }
             spin_unlock(buf_lock, irq_state);
 
-            // Send over USB (binary data)
-            size_t written = fwrite(send_buf, 1, to_send, stdout);
+            ssize_t written = write(1, send_buf, to_send);
             if (written != to_send) {
-                printf("USB write error: %u of %u bytes written\n", written, to_send);
+                char debug_str[64];
+                snprintf(debug_str, sizeof(debug_str), "USB write error: %zd of %u bytes written\n", written, to_send);
+                send_debug_string(debug_str);
             }
-            fflush(stdout);  // Flush to ensure timely delivery
+
+            if (absolute_time_diff_us(last_flush, get_absolute_time()) >= 1000000) {
+                fflush(stdout);
+                last_flush = get_absolute_time();
+            }
         } else {
-            // Report dropped samples periodically
             if (dropped_samples > 0) {
-                printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
+                char debug_str[64];
+                snprintf(debug_str, sizeof(debug_str), "Dropped %u samples due to buffer overflow\n", dropped_samples);
+                send_debug_string(debug_str);
                 dropped_samples = 0;
             }
-            sleep_ms(1);  // Yield if no data
+            sleep_ms(1);
         }
     }
 

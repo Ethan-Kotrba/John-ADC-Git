@@ -5,21 +5,19 @@ import csv
 import os
 
 # Configuration
-SERIAL_PORT = '/dev/ttyACM0'  # Change to '/dev/ttyACM0' or similar on Linux/macOS
-BAUD_RATE = 5000000    # USB CDC doesn't strictly use baud, but set for compatibility
+SERIAL_PORT = '/dev/ttyACM0'  # Adjust for your system
+BAUD_RATE = 5000000
 OUTPUT_FILE = 'adc_data.csv'
-SAMPLE_RATE = 153600  # Total samples/sec (76.8 ksps per channel)
-READ_TIMEOUT = 1      # Seconds
-
-# MCP3564 settings (match Pico code)
-VREF = 3.3           # Reference voltage (adjust if different in your setup)
-RESOLUTION = 32      # 24-bit ADC
-# GAIN = 1             # Gain setting from CONFIG2
+SAMPLE_RATE = 7200  # Total samples/sec (3.6 ksps per channel, OSR=256)
+READ_TIMEOUT = 1
+VREF = 3.3
+RESOLUTION = 32
+GAIN = 1
 
 def open_serial_port():
     try:
         ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=READ_TIMEOUT)
-        time.sleep(2)  # Wait for USB CDC to initialize
+        time.sleep(2)
         print(f"Connected to {SERIAL_PORT}")
         return ser
     except serial.SerialException as e:
@@ -27,15 +25,20 @@ def open_serial_port():
         exit(1)
 
 def decode_sample(data):
-    """Decode 4-byte sample: 1 byte channel ID, 3 bytes ADC value."""
     if len(data) != 4:
         return None, None
-    channel_id = data[0] >> 6  # Top 2 bits indicate channel
-    # Extract 24-bit signed value (2's complement)
+    channel_id = data[0] >> 4 & 0x0F  # Channel ID in bits 7:4
+    if channel_id not in (0, 1):
+        return None, None
     raw_value = int.from_bytes(data[1:4], byteorder='big', signed=True)
-    # Convert to voltage: (raw_value / 2^23) * VREF / GAIN
     voltage = (raw_value / (2**23)) * VREF / GAIN
     return channel_id, voltage
+
+def read_debug_string(ser, length):
+    data = ser.read(length)
+    if len(data) == length:
+        return data.decode('ascii', errors='ignore')
+    return None
 
 def main():
     ser = open_serial_port()
@@ -43,35 +46,46 @@ def main():
     sample_count = 0
     last_print = start_time
 
-
-    #Ideally would just safe the data using pandas then convert to .csv file, but whatever grok
-    # Open CSV file for writing
     with open(OUTPUT_FILE, 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['Timestamp', 'Channel', 'Voltage'])
 
         try:
             while True:
-                # Read 4 bytes at a time (one sample)
-                data = ser.read(4)
+                # Read first byte to check for debug string or sample
+                header = ser.read(1)
+                if len(header) == 0:
+                    continue
+
+                if header[0] == 0xFF:  # Debug string marker
+                    length_byte = ser.read(1)
+                    if len(length_byte) == 0:
+                        continue
+                    length = length_byte[0]
+                    debug_str = read_debug_string(ser, length)
+                    if debug_str:
+                        print(f"DEBUG: {debug_str}", end='')
+                    else:
+                        print(f"Partial debug string read: expected {length} bytes")
+                    continue
+
+                # Assume ADC sample: read 3 more bytes (total 4)
+                data = header + ser.read(3)
                 if len(data) == 4:
                     channel_id, voltage = decode_sample(data)
                     if channel_id is not None:
                         timestamp = time.time() - start_time
                         sample_count += 1
-                        # Write to CSV
-                        # csv_writer.writerow([timestamp, channel_id, f"{voltage:.6f}"])
-                        # Periodically print status
+                        csv_writer.writerow([timestamp, channel_id, f"{voltage:.6f}"])
                         if time.time() - last_print >= 1:
                             rate = sample_count / (time.time() - start_time)
                             print(f"Received {sample_count} samples, rate: {rate:.2f} sps")
                             last_print = time.time()
-                elif len(data) > 0:
+                    else:
+                        print(f"Invalid sample: {data.hex()}")
+                else:
                     print(f"Partial read: {len(data)} bytes, skipping")
-                    # Re-align by reading one byte at a time until next sample
-                    ser.read(1)
-                
-                # Flush CSV periodically to avoid memory issues
+
                 if sample_count % 1000 == 0:
                     csvfile.flush()
 

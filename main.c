@@ -16,7 +16,7 @@
 #define PIN_DRDY 3  // Data Ready pin (active low)
 
 // SPI baud rate (MCP3564 supports up to 20 MHz)
-#define SPI_BAUD 20000000
+#define SPI_BAUD 10000000
 
 // MCP3564 constants
 #define DEVICE_ADDR 0b01
@@ -52,6 +52,7 @@ void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
     spi_write_blocking(SPI_INST, &cmd, 1);
     spi_write_blocking(SPI_INST, buf + (3 - num_bytes), num_bytes);
     gpio_put(PIN_CS, 1);
+    sleep_us(10);
 }
 
 // Function to read MCP3564 registers (handles 1-3 byte registers)
@@ -199,9 +200,10 @@ int main() {
     // CONFIG0: Internal 3.6864 MHz clock, ADC conversion mode (~76.8 ksps/channel, OSR=32)
     write_reg(REG_CONFIG0, 0x63, 1);           // Internal clock, ADC conversion mode
     write_reg(REG_CONFIG1, 0x00, 1);           // OSR=32, PRE=1 (AMCLK=MCLK)
-    write_reg(REG_CONFIG2, 0x88, 1);           // Gain=1x, boost=x1
+    //Config2 was set to 0x88, but that messed with the reserved bits
+    write_reg(REG_CONFIG2, 0x8B, 1);           // Gain=1x, boost=x1
     write_reg(REG_CONFIG3, 0xF0, 1);           // Continuous conv, 32-bit w/ CH ID
-    write_reg(REG_SCAN, 0x000003, 3);          // Scan CH0 and CH1 (single-ended)
+    write_reg(REG_SCAN, 0x000001, 3);          // Scan CH0 and CH1 (single-ended)
 
     // Verify ADC configuration
     verify_config();

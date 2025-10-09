@@ -99,4 +99,10 @@ CMakeFiles/John-ADC-Git.dir/main.c.o: \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
- /home/acid/Clones/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h
+ /home/acid/Clones/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pwm/include/hardware/pwm.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
+ /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h

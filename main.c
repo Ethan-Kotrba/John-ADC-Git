@@ -6,6 +6,8 @@
 #include "hardware/gpio.h"
 #include "hardware/sync.h"
 #include "pico/multicore.h"
+#include "hardware/pwm.h"
+#include "hardware/clocks.h"
 
 // Pin definitions (adjust as needed for your setup)
 #define SPI_INST spi0
@@ -31,6 +33,10 @@
 #define REG_SCAN     0x7
 #define SAMPLE_SIZE 32
 
+#define CLOCK_PIN 0 // GPIO pin for the clock signal (GP0 = PWM slice 0, channel A)
+#define CLOCK_FREQ_HZ 10000000 // Target clock frequency (1 MHz)
+// #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
+
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
 #define BUF_SIZE (4096 * 4)
 uint8_t data_buf[BUF_SIZE];
@@ -53,6 +59,35 @@ void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
     spi_write_blocking(SPI_INST, buf + (3 - num_bytes), num_bytes);
     gpio_put(PIN_CS, 1);
     sleep_us(10);
+}
+
+void Setup_PWM_Clock(void) {
+    // Set up PWM
+    gpio_set_function(CLOCK_PIN, GPIO_FUNC_PWM);
+    uint slice_num = pwm_gpio_to_slice_num(CLOCK_PIN); // Get PWM slice for GP0
+
+    // Calculate PWM divider and wrap value for desired frequency
+    // System clock is typically 125 MHz
+    // PWM frequency = sys_clk / (divider * wrap)
+    // For 50% duty cycle, set level to wrap/2
+    // For 1 MHz: wrap = 125, divider = 1 (125 MHz / (1 * 125) = 1 MHz)
+    uint32_t sys_hz = clock_get_hz(clk_sys); // Typically 125 MHz
+    uint16_t wrap = sys_hz / CLOCK_FREQ_HZ; // E.g., 125 MHz / 1 MHz = 125
+    float div = 1.0f; // Start with divider = 1
+    if (wrap > 65535) {
+        // If wrap exceeds 16-bit limit, increase divider
+        div = (float)sys_hz / (CLOCK_FREQ_HZ * 65535);
+        wrap = 65535;
+    }
+
+    // Configure PWM
+    pwm_config config = pwm_get_default_config();
+    pwm_config_set_clkdiv(&config, div);
+    pwm_config_set_wrap(&config, wrap);
+    pwm_init(slice_num, &config, true); // Start PWM
+
+    // Set 50% duty cycle (square wave)
+    pwm_set_gpio_level(CLOCK_PIN, wrap / 2);
 }
 
 // Function to read MCP3564 registers (handles 1-3 byte registers)
@@ -85,6 +120,7 @@ void verify_config() {
 
 // DRDY interrupt handler
 void drdy_handler(uint gpio, uint32_t events) {
+    gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, false);
     static uint8_t tx_buf[5] = {CMD_STATIC_READ(0x0), 0xFF, 0xFF, 0xFF, 0xFF};
     static uint8_t rx_buf[5];
 
@@ -127,6 +163,7 @@ void drdy_handler(uint gpio, uint32_t events) {
         dropped_samples++;
     }
     spin_unlock(buf_lock, irq_state);
+    gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, true);
 }
 
 // Core 1: Dedicated to reading from ADC using DMA and interrupts
@@ -159,6 +196,9 @@ void core1_main() {
 int main() {
     // Initialize stdio (USB CDC for output to laptop)
     stdio_init_all();
+
+    //Setup PWM
+    Setup_PWM_Clock();
 
     // Initialize SPI
     if (spi_init(SPI_INST, SPI_BAUD) == 0) {
@@ -193,17 +233,26 @@ int main() {
     // Claim spin lock for buffer synchronization
     buf_lock = spin_lock_init(spin_lock_claim_unused(true));
 
+
+    //AMCLK = MCLK / Prescaler
+    //DMCLK = AMCLK / 4
+    //DRCLK = DMCLK / OSR
+    //Conversation start low pulse = 1/DMCLK
+    // DMCLK == Sampling Rate, DRCLK == Data output rate
+    // DR_int hightime min == 16* 1/DMCLK
+    // DR_int lowtime max == OSR-16
+
     // Configure MCP3564 for 2-channel SCAN (single-ended CH0 and CH1 vs AGND),
     // continuous conversion, OSR=32 for max data rate (~76.8 ksps per channel),
     // gain=1x, data format=32-bit with channel ID
     write_reg(REG_LOCK, 0xA5, 1);              // Unlock registers
     // CONFIG0: Internal 3.6864 MHz clock, ADC conversion mode (~76.8 ksps/channel, OSR=32)
-    write_reg(REG_CONFIG0, 0x63, 1);           // Internal clock, ADC conversion mode
+    write_reg(REG_CONFIG0, 0x03, 1);           // Internal clock, ADC conversion mode
     write_reg(REG_CONFIG1, 0x00, 1);           // OSR=32, PRE=1 (AMCLK=MCLK)
     //Config2 was set to 0x88, but that messed with the reserved bits
-    write_reg(REG_CONFIG2, 0x8B, 1);           // Gain=1x, boost=x1
+    write_reg(REG_CONFIG2, 0xC0, 1);           // Gain=1x, boost=x1
     write_reg(REG_CONFIG3, 0xF0, 1);           // Continuous conv, 32-bit w/ CH ID
-    write_reg(REG_SCAN, 0x000001, 3);          // Scan CH0 and CH1 (single-ended)
+    write_reg(REG_SCAN, 0x000003, 3);          // Scan CH0 and CH1 (single-ended)
 
     // Verify ADC configuration
     verify_config();
@@ -212,7 +261,7 @@ int main() {
     multicore_launch_core1(core1_main);
 
     // Core 0: Send buffered data to USB
-    __wfi();
+    // __wfi();
     while (true) {
         uint32_t avail = 0;
         {
@@ -223,8 +272,7 @@ int main() {
 
         if (avail >= 256) {  // Send in 256-byte chunks for USB efficiency
             uint8_t send_buf[256];
-            uint32_t to_send = (avail > 256) ? 256 : avail;
-            to_send -= to_send % 4;  // Align to sample size
+            uint32_t to_send = 256;
 
             uint32_t irq_state = spin_lock_blocking(buf_lock);
             if (rd_idx + to_send > BUF_SIZE) {

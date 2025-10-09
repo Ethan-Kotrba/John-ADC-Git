@@ -39,7 +39,7 @@
 // #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
 
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
-#define BUF_SIZE (16384 * 8)
+#define BUF_SIZE (16384 * 4)
 uint8_t data_buf[BUF_SIZE];
 volatile uint32_t wr_idx = 0;
 volatile uint32_t rd_idx = 0;
@@ -155,16 +155,16 @@ void drdy_handler(uint gpio, uint32_t events) {
     }
 
     // Validate channel ID and copy to shared buffer
-    uint32_t next_wr = (wr_idx + 8) % BUF_SIZE;
+    uint32_t next_wr = (wr_idx + 4) % BUF_SIZE;
     uint32_t irq_state = spin_lock_blocking(buf_lock);
     if (next_wr != rd_idx) {
         uint8_t ch_id = (rx_buf[1] >> 4) & 0x0F;  // Channel ID in bits 7:4
         if (ch_id == 0 || ch_id == 1) {  // Validate CH0 or CH1
-            memcpy(&data_buf[wr_idx], &rx_buf[1], 4);
-            data_buf[wr_idx + 4] = (timestamp >> 24) & 0xFF;
-            data_buf[wr_idx + 5] = (timestamp >> 16) & 0xFF;
-            data_buf[wr_idx + 6] = (timestamp >> 8) & 0xFF;
-            data_buf[wr_idx + 7] = timestamp & 0xFF;
+            // memcpy(&data_buf[wr_idx], &rx_buf[1], 4);
+            data_buf[wr_idx] = (timestamp >> 24) & 0xFF;
+            data_buf[wr_idx + 1] = (timestamp >> 16) & 0xFF;
+            data_buf[wr_idx + 2] = (timestamp >> 8) & 0xFF;
+            data_buf[wr_idx + 3] = timestamp & 0xFF;
             wr_idx = next_wr;
         } else {
             // printf("Invalid channel ID: %u\n", ch_id);
@@ -180,23 +180,29 @@ void drdy_handler(uint gpio, uint32_t events) {
 
 // Core 1: Dedicated to reading from ADC using DMA and interrupts
 void core1_main() {
-    // Configure DMA channels once
-    dma_channel_config tx_config = dma_channel_get_default_config(tx_dma);
-    channel_config_set_transfer_data_size(&tx_config, DMA_SIZE_8);
-    channel_config_set_dreq(&tx_config, spi_get_dreq(SPI_INST, true));
-    channel_config_set_read_increment(&tx_config, true);
-    channel_config_set_write_increment(&tx_config, false);
-    dma_channel_configure(tx_dma, &tx_config, &spi_get_hw(SPI_INST)->dr, NULL, 5, false);
 
-    dma_channel_config rx_config = dma_channel_get_default_config(rx_dma);
-    channel_config_set_transfer_data_size(&rx_config, DMA_SIZE_8);
-    channel_config_set_dreq(&rx_config, spi_get_dreq(SPI_INST, false));
-    channel_config_set_read_increment(&rx_config, false);
-    channel_config_set_write_increment(&rx_config, true);
-    dma_channel_configure(rx_dma, &rx_config, NULL, &spi_get_hw(SPI_INST)->dr, 5, false);
+    while(true) {
+        sleep_us(100);
+        uint32_t timestamp = time_us_32();
+        // Validate channel ID and copy to shared buffer
+        uint32_t next_wr = (wr_idx + 4) % BUF_SIZE;
+        uint32_t irq_state = spin_lock_blocking(buf_lock);
+        if (next_wr != rd_idx) {
 
-    // Enable DRDY interrupt (falling edge)
-    gpio_set_irq_enabled_with_callback(PIN_DRDY, GPIO_IRQ_EDGE_FALL, true, &drdy_handler);
+                // memcpy(&data_buf[wr_idx], &rx_buf[1], 4);
+            data_buf[wr_idx] = (timestamp >> 24) & 0xFF;
+            data_buf[wr_idx + 1] = (timestamp >> 16) & 0xFF;
+            data_buf[wr_idx + 2] = (timestamp >> 8) & 0xFF;            
+            data_buf[wr_idx + 3] = timestamp & 0xFF;
+            wr_idx = next_wr; 
+        } else {
+            dropped_samples++;
+            return;
+        }
+        spin_unlock(buf_lock, irq_state);
+    }
+
+    
 
     // Keep core alive, interrupt handles DRDY
     __wfi();
@@ -206,65 +212,16 @@ int main() {
     // Initialize stdio (USB CDC for output to laptop)
     stdio_init_all();
 
-    //Setup PWM
-    Setup_PWM_Clock();
 
-    // Initialize SPI
-    if (spi_init(SPI_INST, SPI_BAUD) == 0) {
-        // printf("SPI initialization failed\n");
-        while (true);
-    }
-    // SPI Mode 0,0 (CPOL=0, CPHA=0) as per MCP3564 datasheet Section 6.2
-    spi_set_format(SPI_INST, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-    gpio_set_function(PIN_MISO, GPIO_FUNC_SPI);
-    gpio_set_function(PIN_SCK, GPIO_FUNC_SPI);
-    gpio_set_function(PIN_MOSI, GPIO_FUNC_SPI);
-
-    // Initialize CS and DRDY
-    gpio_init(PIN_CS);
-    gpio_set_dir(PIN_CS, GPIO_OUT);
-    gpio_put(PIN_CS, 1);
-    gpio_init(PIN_DRDY);
-    gpio_set_dir(PIN_DRDY, GPIO_IN);
-    gpio_pull_up(PIN_DRDY);  // Uncomment if needed based on hardware
 
     // Allow ADC to stabilize after power-on (MCP3564 datasheet Section 6.3)
     sleep_ms(100);
 
-    // Claim DMA channels
-    tx_dma = dma_claim_unused_channel(true);
-    rx_dma = dma_claim_unused_channel(true);
-    if (tx_dma < 0 || rx_dma < 0) {
-        // printf("Failed to allocate DMA channels\n");
-        while (true);
-    }
+
 
     // Claim spin lock for buffer synchronization
     buf_lock = spin_lock_init(spin_lock_claim_unused(true));
 
-
-    //AMCLK = MCLK / Prescaler
-    //DMCLK = AMCLK / 4
-    //DRCLK = DMCLK / OSR
-    //Conversation start low pulse = 1/DMCLK
-    // DMCLK == Sampling Rate, DRCLK == Data output rate
-    // DR_int hightime min == 16* 1/DMCLK
-    // DR_int lowtime max == OSR-16
-
-    // Configure MCP3564 for 2-channel SCAN (single-ended CH0 and CH1 vs AGND),
-    // continuous conversion, OSR=32 for max data rate (~76.8 ksps per channel),
-    // gain=1x, data format=32-bit with channel ID
-    write_reg(REG_LOCK, 0xA5, 1);              // Unlock registers
-    // CONFIG0: Internal 3.6864 MHz clock, ADC conversion mode (~76.8 ksps/channel, OSR=32)
-    write_reg(REG_CONFIG0, 0x03, 1);           // Internal clock, ADC conversion mode
-    write_reg(REG_CONFIG1, 0x00, 1);           // OSR=32, PRE=1 (AMCLK=MCLK)
-    //Config2 was set to 0x88, but that messed with the reserved bits
-    write_reg(REG_CONFIG2, 0xC0, 1);           // Gain=1x, boost=x1
-    write_reg(REG_CONFIG3, 0xF0, 1);           // Continuous conv, 32-bit w/ CH ID
-    write_reg(REG_SCAN, 0x000003, 3);          // Scan CH0 and CH1 (single-ended)
-
-    // Verify ADC configuration
-    verify_config();
 
     // Launch core 1 for ADC reading
     multicore_launch_core1(core1_main);

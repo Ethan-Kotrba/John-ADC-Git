@@ -1564,8 +1564,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS"
-      binary: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS"
+      source: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1"
+      binary: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_C_FLAGS_DEBUG: "-Og -g"
@@ -1576,13 +1576,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS'
+        Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1d380/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_1d380.dir/build.make CMakeFiles/cmTC_1d380.dir/build
-        make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS'
-        Building C object CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o
-        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ce1c1/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_ce1c1.dir/build.make CMakeFiles/cmTC_ce1c1.dir/build
+        make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1'
+        Building C object CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o
+        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
@@ -1590,8 +1590,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o -version -o /tmp/cchfFuMA.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccQmwKiC.s
         GNU C17 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
         	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
         
@@ -1612,14 +1612,14 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: ada28fdd13bdd399f195284d34df0081
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o /tmp/cchfFuMA.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o /tmp/ccQmwKiC.s
         GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
         COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-        Linking C executable cmTC_1d380.elf
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d380.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+        Linking C executable cmTC_ce1c1.elf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce1c1.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
         COLLECT_LTO_WRAPPER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper
@@ -1630,12 +1630,12 @@ events:
         gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
         COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_1d380.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccW7cXwL.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_1d380.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_ce1c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsx8BdY.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_ce1c1.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o
         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_1d380.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o -o cmTC_1d380.elf
-        make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_ce1c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o -o cmTC_ce1c1.elf
+        make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1'
         
       exitCode: 0
   -
@@ -1668,13 +1668,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS']
+        ignore line: [Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1d380/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_1d380.dir/build.make CMakeFiles/cmTC_1d380.dir/build]
-        ignore line: [make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS']
-        ignore line: [Building C object CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ce1c1/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_ce1c1.dir/build.make CMakeFiles/cmTC_ce1c1.dir/build]
+        ignore line: [make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1']
+        ignore line: [Building C object CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
@@ -1682,8 +1682,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o -version -o /tmp/cchfFuMA.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccQmwKiC.s]
         ignore line: [GNU C17 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
         ignore line: []
@@ -1704,14 +1704,14 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: ada28fdd13bdd399f195284d34df0081]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o /tmp/cchfFuMA.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o /tmp/ccQmwKiC.s]
         ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
         ignore line: [COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [Linking C executable cmTC_1d380.elf]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d380.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [Linking C executable cmTC_ce1c1.elf]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce1c1.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper]
@@ -1722,17 +1722,17 @@ events:
         ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
         ignore line: [COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_1d380.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        link line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccW7cXwL.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_1d380.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_ce1c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        link line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsx8BdY.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_ce1c1.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o]
           arg [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccW7cXwL.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccsx8BdY.res] ==> ignore
           arg [--sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_1d380.elf] ==> ignore
+          arg [cmTC_ce1c1.elf] ==> ignore
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp]
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -1741,12 +1741,12 @@ events:
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib]
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o] ==> ignore
         ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 0000000000008000]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_1d380.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_1d380.dir/CMakeCCompilerABI.c.o -o cmTC_1d380.elf]
-        ignore line: [make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-8SXJVS']
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_ce1c1.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_ce1c1.dir/CMakeCCompilerABI.c.o -o cmTC_ce1c1.elf]
+        ignore line: [make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-rklzw1']
         ignore line: []
         ignore line: []
         collapse library dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp] ==> [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp]
@@ -1771,8 +1771,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX"
-      binary: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX"
+      source: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy"
+      binary: "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
@@ -1784,13 +1784,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX'
+        Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_571ec/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_571ec.dir/build.make CMakeFiles/cmTC_571ec.dir/build
-        make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX'
-        Building CXX object CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o
-        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_169e0/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_169e0.dir/build.make CMakeFiles/cmTC_169e0.dir/build
+        make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy'
+        Building CXX object CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o
+        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
         Target: arm-none-eabi
@@ -1798,8 +1798,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccGfQvbo.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccs22kUS.s
         GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
         	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
         
@@ -1826,14 +1826,14 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 62a2c0a0f0d30bb0bbe5c686601adbb0
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGfQvbo.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccs22kUS.s
         GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
         COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-        Linking CXX executable cmTC_571ec.elf
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_571ec.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+        Linking CXX executable cmTC_169e0.elf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_169e0.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
         COLLECT_LTO_WRAPPER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper
@@ -1844,12 +1844,12 @@ events:
         gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
         COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_571ec.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgwsX7z.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_571ec.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_169e0.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cckrray9.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_169e0.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o
         /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_571ec.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
-        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_571ec.elf
-        make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_169e0.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m'
+        /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_169e0.elf
+        make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy'
         
       exitCode: 0
   -
@@ -1888,13 +1888,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX']
+        ignore line: [Change Dir: '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_571ec/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_571ec.dir/build.make CMakeFiles/cmTC_571ec.dir/build]
-        ignore line: [make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX']
-        ignore line: [Building CXX object CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_169e0/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_169e0.dir/build.make CMakeFiles/cmTC_169e0.dir/build]
+        ignore line: [make[1]: Entering directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy']
+        ignore line: [Building CXX object CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++]
         ignore line: [Target: arm-none-eabi]
@@ -1902,8 +1902,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccGfQvbo.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -auxbase-strip CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccs22kUS.s]
         ignore line: [GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
         ignore line: []
@@ -1930,14 +1930,14 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 62a2c0a0f0d30bb0bbe5c686601adbb0]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGfQvbo.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccs22kUS.s]
         ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
         ignore line: [COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [Linking CXX executable cmTC_571ec.elf]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_571ec.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [Linking CXX executable cmTC_169e0.elf]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_169e0.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper]
@@ -1948,17 +1948,17 @@ events:
         ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
         ignore line: [COMPILER_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_571ec.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        link line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgwsX7z.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_571ec.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_169e0.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        link line: [ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2 -plugin /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so -plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cckrray9.res --sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -X -o cmTC_169e0.elf -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1 -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib -L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o]
           arg [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccgwsX7z.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cckrray9.res] ==> ignore
           arg [--sysroot=/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_571ec.elf] ==> ignore
+          arg [cmTC_169e0.elf] ==> ignore
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp]
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -1967,12 +1967,12 @@ events:
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib]
           arg [-L/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib] ==> dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
         ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 0000000000008000]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_571ec.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
-        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_571ec.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_571ec.elf]
-        ignore line: [make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-VRWwOX']
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_169e0.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m']
+        ignore line: [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_169e0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_169e0.elf]
+        ignore line: [make[1]: Leaving directory '/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/CMakeScratch/TryCompile-QRUCGy']
         ignore line: []
         ignore line: []
         collapse library dir [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp] ==> [/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp]

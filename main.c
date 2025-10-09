@@ -147,7 +147,7 @@ void drdy_handler(uint gpio, uint32_t events) {
     // Check for DMA errors (read/write error flags in ctrl_trig register)
     uint32_t rx_status = dma_hw->ch[rx_dma].ctrl_trig;
     if (rx_status & (DMA_CH0_CTRL_TRIG_READ_ERROR_BITS | DMA_CH0_CTRL_TRIG_WRITE_ERROR_BITS)) {
-        printf("DMA RX error: status 0x%08X\n", rx_status);
+        // printf("DMA RX error: status 0x%08X\n", rx_status);
         // Clear error flags
         dma_hw->ch[rx_dma].ctrl_trig = rx_status & ~(DMA_CH0_CTRL_TRIG_READ_ERROR_BITS | DMA_CH0_CTRL_TRIG_WRITE_ERROR_BITS);
         gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, true);
@@ -155,7 +155,7 @@ void drdy_handler(uint gpio, uint32_t events) {
     }
 
     // Validate channel ID and copy to shared buffer
-    uint32_t next_wr = (wr_idx + 4 + TIMESTAMP_SIZE) % BUF_SIZE;
+    uint32_t next_wr = (wr_idx + 8) % BUF_SIZE;
     uint32_t irq_state = spin_lock_blocking(buf_lock);
     if (next_wr != rd_idx) {
         uint8_t ch_id = (rx_buf[1] >> 4) & 0x0F;  // Channel ID in bits 7:4
@@ -167,10 +167,12 @@ void drdy_handler(uint gpio, uint32_t events) {
             data_buf[wr_idx + 7] = timestamp & 0xFF;
             wr_idx = next_wr;
         } else {
-            printf("Invalid channel ID: %u\n", ch_id);
+            // printf("Invalid channel ID: %u\n", ch_id);
         }
     } else {
         dropped_samples++;
+        gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, false);
+        return;
     }
     spin_unlock(buf_lock, irq_state);
     gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, true);
@@ -209,7 +211,7 @@ int main() {
 
     // Initialize SPI
     if (spi_init(SPI_INST, SPI_BAUD) == 0) {
-        printf("SPI initialization failed\n");
+        // printf("SPI initialization failed\n");
         while (true);
     }
     // SPI Mode 0,0 (CPOL=0, CPHA=0) as per MCP3564 datasheet Section 6.2
@@ -233,7 +235,7 @@ int main() {
     tx_dma = dma_claim_unused_channel(true);
     rx_dma = dma_claim_unused_channel(true);
     if (tx_dma < 0 || rx_dma < 0) {
-        printf("Failed to allocate DMA channels\n");
+        // printf("Failed to allocate DMA channels\n");
         while (true);
     }
 
@@ -296,13 +298,13 @@ int main() {
             // Send over USB (binary data)
             size_t written = fwrite(send_buf, 1, to_send, stdout);
             if (written != to_send) {
-                printf("USB write error: %u of %u bytes written\n", written, to_send);
+                // printf("USB write error: %u of %u bytes written\n", written, to_send);
             }
             fflush(stdout);  // Flush to ensure timely delivery
         } else {
             // Report dropped samples periodically
             if (dropped_samples > 0) {
-                printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
+                // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
                 dropped_samples = 0;
             }
             sleep_ms(1);  // Yield if no data

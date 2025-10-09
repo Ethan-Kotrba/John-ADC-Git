@@ -40,7 +40,7 @@ def decode_sample(data):
     # Convert to voltage: (raw_value / 2^23) * VREF / GAIN
     voltage = (raw_value / (2**23)) * VREF / GAIN
     #extract Timestamp
-    timestamp = int.from_bytes(data[4:SAMPLE_SIZE+1], byteorder='big')
+    timestamp = int.from_bytes(data[4:SAMPLE_SIZE], byteorder='big')
     return channel_id, voltage, timestamp
 
 def realign_serial(ser):
@@ -73,42 +73,27 @@ def main():
 
         try:
             while True:
+                # Read 4 bytes at a time (one sample)
                 data = ser.read(SAMPLE_SIZE)
                 if len(data) == SAMPLE_SIZE:
+                    # print(data)
+                    # print(f"{hex(data[0])} {hex(data[1])} {hex(data[2])} {hex(data[3])} {hex(data[4])} {hex(data[5])} {hex(data[6])} {hex(data[7])}")
                     channel_id, voltage, timestamp = decode_sample(data)
-                    if channel_id is None or channel_id not in [0, 1]:
-                        print(f"Invalid channel ID: {channel_id}, attempting realignment")
-                        data = realign_serial(ser)
-                        if data is None:
-                            continue
-                        channel_id, voltage, timestamp = decode_sample(data)
-                else:
-                    print(f"Partial read: {len(data)} bytes, attempting realignment")
-                    data = realign_serial(ser)
-                    if data is None:
-                        continue
-                    channel_id, voltage, timestamp = decode_sample(data)
-                # Read 4 bytes at a time (one sample)
-                # data = ser.read(SAMPLE_SIZE)
-                # if len(data) == SAMPLE_SIZE:
-                #     # print(data)
-                #     print(f"{hex(data[0])} {hex(data[1])} {hex(data[2])} {hex(data[3])} {hex(data[4])} {hex(data[5])} {hex(data[6])} {hex(data[7])}")
-                #     channel_id, voltage, timestamp = decode_sample(data)
-                #     if channel_id is not None:
-                #         sample_count += 1
-                #         # Write to CSV
-                #         # csv_writer.writerow([timestamp, channel_id, f"{voltage:.6f}"])
+                    if channel_id is not None:
+                        sample_count += 1
+                        # Write to CSV
+                        # csv_writer.writerow([timestamp, channel_id, f"{voltage:.6f}"])
+                        csv_writer.writerow([data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]])
                         
-                #         # Periodically print status
-                #         if time.time() - last_print >= 1:
-                #             rate = sample_count / (time.time() - start_time)
-                #             print(f"Received {sample_count}, rate: {rate:.2f} sps")
-                #             last_print = time.time()
-                # elif len(data) != 0:
-                #     print(f"Partial read: {len(data)} bytes, skipping")
-                #     # Re-align by reading one byte at a time until next sample
-                #     ser.read(1)
-
+                        # Periodically print status
+                        if time.time() - last_print >= 1:
+                            rate = sample_count / (time.time() - start_time)
+                            print(f"Received {sample_count}, rate: {rate:.2f} sps")
+                            last_print = time.time()
+                elif len(data) != 0:
+                    print(f"Partial read: {len(data)} bytes, skipping")
+                    # Re-align by reading one byte at a time until next sample
+                    ser.read(1)
                 
                 # Flush CSV periodically to avoid memory issues
                 if sample_count % 1000 == 0:

@@ -62,8 +62,4 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_s
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
- /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
- /home/acid/Clones/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
- /home/acid/Clones/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
- /home/acid/Clones/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
- /home/acid/Clones/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
+ /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h

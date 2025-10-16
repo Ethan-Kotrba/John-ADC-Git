@@ -8,19 +8,18 @@
 #include "pico/multicore.h"
 #include "hardware/pwm.h"
 #include "hardware/clocks.h"
+#include "tusb.h" // Include TinyUSB header
 
-// Pin definitions (adjust as needed for your setup)
+// Pin definitions (unchanged)
 #define SPI_INST spi0
 #define PIN_MISO 4
 #define PIN_CS   5
 #define PIN_SCK  6
 #define PIN_MOSI 7
-#define PIN_DRDY 3  // Data Ready pin (active low)
+#define PIN_DRDY 3
 
-// SPI baud rate (MCP3564 supports up to 20 MHz)
 #define SPI_BAUD 10000000
 
-// MCP3564 constants
 #define DEVICE_ADDR 0b01
 #define CMD_STATIC_READ(reg) ((DEVICE_ADDR << 6) | ((reg) << 2) | 0b01)
 #define CMD_INC_WRITE(reg) ((DEVICE_ADDR << 6) | ((reg) << 2) | 0b10)
@@ -34,11 +33,9 @@
 #define SAMPLE_SIZE 6
 #define TIMESTAMP_SIZE 2
 
-#define CLOCK_PIN 0 // GPIO pin for the clock signal (GP0 = PWM slice 0, channel A)
-#define CLOCK_FREQ_HZ 18000000 // Target clock frequency (1 MHz)
-// #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
+#define CLOCK_PIN 0
+#define CLOCK_FREQ_HZ 18000000
 
-// Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
 #define BUF_SIZE (16384 * (SAMPLE_SIZE))
 uint8_t data_buf[BUF_SIZE];
 volatile uint32_t wr_idx = 0;
@@ -46,7 +43,6 @@ volatile uint32_t rd_idx = 0;
 volatile uint32_t dropped_samples = 0;
 spin_lock_t *buf_lock;
 
-// DMA channels
 int tx_dma;
 int rx_dma;
 
@@ -255,19 +251,25 @@ void Configure_ADC(void) {
 }
 
 int main() {
-    // Initialize stdio (USB CDC for output to laptop)
-    stdio_init_all();
+    // Initialize stdio (only for UART if needed, USB handled by TinyUSB)
+    stdio_init_all(); // Keep for initialization, but USB output will be manual
 
-    //Setup PWM
+    // Initialize TinyUSB
+    tusb_init();
+
+    // Setup PWM
     Setup_PWM_Clock();
 
     // Claim DMA channels
     tx_dma = dma_claim_unused_channel(true);
     rx_dma = dma_claim_unused_channel(true);
     if (tx_dma < 0 || rx_dma < 0) {
-        // printf("Failed to allocate DMA channels\n");
-        while (true);
+        while (true); // Error handling
     }
+
+    // Setup SPI and ADC
+    Setup_SPI();
+    Configure_ADC();
 
     // Claim spin lock for buffer synchronization
     buf_lock = spin_lock_init(spin_lock_claim_unused(true));
@@ -275,47 +277,83 @@ int main() {
     // Launch core 1 for ADC reading
     multicore_launch_core1(core1_main);
 
-    // Core 0: Send buffered data to USB
-    // __wfi();
-    while (true) {
-        uint32_t avail = 0;
-        {
-            uint32_t irq_state = spin_lock_blocking(buf_lock);
-            avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
-            spin_unlock(buf_lock, irq_state);
-        }
-        int16_t limit = (64*(4+TIMESTAMP_SIZE));
-        if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
-            uint8_t send_buf[limit];
-            uint32_t to_send = limit;
-
-            uint32_t irq_state = spin_lock_blocking(buf_lock);
-            if (rd_idx + to_send > BUF_SIZE) {
-                uint32_t part1 = BUF_SIZE - rd_idx;
-                memcpy(send_buf, &data_buf[rd_idx], part1);
-                memcpy(send_buf + part1, data_buf, to_send - part1);
-                rd_idx = to_send - part1;
-            } else {
-                memcpy(send_buf, &data_buf[rd_idx], to_send);
-                rd_idx = (rd_idx + to_send) % BUF_SIZE;
+    while (1) {
+        tud_task(); // TinyUSB task handling
+        if (tud_cdc_n_connected(0)) { // Check CDC instance 0
+            uint8_t buffer[384];
+            uint32_t samples = 0;
+            if (multicore_fifo_pop_blocking_inline(0, &samples)) {
+                for (int i = 0; i < 64; i++) {
+                    buffer[i * 6 + 0] = (samples >> 24) & 0xFF;
+                    buffer[i * 6 + 1] = (samples >> 16) & 0xFF;
+                    buffer[i * 6 + 2] = (samples >> 8) & 0xFF;
+                    buffer[i * 6 + 3] = samples & 0xFF;
+                    buffer[i * 6 + 4] = '\r';
+                    buffer[i * 6 + 5] = '\n';
+                }
+                tud_cdc_n_write(0, buffer, 384);
+                tud_cdc_n_write_flush(0);
             }
-            spin_unlock(buf_lock, irq_state);
-
-            // Send over USB (binary data)
-            size_t written = fwrite(send_buf, 1, to_send, stdout);
-            if (written != to_send) {
-                // printf("USB write error: %u of %u bytes written\n", written, to_send);
-            }
-            fflush(stdout);  // Flush to ensure timely delivery
-        } else {
-            // Report dropped samples periodically
-            if (dropped_samples > 0) {
-                // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
-                dropped_samples = 0;
-            }
-            sleep_us(500);  // Yield if no data
         }
     }
+
+    // // Core 0: Send buffered data to USB using TinyUSB
+    // while (true) {
+    //     // Process TinyUSB tasks
+    //     tud_task(); // Handle USB events
+
+    //     // Check if USB is connected
+    //     if (!tud_cdc_connected()) {
+    //         sleep_ms(100); // Wait until USB is connected
+    //         continue;
+    //     }
+
+    //     uint32_t avail = 0;
+    //     {
+    //         uint32_t irq_state = spin_lock_blocking(buf_lock);
+    //         avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
+    //         spin_unlock(buf_lock, irq_state);
+    //     }
+    //     int16_t limit = (64 * (4 + TIMESTAMP_SIZE)); // 384 bytes
+    //     if (avail >= limit) {
+    //         uint8_t send_buf[limit];
+    //         uint32_t to_send = limit;
+
+    //         uint32_t irq_state = spin_lock_blocking(buf_lock);
+    //         if (rd_idx + to_send > BUF_SIZE) {
+    //             uint32_t part1 = BUF_SIZE - rd_idx;
+    //             memcpy(send_buf, &data_buf[rd_idx], part1);
+    //             memcpy(send_buf + part1, data_buf, to_send - part1);
+    //             rd_idx = to_send - part1;
+    //         } else {
+    //             memcpy(send_buf, &data_buf[rd_idx], to_send);
+    //             rd_idx = (rd_idx + to_send) % BUF_SIZE;
+    //         }
+    //         spin_unlock(buf_lock, irq_state);
+
+    //         // Send over USB using TinyUSB CDC
+    //         uint32_t written = tud_cdc_write(send_buf, to_send);
+    //         if (written > 0) {
+    //             tud_cdc_write_flush(); // Ensure data is sent
+    //         }
+    //         if (written != to_send) {
+    //             // Handle partial write (buffer full or USB not ready)
+    //             sleep_us(500); // Brief delay to avoid busy looping
+    //         }
+    //     } else {
+    //         // Report dropped samples periodically
+    //         if (dropped_samples > 0) {
+    //             char msg[64];
+    //             snprintf(msg, sizeof(msg), "Dropped %u samples due to buffer overflow\n", dropped_samples);
+    //             if (tud_cdc_connected()) {
+    //                 tud_cdc_write_str(msg);
+    //                 tud_cdc_write_flush();
+    //             }
+    //             dropped_samples = 0;
+    //         }
+    //         sleep_us(500); // Yield if no data
+    //     }
+    // }
 
     return 0;
 }

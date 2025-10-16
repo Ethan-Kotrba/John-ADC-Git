@@ -207,6 +207,30 @@ pico_status_led_ws2812_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build
 .PHONY : pico_status_led_ws2812_pio_h/fast
 
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i
+
+# target to preprocess a source file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s
+
+# target to generate assembly for a file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
 
@@ -374,6 +398,30 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/acid
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i
+
+# target to preprocess a source file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s
+
+# target to generate assembly for a file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o
@@ -902,6 +950,30 @@ home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.s: home/acid/Cl
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.o
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.i
+
+# target to preprocess a source file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.s
+
+# target to generate assembly for a file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o
@@ -1927,77 +1999,29 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o
 
 # target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
-
-# target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s
-
-# target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
 
 # target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s
-
-# target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
-
-# target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
 
 # target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o
@@ -2086,6 +2110,9 @@ help:
 	@echo "... John-ADC-Git"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2107,6 +2134,9 @@ help:
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
@@ -2173,6 +2203,9 @@ help:
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.s"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.i"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_adc/adc.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s"
@@ -2301,15 +2334,9 @@ help:
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"

@@ -84,7 +84,6 @@ CMakeFiles/John-ADC-Git.dir/main.c.o: \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
- /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
@@ -105,4 +104,25 @@ CMakeFiles/John-ADC-Git.dir/main.c.o: \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
- /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
+ /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/inttypes.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/acid/Clones/pico/John-ADC-Git/tusb_config.h \
+ /home/acid/Clones/pico/pico-sdk/src/common/pico_util/include/pico/util/queue.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
+ /home/acid/Clones/pico/John-ADC-Git/tusb_config.h

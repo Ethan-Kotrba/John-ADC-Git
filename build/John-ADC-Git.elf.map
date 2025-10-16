@@ -2574,25 +2574,25 @@ LOAD /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x0000000010000288       0x48 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .text.drdy_handler
-                0x00000000100002d0      0x168 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x00000000100002d0      0x15c CMakeFiles/John-ADC-Git.dir/main.c.o
                 0x00000000100002d0                drdy_handler
  .text.core1_main
-                0x0000000010000438      0x12c CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x0000000010000438                core1_main
+                0x000000001000042c      0x12c CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x000000001000042c                core1_main
  .text.write_reg
-                0x0000000010000564       0x5c CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x0000000010000564                write_reg
+                0x0000000010000558       0x5c CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x0000000010000558                write_reg
  .text.Setup_PWM_Clock
-                0x00000000100005c0       0x80 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x00000000100005c0                Setup_PWM_Clock
+                0x00000000100005b4       0x80 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x00000000100005b4                Setup_PWM_Clock
  .text.read_reg
-                0x0000000010000640       0x70 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x0000000010000640                read_reg
+                0x0000000010000634       0x70 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x0000000010000634                read_reg
  .text.verify_config
-                0x00000000100006b0       0x74 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x00000000100006b0                verify_config
- .text.main     0x0000000010000724      0x24c CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x0000000010000724                main
+                0x00000000100006a4       0x74 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x00000000100006a4                verify_config
+ .text.main     0x0000000010000718      0x258 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x0000000010000718                main
  .text.gpio_default_irq_handler
                 0x0000000010000970       0xa8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
  .text._gpio_set_irq_enabled
@@ -4135,7 +4135,7 @@ LOAD /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi
  *(.tcommon)
                 0x00000000200015c8                __tls_end = .
 
-.bss            0x00000000200015c8    0x20f64 load address 0x000000001000bb7c
+.bss            0x00000000200015c8    0x18f64 load address 0x000000001000bb7c
                 0x00000000200015c8                . = ALIGN (0x4)
                 0x00000000200015c8                __tbss_end = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -4206,87 +4206,87 @@ LOAD /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi
  *fill*         0x0000000020001e49        0x3 
  .bss.configured_freq
                 0x0000000020001e4c       0x28 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .bss.data_buf  0x0000000020001e74    0x20000 CMakeFiles/John-ADC-Git.dir/main.c.o
+ .bss.data_buf  0x0000000020001e74    0x18000 CMakeFiles/John-ADC-Git.dir/main.c.o
                 0x0000000020001e74                data_buf
  .bss.desc_str.0
-                0x0000000020021e74       0x28 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .bss.drivers   0x0000000020021e9c        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x0000000020019e74       0x28 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .bss.drivers   0x0000000020019e9c        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
  .bss.dropped_samples
-                0x0000000020021ea0        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x0000000020021ea0                dropped_samples
+                0x0000000020019ea0        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x0000000020019ea0                dropped_samples
  .bss.e15_last_sof
-                0x0000000020021ea4        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
-                0x0000000020021ea4                e15_last_sof
- .bss.errno     0x0000000020021ea8        0x4 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
-                0x0000000020021ea8                errno
- .bss.filter    0x0000000020021eac        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x0000000020019ea4        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x0000000020019ea4                e15_last_sof
+ .bss.errno     0x0000000020019ea8        0x4 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
+                0x0000000020019ea8                errno
+ .bss.filter    0x0000000020019eac        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
  .bss.heap_end.0
-                0x0000000020021eb0        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x0000000020019eb0        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .bss.hw_endpoints
-                0x0000000020021eb4      0x400 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x0000000020019eb4      0x400 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .bss.load_value
-                0x00000000200222b4        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+                0x000000002001a2b4        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
  .bss.next_buffer_ptr
-                0x00000000200222b8        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x000000002001a2b8        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .bss.one_shot_timer_crit_sec
-                0x00000000200222bc        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .bss.pools     0x00000000200222c4       0x10 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+                0x000000002001a2bc        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .bss.pools     0x000000002001a2c4       0x10 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
  .bss.raw_irq_mask
-                0x00000000200222d4        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .bss.rd_idx    0x00000000200222dc        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x00000000200222dc                rd_idx
+                0x000000002001a2d4        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .bss.rd_idx    0x000000002001a2dc        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x000000002001a2dc                rd_idx
  .bss.retrieved_id
-                0x00000000200222e0        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .bss.rx_buf.4  0x00000000200222e8        0x5 CMakeFiles/John-ADC-Git.dir/main.c.o
- *fill*         0x00000000200222ed        0x3 
- .bss.rx_dma    0x00000000200222f0        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x00000000200222f0                rx_dma
- .bss.sd_table  0x00000000200222f4      0x100 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
-                0x00000000200222f4                sd_table
+                0x000000002001a2e0        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .bss.rx_buf.4  0x000000002001a2e8        0x5 CMakeFiles/John-ADC-Git.dir/main.c.o
+ *fill*         0x000000002001a2ed        0x3 
+ .bss.rx_dma    0x000000002001a2f0        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x000000002001a2f0                rx_dma
+ .bss.sd_table  0x000000002001a2f4      0x100 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x000000002001a2f4                sd_table
  .bss.sf_clz_func
-                0x00000000200223f4        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
-                0x00000000200223f4                sf_clz_func
- .bss.sf_table  0x00000000200223f8      0x100 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
-                0x00000000200223f8                sf_table
+                0x000000002001a3f4        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x000000002001a3f4                sf_clz_func
+ .bss.sf_table  0x000000002001a3f8      0x100 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+                0x000000002001a3f8                sf_table
  .bss.sleep_notifier
-                0x00000000200224f8        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+                0x000000002001a4f8        0x4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
  .bss.stdio_usb_mutex
-                0x00000000200224fc        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .bss.tx_dma    0x0000000020022504        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x0000000020022504                tx_dma
+                0x000000002001a4fc        0x8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .bss.tx_dma    0x000000002001a504        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x000000002001a504                tx_dma
  .bss.usbd_serial_str
-                0x0000000020022508       0x11 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- *fill*         0x0000000020022519        0x3 
- .bss.wr_idx    0x000000002002251c        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
-                0x000000002002251c                wr_idx
- .bss._claimed  0x0000000020022520        0x2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+                0x000000002001a508       0x11 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ *fill*         0x000000002001a519        0x3 
+ .bss.wr_idx    0x000000002001a51c        0x4 CMakeFiles/John-ADC-Git.dir/main.c.o
+                0x000000002001a51c                wr_idx
+ .bss._claimed  0x000000002001a520        0x2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
  .bss._app_driver_count
-                0x0000000020022522        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x000000002001a522        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
  .bss._sof_enable
-                0x0000000020022523        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x000000002001a523        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .bss._usbd_queued_setup
-                0x0000000020022524        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x000000002001a524        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
  .bss.boot2_copyout_valid
-                0x0000000020022525        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+                0x000000002001a525        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
  .bss.irq_handler_chain_free_slot_head
-                0x0000000020022526        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .bss.itf_num   0x0000000020022527        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+                0x000000002001a526        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .bss.itf_num   0x000000002001a527        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
  .bss.low_priority_irq_num
-                0x0000000020022528        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x000000002001a528        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .bss.one_shot_timer_pending
-                0x0000000020022529        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+                0x000000002001a529        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
  .bss.user_irq_claimed
-                0x000000002002252a        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x000000002001a52a        0x1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
  *(COMMON)
-                0x000000002002252c                . = ALIGN (0x4)
- *fill*         0x000000002002252b        0x1 
-                0x000000002002252c                __bss_end__ = .
+                0x000000002001a52c                . = ALIGN (0x4)
+ *fill*         0x000000002001a52b        0x1 
+                0x000000002001a52c                __bss_end__ = .
 
-.heap           0x000000002002252c      0x800 load address 0x000000001000bb7c
-                0x000000002002252c                __end__ = .
-                0x000000002002252c                end = __end__
+.heap           0x000000002001a52c      0x800 load address 0x000000001000bb7c
+                0x000000002001a52c                __end__ = .
+                0x000000002001a52c                end = __end__
  *(.heap*)
- .heap          0x000000002002252c      0x800 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .heap          0x000000002001a52c      0x800 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
                 0x0000000020040000                __HeapLimit = (ORIGIN (RAM) + LENGTH (RAM))
 
 .scratch_x      0x0000000020040000        0x0 load address 0x000000001000bb7c
@@ -4656,162 +4656,162 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
  .comment       0x0000000000000049       0x4a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 
-.debug_info     0x0000000000000000    0x306bd
- .debug_info    0x0000000000000000     0x4482 CMakeFiles/John-ADC-Git.dir/main.c.o
- .debug_info    0x0000000000004482     0x1dac CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_info    0x000000000000622e      0x1c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_info    0x00000000000063f2      0x19c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_info    0x000000000000658e      0x6d4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_info    0x0000000000006c62      0x409 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_info    0x000000000000706b      0x2de CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_info    0x0000000000007349     0x208a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_info    0x00000000000093d3      0x1b0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_info    0x0000000000009583     0x1fa5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_info    0x000000000000b528      0x2dd CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_info    0x000000000000b805     0x35c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_info    0x000000000000edc9     0x19c0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_info    0x0000000000010789     0x15ba CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_info    0x0000000000011d43      0x663 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_info    0x00000000000123a6      0x5d0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_info    0x0000000000012976      0x2c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_info    0x0000000000012c3a      0x3f9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_info    0x0000000000013033      0x1e1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_info    0x0000000000013214      0x1b2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_info    0x00000000000133c6      0x839 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_info    0x0000000000013bff      0x6fd CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_info    0x00000000000142fc       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_info    0x000000000001431f       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_info    0x0000000000014342       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_info    0x0000000000014365      0x2ea CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_info    0x000000000001464f       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_info    0x0000000000014672       0x24 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_info    0x0000000000014696       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_info    0x00000000000146b9      0x2f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_info    0x00000000000149a9       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_info    0x00000000000149cc      0x588 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_info    0x0000000000014f54       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_info    0x0000000000014f77      0x2fb CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_info    0x0000000000015272     0x1a5e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_info    0x0000000000016cd0       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_info    0x0000000000016cf3      0xc21 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_info    0x0000000000017914     0x141d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_info    0x0000000000018d31      0xa62 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_info    0x0000000000019793     0x1d3c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_info    0x000000000001b4cf      0x6d5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_info    0x000000000001bba4      0x25e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_info    0x000000000001be02     0x13ec CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_info    0x000000000001d1ee     0x277d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_info    0x000000000001f96b     0x1248 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_info    0x0000000000020bb3     0x476f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_info    0x0000000000025322      0xb8e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_info    0x0000000000025eb0     0x1e45 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_info    0x0000000000027cf5     0x136b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_info    0x0000000000029060     0x1ac4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_info    0x000000000002ab24     0x22b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_info    0x000000000002cdd7     0x1392 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
- .debug_info    0x000000000002e169      0xaa1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
- .debug_info    0x000000000002ec0a     0x1ab3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.debug_info     0x0000000000000000    0x30737
+ .debug_info    0x0000000000000000     0x44fc CMakeFiles/John-ADC-Git.dir/main.c.o
+ .debug_info    0x00000000000044fc     0x1dac CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_info    0x00000000000062a8      0x1c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_info    0x000000000000646c      0x19c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_info    0x0000000000006608      0x6d4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_info    0x0000000000006cdc      0x409 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_info    0x00000000000070e5      0x2de CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_info    0x00000000000073c3     0x208a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_info    0x000000000000944d      0x1b0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_info    0x00000000000095fd     0x1fa5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_info    0x000000000000b5a2      0x2dd CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_info    0x000000000000b87f     0x35c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_info    0x000000000000ee43     0x19c0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_info    0x0000000000010803     0x15ba CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_info    0x0000000000011dbd      0x663 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_info    0x0000000000012420      0x5d0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_info    0x00000000000129f0      0x2c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_info    0x0000000000012cb4      0x3f9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_info    0x00000000000130ad      0x1e1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_info    0x000000000001328e      0x1b2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_info    0x0000000000013440      0x839 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_info    0x0000000000013c79      0x6fd CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_info    0x0000000000014376       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_info    0x0000000000014399       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_info    0x00000000000143bc       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_info    0x00000000000143df      0x2ea CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_info    0x00000000000146c9       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_info    0x00000000000146ec       0x24 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_info    0x0000000000014710       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_info    0x0000000000014733      0x2f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_info    0x0000000000014a23       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_info    0x0000000000014a46      0x588 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_info    0x0000000000014fce       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_info    0x0000000000014ff1      0x2fb CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_info    0x00000000000152ec     0x1a5e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_info    0x0000000000016d4a       0x23 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_info    0x0000000000016d6d      0xc21 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_info    0x000000000001798e     0x141d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_info    0x0000000000018dab      0xa62 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_info    0x000000000001980d     0x1d3c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_info    0x000000000001b549      0x6d5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_info    0x000000000001bc1e      0x25e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_info    0x000000000001be7c     0x13ec CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_info    0x000000000001d268     0x277d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_info    0x000000000001f9e5     0x1248 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_info    0x0000000000020c2d     0x476f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_info    0x000000000002539c      0xb8e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_info    0x0000000000025f2a     0x1e45 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_info    0x0000000000027d6f     0x136b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_info    0x00000000000290da     0x1ac4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_info    0x000000000002ab9e     0x22b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_info    0x000000000002ce51     0x1392 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+ .debug_info    0x000000000002e1e3      0xaa1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+ .debug_info    0x000000000002ec84     0x1ab3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 
-.debug_abbrev   0x0000000000000000     0x888b
- .debug_abbrev  0x0000000000000000      0x5e3 CMakeFiles/John-ADC-Git.dir/main.c.o
- .debug_abbrev  0x00000000000005e3      0x3f1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_abbrev  0x00000000000009d4       0xcf CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_abbrev  0x0000000000000aa3       0xf4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_abbrev  0x0000000000000b97      0x2c3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_abbrev  0x0000000000000e5a      0x1df CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_abbrev  0x0000000000001039      0x1f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_abbrev  0x0000000000001229      0x572 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_abbrev  0x000000000000179b      0x116 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_abbrev  0x00000000000018b1      0x3b6 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_abbrev  0x0000000000001c67      0x1aa CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_abbrev  0x0000000000001e11      0x5b8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_abbrev  0x00000000000023c9      0x473 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_abbrev  0x000000000000283c      0x429 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_abbrev  0x0000000000002c65      0x21a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_abbrev  0x0000000000002e7f      0x203 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_abbrev  0x0000000000003082      0x14e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_abbrev  0x00000000000031d0      0x18c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_abbrev  0x000000000000335c      0x11a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_abbrev  0x0000000000003476      0x11c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_abbrev  0x0000000000003592      0x252 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_abbrev  0x00000000000037e4      0x266 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_abbrev  0x0000000000003a4a       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_abbrev  0x0000000000003a5c       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_abbrev  0x0000000000003a6e       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_abbrev  0x0000000000003a80      0x166 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_abbrev  0x0000000000003be6       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_abbrev  0x0000000000003bf8       0x14 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_abbrev  0x0000000000003c0c       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_abbrev  0x0000000000003c1e      0x179 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_abbrev  0x0000000000003d97       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_abbrev  0x0000000000003da9      0x1b4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_abbrev  0x0000000000003f5d       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_abbrev  0x0000000000003f6f       0xad CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_abbrev  0x000000000000401c      0x3a2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_abbrev  0x00000000000043be       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_abbrev  0x00000000000043d0      0x33c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_abbrev  0x000000000000470c      0x486 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_abbrev  0x0000000000004b92      0x2fb CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_abbrev  0x0000000000004e8d      0x501 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_abbrev  0x000000000000538e      0x163 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_abbrev  0x00000000000054f1      0x163 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_abbrev  0x0000000000005654      0x38f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_abbrev  0x00000000000059e3      0x51d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_abbrev  0x0000000000005f00      0x424 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_abbrev  0x0000000000006324      0x625 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_abbrev  0x0000000000006949      0x341 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_abbrev  0x0000000000006c8a      0x4b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_abbrev  0x000000000000713d      0x41a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_abbrev  0x0000000000007557      0x451 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_abbrev  0x00000000000079a8      0x3cd CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_abbrev  0x0000000000007d75      0x322 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
- .debug_abbrev  0x0000000000008097      0x2b5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
- .debug_abbrev  0x000000000000834c      0x53f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.debug_abbrev   0x0000000000000000     0x8888
+ .debug_abbrev  0x0000000000000000      0x5e0 CMakeFiles/John-ADC-Git.dir/main.c.o
+ .debug_abbrev  0x00000000000005e0      0x3f1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_abbrev  0x00000000000009d1       0xcf CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_abbrev  0x0000000000000aa0       0xf4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_abbrev  0x0000000000000b94      0x2c3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_abbrev  0x0000000000000e57      0x1df CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_abbrev  0x0000000000001036      0x1f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_abbrev  0x0000000000001226      0x572 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_abbrev  0x0000000000001798      0x116 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_abbrev  0x00000000000018ae      0x3b6 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_abbrev  0x0000000000001c64      0x1aa CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_abbrev  0x0000000000001e0e      0x5b8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_abbrev  0x00000000000023c6      0x473 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_abbrev  0x0000000000002839      0x429 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_abbrev  0x0000000000002c62      0x21a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_abbrev  0x0000000000002e7c      0x203 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_abbrev  0x000000000000307f      0x14e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_abbrev  0x00000000000031cd      0x18c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_abbrev  0x0000000000003359      0x11a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_abbrev  0x0000000000003473      0x11c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_abbrev  0x000000000000358f      0x252 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_abbrev  0x00000000000037e1      0x266 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_abbrev  0x0000000000003a47       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_abbrev  0x0000000000003a59       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_abbrev  0x0000000000003a6b       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_abbrev  0x0000000000003a7d      0x166 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_abbrev  0x0000000000003be3       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_abbrev  0x0000000000003bf5       0x14 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_abbrev  0x0000000000003c09       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_abbrev  0x0000000000003c1b      0x179 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_abbrev  0x0000000000003d94       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_abbrev  0x0000000000003da6      0x1b4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_abbrev  0x0000000000003f5a       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_abbrev  0x0000000000003f6c       0xad CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_abbrev  0x0000000000004019      0x3a2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_abbrev  0x00000000000043bb       0x12 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_abbrev  0x00000000000043cd      0x33c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_abbrev  0x0000000000004709      0x486 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_abbrev  0x0000000000004b8f      0x2fb CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_abbrev  0x0000000000004e8a      0x501 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_abbrev  0x000000000000538b      0x163 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_abbrev  0x00000000000054ee      0x163 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_abbrev  0x0000000000005651      0x38f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_abbrev  0x00000000000059e0      0x51d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_abbrev  0x0000000000005efd      0x424 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_abbrev  0x0000000000006321      0x625 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_abbrev  0x0000000000006946      0x341 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_abbrev  0x0000000000006c87      0x4b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_abbrev  0x000000000000713a      0x41a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_abbrev  0x0000000000007554      0x451 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_abbrev  0x00000000000079a5      0x3cd CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_abbrev  0x0000000000007d72      0x322 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+ .debug_abbrev  0x0000000000008094      0x2b5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+ .debug_abbrev  0x0000000000008349      0x53f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 
-.debug_loc      0x0000000000000000    0x1c701
- .debug_loc     0x0000000000000000     0x186a CMakeFiles/John-ADC-Git.dir/main.c.o
- .debug_loc     0x000000000000186a     0x1588 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_loc     0x0000000000002df2       0xe9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_loc     0x0000000000002edb      0x45f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_loc     0x000000000000333a      0x13f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_loc     0x0000000000003479       0xf4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_loc     0x000000000000356d     0x1488 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_loc     0x00000000000049f5       0x60 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_loc     0x0000000000004a55     0x1418 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_loc     0x0000000000005e6d       0xf5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_loc     0x0000000000005f62     0x26a1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_loc     0x0000000000008603      0xf6c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_loc     0x000000000000956f      0xe94 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_loc     0x000000000000a403      0x351 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_loc     0x000000000000a754      0x350 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_loc     0x000000000000aaa4       0x57 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_loc     0x000000000000aafb      0x2de CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_loc     0x000000000000add9       0x71 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_loc     0x000000000000ae4a       0x78 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_loc     0x000000000000aec2      0x153 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_loc     0x000000000000b015       0xbf CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_loc     0x000000000000b0d4       0x8c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_loc     0x000000000000b160       0x73 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_loc     0x000000000000b1d3      0x313 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_loc     0x000000000000b4e6     0x2095 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_loc     0x000000000000d57b      0x5f4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_loc     0x000000000000db6f      0xc2b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_loc     0x000000000000e79a      0x47f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_loc     0x000000000000ec19      0xd92 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_loc     0x000000000000f9ab      0x109 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_loc     0x000000000000fab4       0xff CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_loc     0x000000000000fbb3      0xb77 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_loc     0x000000000001072a     0x1364 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_loc     0x0000000000011a8e      0x91b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_loc     0x00000000000123a9     0x2a29 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_loc     0x0000000000014dd2      0x68b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_loc     0x000000000001545d     0x1438 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_loc     0x0000000000016895      0xb4b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_loc     0x00000000000173e0     0x1274 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_loc     0x0000000000018654     0x22c9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_loc     0x000000000001a91d      0xc27 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
- .debug_loc     0x000000000001b544      0x3de CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
- .debug_loc     0x000000000001b922      0xddf CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.debug_loc      0x0000000000000000    0x1c760
+ .debug_loc     0x0000000000000000     0x18c9 CMakeFiles/John-ADC-Git.dir/main.c.o
+ .debug_loc     0x00000000000018c9     0x1588 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_loc     0x0000000000002e51       0xe9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_loc     0x0000000000002f3a      0x45f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_loc     0x0000000000003399      0x13f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_loc     0x00000000000034d8       0xf4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_loc     0x00000000000035cc     0x1488 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_loc     0x0000000000004a54       0x60 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_loc     0x0000000000004ab4     0x1418 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_loc     0x0000000000005ecc       0xf5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_loc     0x0000000000005fc1     0x26a1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_loc     0x0000000000008662      0xf6c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_loc     0x00000000000095ce      0xe94 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_loc     0x000000000000a462      0x351 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_loc     0x000000000000a7b3      0x350 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_loc     0x000000000000ab03       0x57 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_loc     0x000000000000ab5a      0x2de CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_loc     0x000000000000ae38       0x71 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_loc     0x000000000000aea9       0x78 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_loc     0x000000000000af21      0x153 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_loc     0x000000000000b074       0xbf CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_loc     0x000000000000b133       0x8c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_loc     0x000000000000b1bf       0x73 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_loc     0x000000000000b232      0x313 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_loc     0x000000000000b545     0x2095 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_loc     0x000000000000d5da      0x5f4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_loc     0x000000000000dbce      0xc2b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_loc     0x000000000000e7f9      0x47f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_loc     0x000000000000ec78      0xd92 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_loc     0x000000000000fa0a      0x109 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_loc     0x000000000000fb13       0xff CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_loc     0x000000000000fc12      0xb77 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_loc     0x0000000000010789     0x1364 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_loc     0x0000000000011aed      0x91b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_loc     0x0000000000012408     0x2a29 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_loc     0x0000000000014e31      0x68b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_loc     0x00000000000154bc     0x1438 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_loc     0x00000000000168f4      0xb4b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_loc     0x000000000001743f     0x1274 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_loc     0x00000000000186b3     0x22c9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_loc     0x000000000001a97c      0xc27 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+ .debug_loc     0x000000000001b5a3      0x3de CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+ .debug_loc     0x000000000001b981      0xddf CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 
 .debug_aranges  0x0000000000000000     0x1970
  .debug_aranges
@@ -4969,86 +4969,86 @@ LOAD linker stubs
  .debug_ranges  0x0000000000005200       0x80 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
  .debug_ranges  0x0000000000005280      0x390 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 
-.debug_line     0x0000000000000000    0x1e7ad
- .debug_line    0x0000000000000000     0x1763 CMakeFiles/John-ADC-Git.dir/main.c.o
- .debug_line    0x0000000000001763      0xf3e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x00000000000026a1      0x2da CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_line    0x000000000000297b      0x21d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x0000000000002b98      0x650 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_line    0x00000000000031e8      0x433 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x000000000000361b      0x3e8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x0000000000003a03     0x12c1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x0000000000004cc4      0x2bc CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_line    0x0000000000004f80     0x12b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_line    0x0000000000006233      0x39f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_line    0x00000000000065d2     0x1e0a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_line    0x00000000000083dc      0xfc4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x00000000000093a0      0xc90 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x000000000000a030      0x5a4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x000000000000a5d4      0x527 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_line    0x000000000000aafb      0x300 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x000000000000adfb      0x2b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x000000000000b0ae      0x34b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x000000000000b3f9      0x294 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x000000000000b68d      0x5ac CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x000000000000bc39      0x551 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x000000000000c18a      0x108 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_line    0x000000000000c292      0x2a9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_line    0x000000000000c53b      0x452 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_line    0x000000000000c98d      0x3f4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_line    0x000000000000cd81      0x670 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_line    0x000000000000d3f1       0x61 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_line    0x000000000000d452      0x3d2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_line    0x000000000000d824      0x3d5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_line    0x000000000000dbf9      0x198 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_line    0x000000000000dd91      0x4ae CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_line    0x000000000000e23f       0x94 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_line    0x000000000000e2d3      0x1f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x000000000000e4c3     0x12a9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x000000000000f76c       0xa2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x000000000000f80e      0x867 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x0000000000010075      0xdea CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_line    0x0000000000010e5f      0x521 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_line    0x0000000000011380     0x107b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_line    0x00000000000123fb      0x357 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_line    0x0000000000012752      0x3d8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_line    0x0000000000012b2a      0xac2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_line    0x00000000000135ec     0x1259 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_line    0x0000000000014845      0xc28 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_line    0x000000000001546d     0x278d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_line    0x0000000000017bfa      0x695 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_line    0x000000000001828f     0x118d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_line    0x000000000001941c      0xb59 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_line    0x0000000000019f75     0x1006 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_line    0x000000000001af7b     0x121e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_line    0x000000000001c199      0xea1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
- .debug_line    0x000000000001d03a      0x694 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
- .debug_line    0x000000000001d6ce     0x10df CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.debug_line     0x0000000000000000    0x1e821
+ .debug_line    0x0000000000000000     0x17d7 CMakeFiles/John-ADC-Git.dir/main.c.o
+ .debug_line    0x00000000000017d7      0xf3e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x0000000000002715      0x2da CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_line    0x00000000000029ef      0x21d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x0000000000002c0c      0x650 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_line    0x000000000000325c      0x433 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x000000000000368f      0x3e8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x0000000000003a77     0x12c1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x0000000000004d38      0x2bc CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x0000000000004ff4     0x12b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_line    0x00000000000062a7      0x39f CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_line    0x0000000000006646     0x1e0a CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_line    0x0000000000008450      0xfc4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0000000000009414      0xc90 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x000000000000a0a4      0x5a4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x000000000000a648      0x527 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_line    0x000000000000ab6f      0x300 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x000000000000ae6f      0x2b3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x000000000000b122      0x34b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x000000000000b46d      0x294 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x000000000000b701      0x5ac CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x000000000000bcad      0x551 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x000000000000c1fe      0x108 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_line    0x000000000000c306      0x2a9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_line    0x000000000000c5af      0x452 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_line    0x000000000000ca01      0x3f4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_line    0x000000000000cdf5      0x670 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_line    0x000000000000d465       0x61 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_line    0x000000000000d4c6      0x3d2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_line    0x000000000000d898      0x3d5 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_line    0x000000000000dc6d      0x198 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_line    0x000000000000de05      0x4ae CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_line    0x000000000000e2b3       0x94 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_line    0x000000000000e347      0x1f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x000000000000e537     0x12a9 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x000000000000f7e0       0xa2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x000000000000f882      0x867 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x00000000000100e9      0xdea CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x0000000000010ed3      0x521 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_line    0x00000000000113f4     0x107b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_line    0x000000000001246f      0x357 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_line    0x00000000000127c6      0x3d8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_line    0x0000000000012b9e      0xac2 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_line    0x0000000000013660     0x1259 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_line    0x00000000000148b9      0xc28 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_line    0x00000000000154e1     0x278d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_line    0x0000000000017c6e      0x695 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_line    0x0000000000018303     0x118d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_line    0x0000000000019490      0xb59 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_line    0x0000000000019fe9     0x1006 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_line    0x000000000001afef     0x121e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_line    0x000000000001c20d      0xea1 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+ .debug_line    0x000000000001d0ae      0x694 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+ .debug_line    0x000000000001d742     0x10df CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 
 .debug_str      0x0000000000000000     0x99db
- .debug_str     0x0000000000000000     0x18fe CMakeFiles/John-ADC-Git.dir/main.c.o
-                                       0x1b3f (size before relaxing)
- .debug_str     0x00000000000018fe      0x588 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_str     0x0000000000000000     0x1919 CMakeFiles/John-ADC-Git.dir/main.c.o
+                                       0x1b6d (size before relaxing)
+ .debug_str     0x0000000000001919      0x588 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
                                         0xccb (size before relaxing)
- .debug_str     0x0000000000001e86       0x72 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_str     0x0000000000001ea1       0x72 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
                                         0x219 (size before relaxing)
- .debug_str     0x0000000000001ef8       0x81 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_str     0x0000000000001f13       0x81 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
                                         0x1f5 (size before relaxing)
- .debug_str     0x0000000000001f79       0xf3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_str     0x0000000000001f94       0xf3 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
                                         0x39e (size before relaxing)
- .debug_str     0x000000000000206c       0xba CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_str     0x0000000000002087       0xba CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
                                         0x339 (size before relaxing)
- .debug_str     0x0000000000002126       0x58 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_str     0x0000000000002141       0x58 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
                                         0x25f (size before relaxing)
- .debug_str     0x000000000000217e      0x48e CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_str     0x0000000000002199      0x47d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
                                         0xa6a (size before relaxing)
- .debug_str     0x000000000000260c       0x61 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_str     0x0000000000002616       0x61 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
                                         0x21d (size before relaxing)
- .debug_str     0x000000000000266d      0x27b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_str     0x0000000000002677      0x27b CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
                                         0x806 (size before relaxing)
- .debug_str     0x00000000000028e8       0xd0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_str     0x00000000000028f2       0xd0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
                                         0x2dd (size before relaxing)
- .debug_str     0x00000000000029b8      0x97c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_str     0x00000000000029c2      0x972 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
                                        0x1203 (size before relaxing)
  .debug_str     0x0000000000003334      0x1ca CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
                                         0xa3b (size before relaxing)
@@ -5135,76 +5135,76 @@ LOAD linker stubs
  .debug_str     0x000000000000956e      0x46d CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
                                         0xd2c (size before relaxing)
 
-.debug_frame    0x0000000000000000     0x3e60
- .debug_frame   0x0000000000000000       0xf4 CMakeFiles/John-ADC-Git.dir/main.c.o
- .debug_frame   0x00000000000000f4      0x2f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_frame   0x00000000000003e4       0x28 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_frame   0x000000000000040c       0x44 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_frame   0x0000000000000450       0x9c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_frame   0x00000000000004ec       0x9c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_frame   0x0000000000000588       0x38 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_frame   0x00000000000005c0      0x258 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_frame   0x0000000000000818       0x20 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_frame   0x0000000000000838      0x1c8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_frame   0x0000000000000a00       0x50 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_frame   0x0000000000000a50      0x2dc CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_frame   0x0000000000000d2c      0x2a8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_frame   0x0000000000000fd4      0x204 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_frame   0x00000000000011d8       0x44 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_frame   0x000000000000121c       0xd8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_frame   0x00000000000012f4       0x40 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_frame   0x0000000000001334       0x9c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_frame   0x00000000000013d0       0x40 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_frame   0x0000000000001410       0x80 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_frame   0x0000000000001490       0x80 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_frame   0x0000000000001510       0x48 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_frame   0x0000000000001558       0x2c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_frame   0x0000000000001584       0x2c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_frame   0x00000000000015b0       0x84 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_frame   0x0000000000001634      0x1f8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_frame   0x000000000000182c      0x184 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_frame   0x00000000000019b0      0x274 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_frame   0x0000000000001c24       0xb8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
- .debug_frame   0x0000000000001cdc      0x12c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_frame   0x0000000000001e08       0x48 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_frame   0x0000000000001e50       0x58 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_frame   0x0000000000001ea8      0x150 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_frame   0x0000000000001ff8      0x270 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_frame   0x0000000000002268      0x130 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_frame   0x0000000000002398      0x4a0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_frame   0x0000000000002838       0xdc CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_frame   0x0000000000002914      0x23c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_frame   0x0000000000002b50      0x18c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_frame   0x0000000000002cdc      0x218 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_frame   0x0000000000002ef4      0x2c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_frame   0x00000000000031b8      0x134 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
- .debug_frame   0x00000000000032ec      0x14c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
- .debug_frame   0x0000000000003438      0x240 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
- .debug_frame   0x0000000000003678       0x6c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fflush.o)
- .debug_frame   0x00000000000036e4      0x170 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-findfp.o)
- .debug_frame   0x0000000000003854       0x54 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
- .debug_frame   0x00000000000038a8       0x5c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fwalk.o)
- .debug_frame   0x0000000000003904       0x54 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fwrite.o)
- .debug_frame   0x0000000000003958       0xb0 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
- .debug_frame   0x0000000000003a08       0x3c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
- .debug_frame   0x0000000000003a44       0x40 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
- .debug_frame   0x0000000000003a84       0x3c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reallocr.o)
- .debug_frame   0x0000000000003ac0       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000003aec       0x90 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-stdio.o)
- .debug_frame   0x0000000000003b7c       0x28 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
- .debug_frame   0x0000000000003ba4       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-writer.o)
- .debug_frame   0x0000000000003bd0       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-closer.o)
- .debug_frame   0x0000000000003bfc       0x48 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fclose.o)
- .debug_frame   0x0000000000003c44       0x3c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fvwrite.o)
- .debug_frame   0x0000000000003c80       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lseekr.o)
- .debug_frame   0x0000000000003cac       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memchr-stub.o)
- .debug_frame   0x0000000000003cd8       0x30 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memmove.o)
- .debug_frame   0x0000000000003d08       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-readr.o)
- .debug_frame   0x0000000000003d34       0x50 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
- .debug_frame   0x0000000000003d84       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-wsetup.o)
- .debug_frame   0x0000000000003db0       0x58 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-makebuf.o)
- .debug_frame   0x0000000000003e08       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fstatr.o)
- .debug_frame   0x0000000000003e34       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-isattyr.o)
+.debug_frame    0x0000000000000000     0x3e64
+ .debug_frame   0x0000000000000000       0xf8 CMakeFiles/John-ADC-Git.dir/main.c.o
+ .debug_frame   0x00000000000000f8      0x2f0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_frame   0x00000000000003e8       0x28 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_frame   0x0000000000000410       0x44 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_frame   0x0000000000000454       0x9c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_frame   0x00000000000004f0       0x9c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_frame   0x000000000000058c       0x38 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_frame   0x00000000000005c4      0x258 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_frame   0x000000000000081c       0x20 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_frame   0x000000000000083c      0x1c8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_frame   0x0000000000000a04       0x50 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_frame   0x0000000000000a54      0x2dc CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_frame   0x0000000000000d30      0x2a8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_frame   0x0000000000000fd8      0x204 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_frame   0x00000000000011dc       0x44 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_frame   0x0000000000001220       0xd8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_frame   0x00000000000012f8       0x40 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_frame   0x0000000000001338       0x9c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_frame   0x00000000000013d4       0x40 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_frame   0x0000000000001414       0x80 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_frame   0x0000000000001494       0x80 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_frame   0x0000000000001514       0x48 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_frame   0x000000000000155c       0x2c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_frame   0x0000000000001588       0x2c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_frame   0x00000000000015b4       0x84 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_frame   0x0000000000001638      0x1f8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_frame   0x0000000000001830      0x184 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_frame   0x00000000000019b4      0x274 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_frame   0x0000000000001c28       0xb8 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+ .debug_frame   0x0000000000001ce0      0x12c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_frame   0x0000000000001e0c       0x48 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_frame   0x0000000000001e54       0x58 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_frame   0x0000000000001eac      0x150 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_frame   0x0000000000001ffc      0x270 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_frame   0x000000000000226c      0x130 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_frame   0x000000000000239c      0x4a0 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_frame   0x000000000000283c       0xdc CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_frame   0x0000000000002918      0x23c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_frame   0x0000000000002b54      0x18c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_frame   0x0000000000002ce0      0x218 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_frame   0x0000000000002ef8      0x2c4 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_frame   0x00000000000031bc      0x134 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+ .debug_frame   0x00000000000032f0      0x14c CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+ .debug_frame   0x000000000000343c      0x240 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+ .debug_frame   0x000000000000367c       0x6c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fflush.o)
+ .debug_frame   0x00000000000036e8      0x170 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000003858       0x54 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
+ .debug_frame   0x00000000000038ac       0x5c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fwalk.o)
+ .debug_frame   0x0000000000003908       0x54 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fwrite.o)
+ .debug_frame   0x000000000000395c       0xb0 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
+ .debug_frame   0x0000000000003a0c       0x3c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
+ .debug_frame   0x0000000000003a48       0x40 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000003a88       0x3c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reallocr.o)
+ .debug_frame   0x0000000000003ac4       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000003af0       0x90 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-stdio.o)
+ .debug_frame   0x0000000000003b80       0x28 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_frame   0x0000000000003ba8       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-writer.o)
+ .debug_frame   0x0000000000003bd4       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-closer.o)
+ .debug_frame   0x0000000000003c00       0x48 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fclose.o)
+ .debug_frame   0x0000000000003c48       0x3c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000000000003c84       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lseekr.o)
+ .debug_frame   0x0000000000003cb0       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memchr-stub.o)
+ .debug_frame   0x0000000000003cdc       0x30 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000003d0c       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-readr.o)
+ .debug_frame   0x0000000000003d38       0x50 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
+ .debug_frame   0x0000000000003d88       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-wsetup.o)
+ .debug_frame   0x0000000000003db4       0x58 /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-makebuf.o)
+ .debug_frame   0x0000000000003e0c       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fstatr.o)
+ .debug_frame   0x0000000000003e38       0x2c /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-isattyr.o)
 
 .debug_line_str
                 0x0000000000000000      0x27d

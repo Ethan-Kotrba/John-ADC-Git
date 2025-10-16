@@ -9,7 +9,7 @@ SERIAL_PORT = '/dev/ttyACM0'  # Change to '/dev/ttyACM0' or similar on Linux/mac
 BAUD_RATE = 5000000    # USB CDC doesn't strictly use baud, but set for compatibility
 OUTPUT_FILE = 'adc_data.csv'
 READ_TIMEOUT = 1      # Seconds
-SAMPLE_SIZE = 8
+SAMPLE_SIZE = 6
 
 # MCP3564 settings (match Pico code)
 VREF = 3.3           # Reference voltage (adjust if different in your setup)
@@ -65,11 +65,13 @@ def decode_sample(data):
     timestamp = int.from_bytes(data[4:SAMPLE_SIZE], byteorder='big')
     return channel_id, voltage, timestamp
 
+
+#Account for timestamp roll over
 def Is_Sample_Tricky(data, Tol):
     if PERVIOUS_TIMESTAMP is None:
         return False
     timestamp = int.from_bytes(data[4:SAMPLE_SIZE], byteorder='big')
-    if abs(timestamp - PERVIOUS_TIMESTAMP) < Tol:
+    if (timestamp - PERVIOUS_TIMESTAMP) & 0xFFFF < Tol:
         return False
     return True
     
@@ -78,10 +80,7 @@ def Is_Sample_Tricky(data, Tol):
 def Is_Sample_Valid(data):
     channel_id = (data[0] >> 4)
     sign = (data[0] & 0x0F)
-    print(channel_id)
-    print(sign)
     adc_data = int.from_bytes(data[1:4], byteorder='big', signed=False)
-    print(adc_data)
     if channel_id not in [0, 1]:
         return False
     if sign not in [0xF, 0x0]:
@@ -104,7 +103,7 @@ def realign_serial(ser):
         if (data[0] >> 4) not in [0, 1] or (data[0] & 0x0F) not in [0x0, 0xF]:
             continue
 
-        data_full = data + ser.read(7)
+        data_full = data + ser.read((SAMPLE_SIZE-1))
 
         if Is_Sample_Valid(data_full):
             return data_full

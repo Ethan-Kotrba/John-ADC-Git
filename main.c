@@ -16,7 +16,6 @@
 #define PIN_SCK  6
 #define PIN_MOSI 7
 #define PIN_DRDY 3  // Data Ready pin (active low)
-#define TIMESTAMP_SIZE 4
 
 // SPI baud rate (MCP3564 supports up to 20 MHz)
 #define SPI_BAUD 10000000
@@ -32,14 +31,15 @@
 #define REG_CONFIG2  0x3
 #define REG_CONFIG3  0x4
 #define REG_SCAN     0x7
-#define SAMPLE_SIZE 32
+#define SAMPLE_SIZE 6
+#define TIMESTAMP_SIZE 2
 
 #define CLOCK_PIN 0 // GPIO pin for the clock signal (GP0 = PWM slice 0, channel A)
 #define CLOCK_FREQ_HZ 18000000 // Target clock frequency (1 MHz)
 // #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
 
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
-#define BUF_SIZE (16384 * 8)
+#define BUF_SIZE (16384 * (SAMPLE_SIZE))
 uint8_t data_buf[BUF_SIZE];
 volatile uint32_t wr_idx = 0;
 volatile uint32_t rd_idx = 0;
@@ -126,7 +126,8 @@ void drdy_handler(uint gpio, uint32_t events) {
     static uint8_t rx_buf[5];
 
     // Capture 24-bit timestamp (truncate 64-bit microsecond time)
-    uint32_t timestamp = time_us_32(); //Timestamp in 32 bit
+    uint32_t time = time_us_32(); //Timestamp in 32 bit
+    uint16_t timestamp = time & 0xFFFF;
 
 
     // Start SPI transaction
@@ -155,16 +156,17 @@ void drdy_handler(uint gpio, uint32_t events) {
     }
 
     // Validate channel ID and copy to shared buffer
-    uint32_t next_wr = (wr_idx + 8) % BUF_SIZE;
+    uint32_t next_wr = (wr_idx + (4+TIMESTAMP_SIZE)) % BUF_SIZE;
     uint32_t irq_state = spin_lock_blocking(buf_lock);
     if (next_wr != rd_idx) {
         uint8_t ch_id = (rx_buf[1] >> 4) & 0x0F;  // Channel ID in bits 7:4
         if (ch_id == 0 || ch_id == 1) {  // Validate CH0 or CH1
             memcpy(&data_buf[wr_idx], &rx_buf[1], 4);
-            data_buf[wr_idx + 4] = (timestamp >> 24) & 0xFF;
-            data_buf[wr_idx + 5] = (timestamp >> 16) & 0xFF;
-            data_buf[wr_idx + 6] = (timestamp >> 8) & 0xFF;
-            data_buf[wr_idx + 7] = timestamp & 0xFF;
+            memcpy(&data_buf[wr_idx+4], &timestamp, TIMESTAMP_SIZE);
+            // data_buf[wr_idx + 4] = (timestamp >> 24) & 0xFF;
+            // data_buf[wr_idx + 5] = (timestamp >> 16) & 0xFF;
+            // data_buf[wr_idx + 4] = (timestamp >> 8) & 0xFF;
+            // data_buf[wr_idx + 5] = timestamp & 0xFF;
             wr_idx = next_wr;
         } else {
             // printf("Invalid channel ID: %u\n", ch_id);
@@ -202,13 +204,7 @@ void core1_main() {
     __wfi();
 }
 
-int main() {
-    // Initialize stdio (USB CDC for output to laptop)
-    stdio_init_all();
-
-    //Setup PWM
-    Setup_PWM_Clock();
-
+void Setup_SPI(void) {
     // Initialize SPI
     if (spi_init(SPI_INST, SPI_BAUD) == 0) {
         // printf("SPI initialization failed\n");
@@ -230,19 +226,10 @@ int main() {
 
     // Allow ADC to stabilize after power-on (MCP3564 datasheet Section 6.3)
     sleep_ms(100);
-
-    // Claim DMA channels
-    tx_dma = dma_claim_unused_channel(true);
-    rx_dma = dma_claim_unused_channel(true);
-    if (tx_dma < 0 || rx_dma < 0) {
-        // printf("Failed to allocate DMA channels\n");
-        while (true);
-    }
-
-    // Claim spin lock for buffer synchronization
-    buf_lock = spin_lock_init(spin_lock_claim_unused(true));
+}
 
 
+void Configure_ADC(void) {
     //AMCLK = MCLK / Prescaler
     //DMCLK = AMCLK / 4
     //DRCLK = DMCLK / OSR
@@ -265,6 +252,25 @@ int main() {
 
     // Verify ADC configuration
     verify_config();
+}
+
+int main() {
+    // Initialize stdio (USB CDC for output to laptop)
+    stdio_init_all();
+
+    //Setup PWM
+    Setup_PWM_Clock();
+
+    // Claim DMA channels
+    tx_dma = dma_claim_unused_channel(true);
+    rx_dma = dma_claim_unused_channel(true);
+    if (tx_dma < 0 || rx_dma < 0) {
+        // printf("Failed to allocate DMA channels\n");
+        while (true);
+    }
+
+    // Claim spin lock for buffer synchronization
+    buf_lock = spin_lock_init(spin_lock_claim_unused(true));
 
     // Launch core 1 for ADC reading
     multicore_launch_core1(core1_main);
@@ -278,10 +284,10 @@ int main() {
             avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
             spin_unlock(buf_lock, irq_state);
         }
-
-        if (avail >= 1064) {  // Send in 256-byte chunks for USB efficiency
-            uint8_t send_buf[1064];
-            uint32_t to_send = 1064;
+        int16_t limit = (64*(4+TIMESTAMP_SIZE));
+        if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
+            uint8_t send_buf[limit];
+            uint32_t to_send = limit;
 
             uint32_t irq_state = spin_lock_blocking(buf_lock);
             if (rd_idx + to_send > BUF_SIZE) {
@@ -307,7 +313,7 @@ int main() {
                 // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
                 dropped_samples = 0;
             }
-            sleep_ms(1);  // Yield if no data
+            sleep_us(500);  // Yield if no data
         }
     }
 

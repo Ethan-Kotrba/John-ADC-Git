@@ -255,10 +255,8 @@ void Configure_ADC(void) {
 }
 
 int main() {
-    // Initialize stdio (USB CDC for output to laptop)
     stdio_init_all();
-
-    //Setup PWM
+    sleep_ms(2000); // Wait for USB connect
     Setup_PWM_Clock();
 
     // Claim DMA channels
@@ -277,45 +275,78 @@ int main() {
 
     // Core 0: Send buffered data to USB
     // __wfi();
+    uint8_t buf[1024];
+    memset(buf, 0xAA, 1024);
     while (true) {
-        uint32_t avail = 0;
-        {
-            uint32_t irq_state = spin_lock_blocking(buf_lock);
-            avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
-            spin_unlock(buf_lock, irq_state);
-        }
-        int16_t limit = (64*(4+TIMESTAMP_SIZE));
-        if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
-            uint8_t send_buf[limit];
-            uint32_t to_send = limit;
-
-            uint32_t irq_state = spin_lock_blocking(buf_lock);
-            if (rd_idx + to_send > BUF_SIZE) {
-                uint32_t part1 = BUF_SIZE - rd_idx;
-                memcpy(send_buf, &data_buf[rd_idx], part1);
-                memcpy(send_buf + part1, data_buf, to_send - part1);
-                rd_idx = to_send - part1;
-            } else {
-                memcpy(send_buf, &data_buf[rd_idx], to_send);
-                rd_idx = (rd_idx + to_send) % BUF_SIZE;
-            }
-            spin_unlock(buf_lock, irq_state);
-
-            // Send over USB (binary data)
-            size_t written = fwrite(send_buf, 1, to_send, stdout);
-            if (written != to_send) {
-                // printf("USB write error: %u of %u bytes written\n", written, to_send);
-            }
-            fflush(stdout);  // Flush to ensure timely delivery
-        } else {
-            // Report dropped samples periodically
-            if (dropped_samples > 0) {
-                // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
-                dropped_samples = 0;
-            }
-            sleep_us(500);  // Yield if no data
-        }
+        fwrite(buf, 1, 1024, stdout);
+        // fflush every 4 chunks (~4 KB, matches USB buffer)
+        static int count = 0;
+        if (++count % 4 == 0) fflush(stdout);
     }
-
-    return 0;
 }
+
+// int main() {
+//     // Initialize stdio (USB CDC for output to laptop)
+//     stdio_init_all();
+
+//     //Setup PWM
+//     Setup_PWM_Clock();
+
+//     // Claim DMA channels
+//     tx_dma = dma_claim_unused_channel(true);
+//     rx_dma = dma_claim_unused_channel(true);
+//     if (tx_dma < 0 || rx_dma < 0) {
+//         // printf("Failed to allocate DMA channels\n");
+//         while (true);
+//     }
+
+//     // Claim spin lock for buffer synchronization
+//     buf_lock = spin_lock_init(spin_lock_claim_unused(true));
+
+//     // Launch core 1 for ADC reading
+//     multicore_launch_core1(core1_main);
+
+//     // Core 0: Send buffered data to USB
+//     // __wfi();
+//     while (true) {
+//         uint32_t avail = 0;
+//         {
+//             uint32_t irq_state = spin_lock_blocking(buf_lock);
+//             avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
+//             spin_unlock(buf_lock, irq_state);
+//         }
+//         int16_t limit = (64*(4+TIMESTAMP_SIZE));
+//         if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
+//             uint8_t send_buf[limit];
+//             uint32_t to_send = limit;
+
+//             uint32_t irq_state = spin_lock_blocking(buf_lock);
+//             if (rd_idx + to_send > BUF_SIZE) {
+//                 uint32_t part1 = BUF_SIZE - rd_idx;
+//                 memcpy(send_buf, &data_buf[rd_idx], part1);
+//                 memcpy(send_buf + part1, data_buf, to_send - part1);
+//                 rd_idx = to_send - part1;
+//             } else {
+//                 memcpy(send_buf, &data_buf[rd_idx], to_send);
+//                 rd_idx = (rd_idx + to_send) % BUF_SIZE;
+//             }
+//             spin_unlock(buf_lock, irq_state);
+
+//             // Send over USB (binary data)
+//             size_t written = fwrite(send_buf, 1, to_send, stdout);
+//             if (written != to_send) {
+//                 // printf("USB write error: %u of %u bytes written\n", written, to_send);
+//             }
+//             fflush(stdout);  // Flush to ensure timely delivery
+//         } else {
+//             // Report dropped samples periodically
+//             if (dropped_samples > 0) {
+//                 // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
+//                 dropped_samples = 0;
+//             }
+//             sleep_us(500);  // Yield if no data
+//         }
+//     }
+
+//     return 0;
+// }

@@ -1097,10 +1097,24 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
+CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
+CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c
+CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o"
+	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c
+
+CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i"
+	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c > CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+
+CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s"
+	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
@@ -1114,7 +1128,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
@@ -1128,7 +1142,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
@@ -1142,7 +1156,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
@@ -1156,7 +1170,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
@@ -1170,7 +1184,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
@@ -1184,7 +1198,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -c /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
@@ -1198,7 +1212,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/commo
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -c /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
@@ -1212,7 +1226,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_f
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -c /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
@@ -1226,7 +1240,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardwa
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
@@ -1240,7 +1254,7 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardwa
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/John-ADC-Git.dir/flags.make
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/John-ADC-Git.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o"
 	/home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -MF CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o.d -o CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -c /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 
 CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i: cmake_force
@@ -1327,6 +1341,7 @@ John__ADC__Git_OBJECTS = \
 "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o" \
 "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o" \
 "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o" \
+"CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o" \
 "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o" \
 "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o" \
 "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o" \
@@ -1416,6 +1431,7 @@ John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib
 John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
 John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
 John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
 John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
 John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
@@ -1431,7 +1447,7 @@ John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/build.make
 John-ADC-Git.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
 John-ADC-Git.elf: /home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 John-ADC-Git.elf: CMakeFiles/John-ADC-Git.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Linking CXX executable John-ADC-Git.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Linking CXX executable John-ADC-Git.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/John-ADC-Git.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/acid/Clones/pico/John-ADC-Git/build/John-ADC-Git.elf > John-ADC-Git.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/acid/Clones/pico/John-ADC-Git/build/John-ADC-Git.elf >> John-ADC-Git.dis

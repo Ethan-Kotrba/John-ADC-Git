@@ -720,7 +720,7 @@ Disassembly of section .text:
 10000626:	b007      	add	sp, #28
 10000628:	bdf0      	pop	{r4, r5, r6, r7, pc}
 1000062a:	46c0      	nop			@ (mov r8, r8)
-1000062c:	00989680 	.word	0x00989680
+1000062c:	0112a880 	.word	0x0112a880
 10000630:	0000ffff 	.word	0x0000ffff
 10000634:	40050000 	.word	0x40050000
 10000638:	4005000c 	.word	0x4005000c

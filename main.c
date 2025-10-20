@@ -35,7 +35,7 @@
 #define SAMPLE_SIZE 32
 
 #define CLOCK_PIN 0 // GPIO pin for the clock signal (GP0 = PWM slice 0, channel A)
-#define CLOCK_FREQ_HZ 10000000 // Target clock frequency (1 MHz)
+#define CLOCK_FREQ_HZ 18000000 // Target clock frequency (1 MHz)
 // #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
 
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)

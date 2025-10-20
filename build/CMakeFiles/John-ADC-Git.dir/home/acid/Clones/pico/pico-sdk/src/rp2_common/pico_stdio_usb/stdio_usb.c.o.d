@@ -103,4 +103,5 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_s
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
- /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h

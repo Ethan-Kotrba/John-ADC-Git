@@ -94,4 +94,5 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/ctype.h

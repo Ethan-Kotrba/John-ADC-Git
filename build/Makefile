@@ -375,6 +375,30 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i
+
+# target to preprocess a source file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s
+
+# target to generate assembly for a file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o
 
@@ -2107,6 +2131,9 @@ help:
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"

@@ -35,7 +35,7 @@
 #define SAMPLE_SIZE 32
 
 #define CLOCK_PIN 0 // GPIO pin for the clock signal (GP0 = PWM slice 0, channel A)
-#define CLOCK_FREQ_HZ 18000000 // Target clock frequency (1 MHz)
+#define CLOCK_FREQ_HZ 10000000 // Target clock frequency (1 MHz)
 // #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
 
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
@@ -279,9 +279,9 @@ int main() {
             spin_unlock(buf_lock, irq_state);
         }
 
-        if (avail >= 1064) {  // Send in 256-byte chunks for USB efficiency
-            uint8_t send_buf[1064];
-            uint32_t to_send = 1064;
+        if (avail >= 1024) {  // Send in 256-byte chunks for USB efficiency
+            uint8_t send_buf[1024];
+            uint32_t to_send = 1024;
 
             uint32_t irq_state = spin_lock_blocking(buf_lock);
             if (rd_idx + to_send > BUF_SIZE) {

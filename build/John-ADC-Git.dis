@@ -720,7 +720,7 @@ Disassembly of section .text:
 10000626:	b007      	add	sp, #28
 10000628:	bdf0      	pop	{r4, r5, r6, r7, pc}
 1000062a:	46c0      	nop			@ (mov r8, r8)
-1000062c:	0112a880 	.word	0x0112a880
+1000062c:	00989680 	.word	0x00989680
 10000630:	0000ffff 	.word	0x0000ffff
 10000634:	40050000 	.word	0x40050000
 10000638:	4005000c 	.word	0x4005000c
@@ -971,7 +971,7 @@ Disassembly of section .text:
 1000087a:	4c3b      	ldr	r4, [pc, #236]	@ (10000968 <main+0x244>)
 1000087c:	6823      	ldr	r3, [r4, #0]
 1000087e:	689b      	ldr	r3, [r3, #8]
-10000880:	3285      	adds	r2, #133	@ 0x85
+10000880:	3280      	adds	r2, #128	@ 0x80
 10000882:	00d2      	lsls	r2, r2, #3
 10000884:	2101      	movs	r1, #1
 10000886:	4668      	mov	r0, sp
@@ -1004,7 +1004,7 @@ Disassembly of section .text:
 100008c6:	2000      	movs	r0, #0
 100008c8:	6010      	str	r0, [r2, #0]
 100008ca:	f381 8810 	msr	PRIMASK, r1
-100008ce:	2285      	movs	r2, #133	@ 0x85
+100008ce:	2280      	movs	r2, #128	@ 0x80
 100008d0:	00d2      	lsls	r2, r2, #3
 100008d2:	4293      	cmp	r3, r2
 100008d4:	d325      	bcc.n	10000922 <main+0x1fe>
@@ -1018,7 +1018,7 @@ Disassembly of section .text:
 100008e6:	f3bf 8f5f 	dmb	sy
 100008ea:	4b1c      	ldr	r3, [pc, #112]	@ (1000095c <main+0x238>)
 100008ec:	681b      	ldr	r3, [r3, #0]
-100008ee:	2285      	movs	r2, #133	@ 0x85
+100008ee:	2280      	movs	r2, #128	@ 0x80
 100008f0:	00d2      	lsls	r2, r2, #3
 100008f2:	4694      	mov	ip, r2
 100008f4:	4463      	add	r3, ip
@@ -1030,12 +1030,12 @@ Disassembly of section .text:
 10000900:	6821      	ldr	r1, [r4, #0]
 10000902:	4b17      	ldr	r3, [pc, #92]	@ (10000960 <main+0x23c>)
 10000904:	18c9      	adds	r1, r1, r3
-10000906:	2285      	movs	r2, #133	@ 0x85
+10000906:	2280      	movs	r2, #128	@ 0x80
 10000908:	00d2      	lsls	r2, r2, #3
 1000090a:	4668      	mov	r0, sp
 1000090c:	f002 fc36 	bl	1000317c <__wrap___aeabi_memcpy>
 10000910:	6823      	ldr	r3, [r4, #0]
-10000912:	2285      	movs	r2, #133	@ 0x85
+10000912:	2280      	movs	r2, #128	@ 0x80
 10000914:	00d2      	lsls	r2, r2, #3
 10000916:	4694      	mov	ip, r2
 10000918:	4463      	add	r3, ip
@@ -1053,7 +1053,7 @@ Disassembly of section .text:
 10000930:	2001      	movs	r0, #1
 10000932:	f001 f8ff 	bl	10001b34 <sleep_ms>
 10000936:	e7ad      	b.n	10000894 <main+0x170>
-10000938:	fffffbd8 	.word	0xfffffbd8
+10000938:	fffffc00 	.word	0xfffffc00
 1000093c:	00989680 	.word	0x00989680
 10000940:	4003c000 	.word	0x4003c000
 10000944:	4003c004 	.word	0x4003c004
@@ -1064,7 +1064,7 @@ Disassembly of section .text:
 10000958:	20022574 	.word	0x20022574
 1000095c:	20022334 	.word	0x20022334
 10000960:	20001ecc 	.word	0x20001ecc
-10000964:	fffe0428 	.word	0xfffe0428
+10000964:	fffe0400 	.word	0xfffe0400
 10000968:	20000dbc 	.word	0x20000dbc
 1000096c:	20021ef8 	.word	0x20021ef8
 

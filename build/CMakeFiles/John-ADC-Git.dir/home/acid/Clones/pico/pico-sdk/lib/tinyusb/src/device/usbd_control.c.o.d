@@ -92,4 +92,5 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/devic
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
- /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h

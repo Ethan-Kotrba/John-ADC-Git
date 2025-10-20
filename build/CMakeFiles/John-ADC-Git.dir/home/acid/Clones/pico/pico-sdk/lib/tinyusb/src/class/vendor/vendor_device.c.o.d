@@ -85,4 +85,5 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class
  /home/acid/Clones/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
  /home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h

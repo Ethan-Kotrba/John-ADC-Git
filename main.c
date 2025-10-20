@@ -35,11 +35,11 @@
 #define TIMESTAMP_SIZE 2
 
 #define CLOCK_PIN 0 // GPIO pin for the clock signal (GP0 = PWM slice 0, channel A)
-#define CLOCK_FREQ_HZ 18000000 // Target clock frequency (1 MHz)
+#define CLOCK_FREQ_HZ 10000000 // Target clock frequency (1 MHz)
 // #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
 
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
-#define BUF_SIZE (16384 * (SAMPLE_SIZE))
+#define BUF_SIZE (1024 * (SAMPLE_SIZE))
 uint8_t data_buf[BUF_SIZE];
 volatile uint32_t wr_idx = 0;
 volatile uint32_t rd_idx = 0;
@@ -173,12 +173,13 @@ void drdy_handler(uint gpio, uint32_t events) {
         }
     } else {
         dropped_samples++;
-        gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, false);
-        return;
+        // gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, false);
+        // return;
     }
     spin_unlock(buf_lock, irq_state);
     gpio_set_irq_enabled(PIN_DRDY, GPIO_IRQ_EDGE_FALL, true);
 }
+
 
 // Core 1: Dedicated to reading from ADC using DMA and interrupts
 void core1_main() {

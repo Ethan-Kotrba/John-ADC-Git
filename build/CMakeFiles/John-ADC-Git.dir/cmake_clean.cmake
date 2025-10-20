@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d"
   "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
   "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d"
+  "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o"
+  "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o.d"
   "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
   "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d"
   "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"

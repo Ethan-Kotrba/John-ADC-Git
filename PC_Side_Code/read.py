@@ -94,11 +94,11 @@ def Is_Sample_Valid(data):
 def realign_serial(ser):
     print("Realigning")
     while True:
-        data = ser.read(1)
 
+        #Look For the Fisrt Potential Sart Of a Sample
+        data = ser.read(1)
         if len(data) != 1:
             continue
-
         #Check to see of channel id and sign nibble are valid
         if (data[0] >> 4) not in [0, 1] or (data[0] & 0x0F) not in [0x0, 0xF]:
             continue

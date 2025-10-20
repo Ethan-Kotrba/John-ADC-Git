@@ -6,13 +6,16 @@ import os
 class Parse_Raw_Data(object):
 
     def __init__(self):
-        self.Sample_Size = 7
+        self.Sample_Size = 8
         self.Time_Res = 3
         self.Raw_Data_Filename = "Raw_USB_Data.bin"
         self.Output_File = "ADC_DATA.csv"
         self.Script_Path = os.path.dirname(__file__)  # Gets the script's directory
         self.Raw_Data_Path = os.path.join(self.Script_Path, self.Raw_Data_Filename)
         self.Raw_Data = None
+        self.Is_All_Data_Read = False
+
+        self.Sample_Count = 0
 
         self.VREF = 3.3
         self.Gain = 1
@@ -29,56 +32,55 @@ class Parse_Raw_Data(object):
         # Extract 24-bit signed value (2's complement)
         #There might be an issue here since its assuming signed, but I thin,
         #you need the second have of the first byte for the sign
-        raw_value = int.from_bytes(self.Current_Sample[1:4], byteorder='big', signed=False)
+        self.Raw_Value = int.from_bytes(self.Current_Sample[1:4], byteorder='big', signed=False)
         # Convert to voltage: (raw_value / 2^23) * VREF / GAIN
-        self.Voltage = (raw_value / (2**23)) * self.VREF / self.Gain
+        self.Voltage = (self.Raw_Value / (2**23)) * self.VREF / self.Gain
         #extract Timestamp
         self.Timestamp = int.from_bytes(self.Current_Sample[4:self.Sample_Size], byteorder='big')
 
     
-    #Account for timestamp roll over
-    def Is_Sample_Tricky(self, data, Tol):
-        if self.Previous_Timestamp is None:
-            return False
-        timestamp = int.from_bytes(data[4:self.Sample_Size], byteorder='big')
-        if (timestamp - self.Previous_Timestamp) & 0xFFFF < Tol:
-            return False
-        return True
+    # #Account for timestamp roll over
+    # def Is_Sample_Tricky(self, data, Tol):
+    #     if self.Previous_Timestamp is None:
+    #         return False
+    #     timestamp = int.from_bytes(data[4:self.Sample_Size], byteorder='big')
+    #     if (timestamp - self.Previous_Timestamp) & 0xFFFF < Tol:
+    #         return False
+    #     return True
         
 
 
-    def Is_Sample_Valid(self, data):
-        channel_id = (data[0] >> 4)
-        sign = (data[0] & 0x0F)
-        adc_data = int.from_bytes(data[1:4], byteorder='big', signed=False)
-        if channel_id not in [0, 1]:
-            return False
-        if sign not in [0xF, 0x0]:
-            return False
-        if 0 > adc_data or adc_data > 0xFFFFFF:
-            return False
-        if self.Is_Sample_Tricky(data, 10000):
-            return False
-        return True
+    # def Is_Sample_Valid(self, data):
+    #     channel_id = (data[0] >> 4)
+    #     sign = (data[0] & 0x0F)
+    #     adc_data = int.from_bytes(data[1:4], byteorder='big', signed=False)
+    #     if channel_id not in [0, 1]:
+    #         return False
+    #     if sign not in [0xF, 0x0]:
+    #         return False
+    #     if 0 > adc_data or adc_data > 0xFFFFFF:
+    #         return False
+    #     if self.Is_Sample_Tricky(data, 10000):
+    #         return False
+    #     return True
     
     def Realign_Data(self):
-        print("Realigning")
         while True:
             data = self.Raw_Data.read(1)
 
-            if len(data) != 1:
+            #Check To See If @ End of File
+            if len(data) == 0:
+                self.Is_All_Data_Read = True
+                return None
+
+            if not self.Is_Canidaite_Starting_Byte(data):
                 continue
 
-            #Check to see of channel id and sign nibble are valid
-            if (data[0] >> 4) not in [0, 1] or (data[0] & 0x0F) not in [0x0, 0xF]:
-                continue
+            self.Current_Sample = data + self.Raw_Data.read((self.Sample_Size-1))
 
-            data_full = data + self.Raw_Data.read((self.Sample_Size-1))
-
-            if self.Is_Sample_Valid(data_full):
-                self.Current_Sample = data_full
+            if self.Is_Sample_Valid():
                 self.Decode_Sample()
-                return
+                return None
             
 
     def Open_File(self):
@@ -96,56 +98,76 @@ class Parse_Raw_Data(object):
         self.CSV_Write.writerow([self.Timestamp, self.Channel_ID, f"{self.Voltage:.6f}"])
         self.Previous_Timestamp = self.Timestamp
 
+        if self.Sample_Count % 1000 == 0:
+            self.Output.flush()
+
 
     def Is_Channel_ID_Valid(self, Raw_Sample):
         channel_id = (Raw_Sample[0] >> 4)
         return channel_id not in [0, 1]
     
+    def Is_Canidaite_Starting_Byte(self, data):
+        channel_id = (data[0] >> 4)
+        sign = (data[0] & 0x0F)
+        if channel_id not in [0, 1]:
+            return False
+        if sign not in [0xF, 0x0]:
+            return False
+        return True
+    
 
     def Is_Sample_Valid(self):
         #Check Channel_ID
         if self.Channel_ID not in [0, 1]:
-            self.Realign_Data()
+            return False
+        if 0 > self.Raw_Value or self.Raw_Value > 0xFFFFFF:
+            return False
+        if self.Previous_Sample is None: #I hate this line
+            return True
+        if (self.Timestamp - self.Previous_Timestamp) & 0xFFFFFF < self.Tol:
+            return False
+        return True
 
 
 
     def Get_Next_Valid_Sample(self):
         self.Current_Sample = self.Raw_Data.read(self.Sample_Size)
+        print(self.Current_Sample)
+        if(len(self.Current_Sample) < 8):
+            self.Is_All_Data_Read = True
+            return
         self.Decode_Sample()
         if self.Is_Sample_Valid():
-            return None
-
+            self.Realign_Data()
 
     
-    def main(self):
+
+
+    def Setup(self):
+        self.Open_File()
+        self.Open_Output_File()
+    
+    def Parse_Data(self):
         while(True):
             self.Get_Next_Valid_Sample()
+            if(self.Is_All_Data_Read):
+                break
             self.Write_Sample_To_CSV()
+
+    def Close_Files(self):
+        self.Output.close()
+        self.Raw_Data.close()
+
+    def main(self):
+        self.Setup()
+        self.Parse_Data()
         self.Close_Files()
 
 
         
-
+if __name__ == "__main__":
+    Parser = Parse_Raw_Data()
+    Parser.main()
 
         
 
-
-
-
-
-
-
-
-with open('/home/acid/Clones/pico/John-ADC-Git/PC_Side_Code/Collected_Data.bin', 'rb') as f:
-    while True:
-        sample = f.read(8)
-        if not sample:
-            break
-        channel_id = sample[0] & 0x0F
-        sign = sample[0] >> 4
-        raw_value = int.from_bytes(sample[1:4], 'big')
-        if sign == 0xF:
-            raw_value -= 1 << 24
-        voltage = (raw_value / (2 ** 23)) * 3.3 / 0.333
-        timestamp = int.from_bytes(sample[4:8], 'little')
-        print(f"Channel: {channel_id}, Voltage: {voltage:.6f} V, Timestamp: {timestamp}")

@@ -27,8 +27,7 @@ class Parse_Raw_Data(object):
         self.Tol = 10000
 
     def Decode_Sample(self):
-        self.Channel_ID = self.Current_Sample[0] >> 4  # Top 2 bits indicate channel
-        
+        self.Channel_ID = (self.Current_Sample[0] >> 4)  # Top 2 bits indicate channel
         # Extract 24-bit signed value (2's complement)
         #There might be an issue here since its assuming signed, but I thin,
         #you need the second have of the first byte for the sign
@@ -65,22 +64,26 @@ class Parse_Raw_Data(object):
     #     return True
     
     def Realign_Data(self):
+        print("Start Realigning")
         while True:
             data = self.Raw_Data.read(1)
 
             #Check To See If @ End of File
-            if len(data) == 0:
+            if len(data) != 1:
                 self.Is_All_Data_Read = True
                 return None
 
             if not self.Is_Canidaite_Starting_Byte(data):
+                print(f"Bad Starting Byte {data}")
                 continue
 
             self.Current_Sample = data + self.Raw_Data.read((self.Sample_Size-1))
+            print(f"About to check this sample {self.Current_Sample}")
+
+            self.Decode_Sample()
 
             if self.Is_Sample_Valid():
-                self.Decode_Sample()
-                return None
+                break
             
 
     def Open_File(self):
@@ -95,6 +98,7 @@ class Parse_Raw_Data(object):
         self.CSV_Write.writerow(['Timestamp', 'Channel', 'Voltage'])
 
     def Write_Sample_To_CSV(self):
+        print(f"========== Good enough to write {self.Current_Sample}")
         self.CSV_Write.writerow([self.Timestamp, self.Channel_ID, f"{self.Voltage:.6f}"])
         self.Previous_Timestamp = self.Timestamp
 
@@ -102,30 +106,43 @@ class Parse_Raw_Data(object):
             self.Output.flush()
 
 
-    def Is_Channel_ID_Valid(self, Raw_Sample):
-        channel_id = (Raw_Sample[0] >> 4)
-        return channel_id not in [0, 1]
+    # def Is_Channel_ID_Valid(self, Raw_Sample):
+    #     channel_id = (Raw_Sample[0] >> 4)
+    #     return channel_id not in [0, 1]
     
     def Is_Canidaite_Starting_Byte(self, data):
         channel_id = (data[0] >> 4)
         sign = (data[0] & 0x0F)
         if channel_id not in [0, 1]:
+            print(f"Channel_ID not equal [0, 1] {channel_id}")
             return False
-        if sign not in [0xF, 0x0]:
+        print(sign)
+        if sign not in [0xF, 0x0, 0, 15]:
+            print(f"The Sign is off {sign}")
             return False
-        return True
+        print(f"This is a potential Good Bit {data}")
+        return True 
     
 
     def Is_Sample_Valid(self):
         #Check Channel_ID
         if self.Channel_ID not in [0, 1]:
+            print(f"Bad Channel Bit {self.Channel_ID}")
+            print(self.Current_Sample)
             return False
         if 0 > self.Raw_Value or self.Raw_Value > 0xFFFFFF:
+            print(f"Bad Raw_Value {self.Raw_Value}")
+            print(self.Current_Sample)
             return False
-        if self.Previous_Sample is None: #I hate this line
+        if self.Previous_Timestamp is None: #I hate this line
+            print("No Previous_Timestamp")
             return True
-        if (self.Timestamp - self.Previous_Timestamp) & 0xFFFFFF < self.Tol:
+        
+        if (self.Timestamp - self.Previous_Timestamp) > self.Tol:
+            print(f"Bad Timestamp {self.Timestamp} | {self.Previous_Timestamp}")
+            print(self.Current_Sample)
             return False
+        print(f"Passes Is Sample Valid {self.Current_Sample}")
         return True
 
 
@@ -137,7 +154,7 @@ class Parse_Raw_Data(object):
             self.Is_All_Data_Read = True
             return
         self.Decode_Sample()
-        if self.Is_Sample_Valid():
+        if not self.Is_Sample_Valid():
             self.Realign_Data()
 
     

@@ -12,7 +12,7 @@ def parse_args():
     parser.add_argument('--port', default='/dev/ttyACM0', help='Serial port (e.g., /dev/ttyACM0)')
     parser.add_argument('--output', default='raw_adc_data.bin', help='Output binary file')
     parser.add_argument('--timeout', type=float, default=1.0, help='Serial read timeout in seconds')
-    parser.add_argument('--chunk-size', type=int, default=256, help='Bytes to read per iteration')
+    parser.add_argument('--chunk-size', type=int, default=1024, help='Bytes to read per iteration')
     return parser.parse_args()
 
 def open_serial_port(port, timeout):

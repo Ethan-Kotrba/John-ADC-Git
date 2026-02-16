@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Pico ARM GCC",
+        "toolchainFile": "",
+        "compilers": {
+            "C": "/path/to/arm-none-eabi-gcc",
+            "CXX": "/path/to/arm-none-eabi-g++"
+        },
+        "preferredGenerator": {
+            "name": "Unix Makefiles"
+        }
+    }
+]

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ACD-Code
+CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ADC-Git
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ACD-Code/build
+CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ADC-Git/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ACD-Code/build/CMakeFiles /home/acid/Clones/pico/John-ACD-Code/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles /home/acid/Clones/pico/John-ADC-Git/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ACD-Code/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named John-ACD-Code
+# Target rules for targets named John-ADC-Git
 
 # Build rule for target.
-John-ACD-Code: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 John-ACD-Code
-.PHONY : John-ACD-Code
+John-ADC-Git: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 John-ADC-Git
+.PHONY : John-ADC-Git
 
 # fast build rule for target.
-John-ACD-Code/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/build
-.PHONY : John-ACD-Code/fast
+John-ADC-Git/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/build
+.PHONY : John-ADC-Git/fast
 
 #=============================================================================
 # Target rules for targets named bs2_default
@@ -207,36 +207,12 @@ pico_status_led_ws2812_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build
 .PHONY : pico_status_led_ws2812_pio_h/fast
 
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
-
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i
-
-# target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
-
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s
-
-# target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
-
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -244,7 +220,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -252,7 +228,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
@@ -260,7 +236,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: home/acid
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -268,7 +244,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/acid
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -276,7 +252,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/acid
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
@@ -284,7 +260,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: home/acid
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -292,7 +268,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/acid
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -300,7 +276,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/acid
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
@@ -308,7 +284,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: home/a
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -316,7 +292,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/a
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -324,7 +300,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/a
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
@@ -332,7 +308,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: home/acid
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -340,7 +316,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/acid
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -348,7 +324,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/acid
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
@@ -356,7 +332,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: home/ac
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -364,7 +340,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/ac
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -372,7 +348,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/ac
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
@@ -380,7 +356,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: home/acid
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -388,7 +364,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/acid
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -396,15 +372,39 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/acid
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.o
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i
+
+# target to preprocess a source file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.i
+
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s
+
+# target to generate assembly for a file
+home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -412,7 +412,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: hom
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -420,7 +420,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: hom
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
@@ -428,7 +428,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: home/acid
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -436,7 +436,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/acid
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -444,7 +444,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/acid
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
@@ -452,7 +452,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: hom
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -460,7 +460,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: hom
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -468,7 +468,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: hom
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
@@ -476,7 +476,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: hom
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -484,7 +484,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: hom
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -492,7 +492,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: hom
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
@@ -500,7 +500,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.o: home/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
@@ -508,7 +508,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
@@ -516,7 +516,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
@@ -524,7 +524,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: home/acid/Clo
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -532,7 +532,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/acid/Clo
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -540,7 +540,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/acid/Clo
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
@@ -548,7 +548,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.o: home/acid/Clones/p
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
@@ -556,7 +556,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/acid/Clones/p
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
@@ -564,7 +564,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/acid/Clones/p
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
@@ -572,7 +572,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.o: home/acid/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
@@ -580,7 +580,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/acid/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
@@ -588,7 +588,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/acid/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
@@ -596,7 +596,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_r
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -604,7 +604,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_r
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -612,7 +612,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_r
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
@@ -620,7 +620,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp204
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -628,7 +628,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp204
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -636,7 +636,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp204
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.o: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
@@ -644,7 +644,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.o: home/acid/Clones/pico/pic
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
@@ -652,7 +652,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/acid/Clones/pico/pic
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
@@ -660,7 +660,7 @@ home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/acid/Clones/pico/pic
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.o: home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
@@ -668,7 +668,7 @@ home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.o: home/acid/Clon
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.i: home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.i
@@ -676,7 +676,7 @@ home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.i: home/acid/Clon
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.s: home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s
@@ -684,7 +684,7 @@ home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.s: home/acid/Clon
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/hardware_claim/claim.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
@@ -692,7 +692,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.o: home/aci
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -700,7 +700,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/aci
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -708,7 +708,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/aci
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
@@ -716,7 +716,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.o: home/acid/Clone
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -724,7 +724,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/acid/Clone
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -732,7 +732,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/acid/Clone
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
@@ -740,7 +740,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.o: home/acid/Clones/pi
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -748,7 +748,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.i: home/acid/Clones/pi
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.s: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -756,7 +756,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.s: home/acid/Clones/pi
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.o: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o
@@ -764,7 +764,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.o: home/acid/Clones/pico
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.i: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -772,7 +772,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.i: home/acid/Clones/pico
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.s: home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -780,7 +780,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.s: home/acid/Clones/pico
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.o: home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
@@ -788,7 +788,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.o: home/acid/Clones/pic
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.i: home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -796,7 +796,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.i: home/acid/Clones/pic
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.s: home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -804,7 +804,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.s: home/acid/Clones/pic
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/time.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.o: home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o
@@ -812,7 +812,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.o: home/acid/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -820,7 +820,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/acid/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -828,7 +828,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/acid/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.o: home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o
@@ -836,7 +836,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.o: home/acid/Clones
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.i: home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -844,7 +844,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.i: home/acid/Clones
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.s: home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -852,7 +852,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.s: home/acid/Clones
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.o: home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o
@@ -860,7 +860,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.o: home/acid/Clones/pi
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.i: home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -868,7 +868,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.i: home/acid/Clones/pi
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.s: home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -876,7 +876,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.s: home/acid/Clones/pi
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.o: home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o
@@ -884,7 +884,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.o: home/acid/Clones/pi
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.o
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.i: home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -892,7 +892,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.i: home/acid/Clones/pi
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.s: home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -900,7 +900,7 @@ home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.s: home/acid/Clones/pi
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.o: home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
@@ -908,7 +908,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.i: home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
@@ -916,7 +916,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.s: home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
@@ -924,7 +924,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
@@ -932,7 +932,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: ho
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
@@ -940,7 +940,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: ho
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
@@ -948,7 +948,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: ho
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
@@ -956,7 +956,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/aci
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -964,7 +964,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/aci
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -972,7 +972,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/aci
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
@@ -980,7 +980,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/a
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
@@ -988,7 +988,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.o: home/acid/Clon
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
@@ -996,7 +996,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/acid/Clon
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
@@ -1004,7 +1004,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s: home/acid/Clon
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
@@ -1012,7 +1012,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/acid/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
@@ -1020,7 +1020,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/acid/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
@@ -1028,7 +1028,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/acid/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
@@ -1036,7 +1036,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -1044,7 +1044,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -1052,7 +1052,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
@@ -1060,7 +1060,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/acid/Clon
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1068,7 +1068,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/acid/Clon
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1076,7 +1076,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/acid/Clon
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
@@ -1084,7 +1084,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: 
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
@@ -1092,7 +1092,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/acid/Clon
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1100,7 +1100,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/acid/Clon
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1108,7 +1108,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/acid/Clon
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
@@ -1116,7 +1116,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/acid/Clon
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
@@ -1124,7 +1124,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/acid/Clon
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
@@ -1132,7 +1132,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/acid/Clon
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
@@ -1140,7 +1140,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1148,7 +1148,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1156,7 +1156,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
@@ -1164,7 +1164,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
@@ -1172,7 +1172,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
@@ -1180,7 +1180,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
@@ -1188,7 +1188,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/acid/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
@@ -1196,7 +1196,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/acid/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
@@ -1204,7 +1204,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/acid/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
@@ -1212,7 +1212,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/acid/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1220,7 +1220,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/acid/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1228,7 +1228,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/acid/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
@@ -1236,7 +1236,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1244,7 +1244,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1252,7 +1252,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
@@ -1260,7 +1260,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1268,7 +1268,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1276,7 +1276,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
@@ -1284,7 +1284,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1292,7 +1292,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1300,7 +1300,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
@@ -1308,7 +1308,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: ho
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
@@ -1316,7 +1316,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: ho
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
@@ -1324,7 +1324,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: ho
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
@@ -1332,7 +1332,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1340,7 +1340,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1348,7 +1348,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
@@ -1356,7 +1356,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
@@ -1364,7 +1364,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
@@ -1372,7 +1372,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
@@ -1380,7 +1380,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
@@ -1388,7 +1388,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/acid/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1396,7 +1396,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/acid/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1404,7 +1404,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/acid/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
@@ -1412,7 +1412,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
@@ -1420,7 +1420,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
@@ -1428,7 +1428,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
@@ -1436,7 +1436,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interfa
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
@@ -1444,7 +1444,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interfa
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
@@ -1452,7 +1452,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interfa
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
@@ -1460,7 +1460,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/acid/Clones
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
@@ -1468,7 +1468,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: hom
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
@@ -1476,7 +1476,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: hom
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
@@ -1484,7 +1484,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: hom
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
@@ -1492,7 +1492,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.o: h
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
@@ -1500,7 +1500,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.o:
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
@@ -1508,7 +1508,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
@@ -1516,7 +1516,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
@@ -1524,7 +1524,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
@@ -1532,7 +1532,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.o: home/ac
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1540,7 +1540,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/ac
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1548,7 +1548,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/ac
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
@@ -1556,7 +1556,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
@@ -1564,7 +1564,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumera
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1572,7 +1572,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumera
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1580,7 +1580,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumera
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o
@@ -1588,7 +1588,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.o: home/acid/Clon
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i
@@ -1596,7 +1596,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.i: home/acid/Clon
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s
@@ -1604,7 +1604,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.s: home/acid/Clon
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
@@ -1612,7 +1612,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.o: h
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
@@ -1620,7 +1620,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.o
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
@@ -1628,7 +1628,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
@@ -1636,7 +1636,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o
@@ -1644,7 +1644,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.o: home/acid
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1652,7 +1652,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/acid
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1660,7 +1660,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/acid
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
@@ -1668,7 +1668,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp204
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
@@ -1676,7 +1676,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeab
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
@@ -1684,7 +1684,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
@@ -1692,7 +1692,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
@@ -1700,7 +1700,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
@@ -1708,15 +1708,39 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o: home
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.o
+
+# target to build an object file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i
+
+# target to preprocess a source file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s
+
+# target to generate assembly for a file
+home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.o
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
@@ -1724,7 +1748,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.i: hom
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
@@ -1732,7 +1756,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.s: hom
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
@@ -1740,7 +1764,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
@@ -1748,7 +1772,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
@@ -1756,7 +1780,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
@@ -1764,7 +1788,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1772,7 +1796,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1780,7 +1804,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
@@ -1788,7 +1812,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/acid/
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1796,7 +1820,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/acid/
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1804,7 +1828,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/acid/
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
@@ -1812,7 +1836,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: 
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
@@ -1820,7 +1844,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: 
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
@@ -1828,7 +1852,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: 
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
@@ -1836,7 +1860,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clo
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
@@ -1844,7 +1868,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clo
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
@@ -1852,7 +1876,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clo
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
@@ -1860,7 +1884,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_sta
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
@@ -1868,7 +1892,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_sta
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
@@ -1876,7 +1900,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_sta
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
@@ -1884,7 +1908,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
@@ -1892,7 +1916,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
@@ -1900,7 +1924,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
@@ -1908,7 +1932,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/acid/Clon
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1916,7 +1940,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/acid/Clon
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1924,39 +1948,15 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/acid/Clon
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o
-
-# target to build an object file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
-
-# target to preprocess a source file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
-
-# target to generate assembly for a file
-home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
@@ -1964,7 +1964,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: 
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
@@ -1972,7 +1972,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: 
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
@@ -1980,7 +1980,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/a
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
@@ -1988,7 +1988,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/a
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
@@ -1996,7 +1996,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/a
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
@@ -2004,7 +2004,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descripto
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
@@ -2012,7 +2012,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descripto
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
@@ -2020,7 +2020,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descripto
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
@@ -2028,7 +2028,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/acid/Cl
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -2036,7 +2036,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/acid/Cl
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -2044,7 +2044,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/acid/Cl
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
@@ -2052,7 +2052,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: home/a
 
 # target to build an object file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -2060,7 +2060,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/a
 
 # target to preprocess a source file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -2068,7 +2068,7 @@ home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/a
 
 # target to generate assembly for a file
 home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
 main.o: main.c.o
@@ -2076,7 +2076,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -2084,7 +2084,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -2092,7 +2092,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ACD-Code.dir/build.make CMakeFiles/John-ACD-Code.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/John-ADC-Git.dir/build.make CMakeFiles/John-ADC-Git.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -2107,12 +2107,9 @@ help:
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... pico_status_led_ws2812_pio_h"
 	@echo "... pioasmBuild"
-	@echo "... John-ACD-Code"
+	@echo "... John-ADC-Git"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2134,6 +2131,9 @@ help:
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.i"
+	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/mtp/mtp_device.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
@@ -2298,6 +2298,9 @@ help:
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.o"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i"
+	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_platform_common/common.s"
@@ -2325,9 +2328,6 @@ help:
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
-	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
 	@echo "... home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"

@@ -10,18 +10,18 @@ if(NOT EXISTS "/home/acid/Clones/pico/pico-sdk/tools/pioasm")
   file(MAKE_DIRECTORY "/home/acid/Clones/pico/pico-sdk/tools/pioasm")
 endif()
 file(MAKE_DIRECTORY
-  "/home/acid/Clones/pico/John-ACD-Code/build/pioasm"
-  "/home/acid/Clones/pico/John-ACD-Code/build/pioasm-install"
-  "/home/acid/Clones/pico/John-ACD-Code/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp"
-  "/home/acid/Clones/pico/John-ACD-Code/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
-  "/home/acid/Clones/pico/John-ACD-Code/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src"
-  "/home/acid/Clones/pico/John-ACD-Code/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
+  "/home/acid/Clones/pico/John-ADC-Git/build/pioasm"
+  "/home/acid/Clones/pico/John-ADC-Git/build/pioasm-install"
+  "/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp"
+  "/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
+  "/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src"
+  "/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/acid/Clones/pico/John-ACD-Code/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/acid/Clones/pico/John-ACD-Code/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/pioasmBuild-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-build/enc_bootloader_mbedtls/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

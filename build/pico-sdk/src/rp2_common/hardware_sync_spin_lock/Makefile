@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ADC-Git
+CMAKE_SOURCE_DIR = /home/acid/Clones/pico/John-ACD-Code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ADC-Git/build
+CMAKE_BINARY_DIR = /home/acid/Clones/pico/John-ACD-Code/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles /home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2_common/hardware_sync_spin_lock//CMakeFiles/progress.marks
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles 0
+	cd /home/acid/Clones/pico/John-ACD-Code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ACD-Code/build/CMakeFiles /home/acid/Clones/pico/John-ACD-Code/build/pico-sdk/src/rp2_common/hardware_sync_spin_lock//CMakeFiles/progress.marks
+	cd /home/acid/Clones/pico/John-ACD-Code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acid/Clones/pico/John-ACD-Code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/clean
+	cd /home/acid/Clones/pico/John-ACD-Code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/preinstall
+	cd /home/acid/Clones/pico/John-ACD-Code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/preinstall
+	cd /home/acid/Clones/pico/John-ACD-Code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_sync_spin_lock/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/acid/Clones/pico/John-ACD-Code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/acid/Clones/pico/John-ADC-Git/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/acid/Clones/pico/John-ACD-Code/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

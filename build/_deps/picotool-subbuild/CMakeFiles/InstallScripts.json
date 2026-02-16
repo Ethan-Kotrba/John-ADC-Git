@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/acid/Clones/pico/John-ACD-Code/build/_deps/picotool-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

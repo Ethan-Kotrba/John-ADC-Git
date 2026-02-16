@@ -16,7 +16,7 @@
 #define PIN_DRDY 3  // Data Ready pin (active low)
 
 // SPI baud rate (MCP3564 supports up to 20 MHz)
-#define SPI_BAUD 20000000
+#define SPI_BAUD 10000000
 
 // MCP3564 constants
 #define DEVICE_ADDR 0b01
@@ -47,6 +47,7 @@ void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
     uint8_t buf[3] = {(value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF};
 
     gpio_put(PIN_CS, 0);
+    sleep_us(1);
     spi_write_blocking(SPI_INST, &cmd, 1);
     spi_write_blocking(SPI_INST, buf + (3 - num_bytes), num_bytes);
     gpio_put(PIN_CS, 1);

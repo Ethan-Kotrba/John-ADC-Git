@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Pico",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/acid/Clones/pico/pico-sdk/src/**",
+                "/home/acid/Clones/pico/pico-sdk/lib/**",
+                "/home/acid/Clones/pico/pico-sdk/lib/tinyusb/src/**"
+            ],
+            "defines": [
+                "CFG_TUD_ENABLED=1",
+                "CFG_TUD_CDC=1",
+                "CFG_TUSB_RHPORT0_MODE=OPT_MODE_DEVICE"
+            ],
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}

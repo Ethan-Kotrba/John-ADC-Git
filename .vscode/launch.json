@@ -1,26 +1,62 @@
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Cortex Debug",
+//             "cwd": "${workspaceFolder}",
+//             "executable": "${workspaceFolder}/build/John-ADC-Git.elf",
+//             "request": "launch",
+//             "type": "cortex-debug",
+//             "servertype": "openocd",
+//             "device": "RP2040",
+//             "configFiles": [
+//                 "interface/picoprobe.cfg",
+//                 "target/rp2040.cfg"
+//             ],
+//             "gdbPath": "arm-none-eabi-gdb", // Adjust if not in PATH
+//             "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+//             "runToEntryPoint": "main",
+//             "preLaunchTask": "Build",
+//             "showDevDebugOutput": "parsed",
+//             "openOCDLaunchCommands": [
+//                 "adapter speed 5000" // Optional: adjust for stability
+//             ]
+//         }
+//     ]
+// }
+
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Cortex Debug",
-            "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/John-ADC-Git.elf",
-            "request": "launch",
-            "type": "cortex-debug",
-            "servertype": "openocd",
-            "device": "RP2040",
-            "configFiles": [
-                "interface/picoprobe.cfg",
-                "target/rp2040.cfg"
-            ],
-            "gdbPath": "arm-none-eabi-gdb", // Adjust if not in PATH
-            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
-            "runToEntryPoint": "main",
-            "preLaunchTask": "Build",
-            "showDevDebugOutput": "parsed",
-            "openOCDLaunchCommands": [
-                "adapter speed 5000" // Optional: adjust for stability
-            ]
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Pico Debug (Debugprobe)",
+      "type": "cortex-debug",
+      "cwd": "${workspaceRoot}",
+    //   "executable": "${command:cmake.launchTargetPath}",
+      "executable": "${workspaceFolder}/build/John-ADC-Git.elf",
+      "request": "launch",
+      "servertype": "openocd",
+      "gdbPath": "arm-none-eabi-gdb",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/rp2040.cfg"
+      ],
+      "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+      "runToEntryPoint": "main",
+      "overrideLaunchCommands": [
+        // "adapter speed 1000",
+        "monitor reset halt",
+        "load",
+        "monitor reset init",
+        "continue"
+      ],
+      "postRestartCommands": [
+        "monitor reset init"
+      ],
+      "showDevDebugOutput": "raw",
+      "openOCDLaunchCommands": [
+        "adapter speed 1000"
+      ]
+    }
+  ]
 }

@@ -758,7 +758,7 @@ Disassembly of section .text:
 10000682:	bc80      	pop	{r7}
 10000684:	46b8      	mov	r8, r7
 10000686:	bdf0      	pop	{r4, r5, r6, r7, pc}
-10000688:	00989680 	.word	0x00989680
+10000688:	0112a880 	.word	0x0112a880
 1000068c:	0000ffff 	.word	0x0000ffff
 10000690:	40050000 	.word	0x40050000
 10000694:	4005000c 	.word	0x4005000c

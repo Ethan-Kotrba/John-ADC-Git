@@ -18,9 +18,9 @@ CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/common/pico_sync/
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
- /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/version.h \
+ /home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/generated/pico_base/pico/version.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
- /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/config_autogen.h \
+ /home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/generated/pico_base/pico/config_autogen.h \
  /home/acid/Clones/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \

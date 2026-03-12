@@ -8,17 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
-  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/acid/Clones/pico/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
+  "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -227,7 +227,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o" "gcc" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d"
   "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" "gcc" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d"
   "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" "gcc" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d"
-  "/home/acid/Clones/pico/John-ADC-Git/main.c" "CMakeFiles/John-ADC-Git.dir/main.c.o" "gcc" "CMakeFiles/John-ADC-Git.dir/main.c.o.d"
+  "/home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/main.c" "CMakeFiles/John-ADC-Git.dir/main.c.o" "gcc" "CMakeFiles/John-ADC-Git.dir/main.c.o.d"
   "/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" "gcc" "CMakeFiles/John-ADC-Git.dir/home/acid/Clones/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d"
   )
 

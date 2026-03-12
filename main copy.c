@@ -57,7 +57,7 @@ void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
     gpio_put(PIN_CS, 0);
     spi_write_blocking(SPI_INST, &cmd, 1);
     spi_write_blocking(SPI_INST, buf + (3 - num_bytes), num_bytes);
-    gpio_put(PIN_CS, 1);wr_idx
+    gpio_put(PIN_CS, 1);
     sleep_us(10);
 }
 

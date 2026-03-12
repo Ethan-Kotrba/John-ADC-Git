@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /home/acid/Clones/pico/John-ADC-Git/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/pico-sdk/src/rp2040/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

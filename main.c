@@ -35,7 +35,7 @@
 #define TIMESTAMP_SIZE 2
 
 #define CLOCK_PIN 0 // GPIO pin for the clock signal (GP0 = PWM slice 0, channel A)
-#define CLOCK_FREQ_HZ 18000000 // Target clock frequency (1 MHz)
+#define CLOCK_FREQ_HZ 10000000 // Target clock frequency (1 MHz)
 // #define CLOCK_FREQ_HZ 1000000 // Target clock frequency (1 MHz)
 
 // Buffer for data transfer between cores (4 bytes per sample, 4096 samples = 16KB)
@@ -63,6 +63,42 @@ void write_reg(uint8_t reg, uint32_t value, uint8_t num_bytes) {
 }
 
 void Setup_PWM_Clock(void) {
+    gpio_set_function(CLOCK_PIN, GPIO_FUNC_PWM);
+    uint slice_num = pwm_gpio_to_slice_num(CLOCK_PIN);
+
+    uint32_t sys_hz = clock_get_hz(clk_sys);
+
+    double div = 1.0;
+    uint16_t wrap;
+
+    uint64_t wrap_temp = (uint64_t)sys_hz / CLOCK_FREQ_HZ;
+
+    if (wrap_temp > 65535) {
+        div = (double)sys_hz / ((double)CLOCK_FREQ_HZ * 65535.0);
+        wrap = 65535;
+    } else {
+        div = 1.0;
+        wrap = (uint16_t)wrap_temp;
+    }
+
+    // For better frequency accuracy, you can fine-tune wrap with rounding
+    // wrap = (uint16_t)((double)sys_hz / (CLOCK_FREQ_HZ * div) + 0.5);
+
+    pwm_config config = pwm_get_default_config();
+    pwm_config_set_clkdiv(&config, div);
+    pwm_config_set_wrap(&config, wrap);
+
+    pwm_init(slice_num, &config, false);   // configure only
+    pwm_set_gpio_level(CLOCK_PIN, wrap / 2);
+    pwm_set_enabled(slice_num, true);      // explicitly enable
+
+    // Debug (remove later if you want)
+    printf("PWM: target %u Hz, sys %.1f MHz, div=%.3f, wrap=%u → ~%.1f kHz\n",
+           CLOCK_FREQ_HZ, sys_hz / 1e6, div, wrap,
+           (sys_hz / (div * wrap)) / 1000.0);
+}
+
+void Setup_PWM_Clock_OLD(void) {
     // Set up PWM
     gpio_set_function(CLOCK_PIN, GPIO_FUNC_PWM);
     uint slice_num = pwm_gpio_to_slice_num(CLOCK_PIN); // Get PWM slice for GP0
@@ -73,12 +109,28 @@ void Setup_PWM_Clock(void) {
     // For 50% duty cycle, set level to wrap/2
     // For 1 MHz: wrap = 125, divider = 1 (125 MHz / (1 * 125) = 1 MHz)
     uint32_t sys_hz = clock_get_hz(clk_sys); // Typically 125 MHz
-    uint16_t wrap = sys_hz / CLOCK_FREQ_HZ; // E.g., 125 MHz / 1 MHz = 125
-    float div = 1.0f; // Start with divider = 1
-    if (wrap > 65535) {
-        // If wrap exceeds 16-bit limit, increase divider
-        div = (float)sys_hz / (CLOCK_FREQ_HZ * 65535);
+    //uint16_t wrap = sys_hz / CLOCK_FREQ_HZ; // E.g., 125 MHz / 1 MHz = 125
+
+    // double div = 1.0f; // Start with divider = 1
+    // if (wrap > 65535) {
+    //     // If wrap exceeds 16-bit limit, increase divider
+    //     div = (float)sys_hz / (CLOCK_FREQ_HZ * 65535);
+    //     wrap = 65535;
+    // }
+
+    double div = 1.0;
+    uint32_t wrap;
+
+    uint64_t target = (uint64_t)sys_hz * 65535ULL;   // safe 64-bit multiply
+    uint64_t max_wrap_for_div1 = (uint64_t)CLOCK_FREQ_HZ * 65535ULL;
+
+    if ((uint64_t)sys_hz / CLOCK_FREQ_HZ > 65535) {
+        // need divider > 1
+        div = (double)sys_hz / (double)CLOCK_FREQ_HZ / 65535.0;
         wrap = 65535;
+    } else {
+        div = 1.0;
+        wrap = (uint32_t)(sys_hz / CLOCK_FREQ_HZ);
     }
 
     // Configure PWM
@@ -162,7 +214,9 @@ void drdy_handler(uint gpio, uint32_t events) {
         uint8_t ch_id = (rx_buf[1] >> 4) & 0x0F;  // Channel ID in bits 7:4
         if (ch_id == 0 || ch_id == 1) {  // Validate CH0 or CH1
             memcpy(&data_buf[wr_idx], &rx_buf[1], 4);
-            memcpy(&data_buf[wr_idx+4], &timestamp, TIMESTAMP_SIZE);
+            // memcpy(&data_buf[wr_idx+4], &timestamp, TIMESTAMP_SIZE);
+            uint16_t ts_be = __builtin_bswap16(timestamp);    // or manual swap
+            memcpy(&data_buf[wr_idx + 4], &ts_be, TIMESTAMP_SIZE);
             // data_buf[wr_idx + 4] = (timestamp >> 24) & 0xFF;
             // data_buf[wr_idx + 5] = (timestamp >> 16) & 0xFF;
             // data_buf[wr_idx + 4] = (timestamp >> 8) & 0xFF;
@@ -254,43 +308,11 @@ void Configure_ADC(void) {
     verify_config();
 }
 
-int main() {
-    stdio_init_all();
-    sleep_ms(2000); // Wait for USB connect
-    Setup_PWM_Clock();
-
-    // Claim DMA channels
-    tx_dma = dma_claim_unused_channel(true);
-    rx_dma = dma_claim_unused_channel(true);
-    if (tx_dma < 0 || rx_dma < 0) {
-        // printf("Failed to allocate DMA channels\n");
-        while (true);
-    }
-
-    // Claim spin lock for buffer synchronization
-    buf_lock = spin_lock_init(spin_lock_claim_unused(true));
-
-    // Launch core 1 for ADC reading
-    multicore_launch_core1(core1_main);
-
-    // Core 0: Send buffered data to USB
-    // __wfi();
-    uint8_t buf[1024];
-    memset(buf, 0xAA, 1024);
-    while (true) {
-        fwrite(buf, 1, 1024, stdout);
-        // fflush every 4 chunks (~4 KB, matches USB buffer)
-        static int count = 0;
-        if (++count % 4 == 0) fflush(stdout);
-    }
-}
-
 // int main() {
-//     // Initialize stdio (USB CDC for output to laptop)
 //     stdio_init_all();
-
-//     //Setup PWM
+//     sleep_ms(500); // Wait for USB connect
 //     Setup_PWM_Clock();
+//     Setup_SPI();
 
 //     // Claim DMA channels
 //     tx_dma = dma_claim_unused_channel(true);
@@ -303,50 +325,91 @@ int main() {
 //     // Claim spin lock for buffer synchronization
 //     buf_lock = spin_lock_init(spin_lock_claim_unused(true));
 
+//     Configure_ADC();
+
 //     // Launch core 1 for ADC reading
 //     multicore_launch_core1(core1_main);
 
 //     // Core 0: Send buffered data to USB
 //     // __wfi();
+//     uint8_t buf[1024];
+//     memset(buf, 0xAA, 1024);
 //     while (true) {
-//         uint32_t avail = 0;
-//         {
-//             uint32_t irq_state = spin_lock_blocking(buf_lock);
-//             avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
-//             spin_unlock(buf_lock, irq_state);
-//         }
-//         int16_t limit = (64*(4+TIMESTAMP_SIZE));
-//         if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
-//             uint8_t send_buf[limit];
-//             uint32_t to_send = limit;
-
-//             uint32_t irq_state = spin_lock_blocking(buf_lock);
-//             if (rd_idx + to_send > BUF_SIZE) {
-//                 uint32_t part1 = BUF_SIZE - rd_idx;
-//                 memcpy(send_buf, &data_buf[rd_idx], part1);
-//                 memcpy(send_buf + part1, data_buf, to_send - part1);
-//                 rd_idx = to_send - part1;
-//             } else {
-//                 memcpy(send_buf, &data_buf[rd_idx], to_send);
-//                 rd_idx = (rd_idx + to_send) % BUF_SIZE;
-//             }
-//             spin_unlock(buf_lock, irq_state);
-
-//             // Send over USB (binary data)
-//             size_t written = fwrite(send_buf, 1, to_send, stdout);
-//             if (written != to_send) {
-//                 // printf("USB write error: %u of %u bytes written\n", written, to_send);
-//             }
-//             fflush(stdout);  // Flush to ensure timely delivery
-//         } else {
-//             // Report dropped samples periodically
-//             if (dropped_samples > 0) {
-//                 // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
-//                 dropped_samples = 0;
-//             }
-//             sleep_us(500);  // Yield if no data
-//         }
+//         fwrite(buf, 1, 1024, stdout);
+//         // fflush every 4 chunks (~4 KB, matches USB buffer)
+//         static int count = 0;
+//         if (++count % 4 == 0) fflush(stdout);
 //     }
-
-//     return 0;
 // }
+
+int main() {
+    // Initialize stdio (USB CDC for output to laptop)
+    stdio_init_all();
+
+    //Setup PWM
+    Setup_PWM_Clock();
+
+    Setup_SPI();
+
+    sleep_ms(100);
+
+    // Claim DMA channels
+    tx_dma = dma_claim_unused_channel(true);
+    rx_dma = dma_claim_unused_channel(true);
+    if (tx_dma < 0 || rx_dma < 0) {
+        // printf("Failed to allocate DMA channels\n");
+        while (true);
+    }
+
+    // Claim spin lock for buffer synchronization
+    buf_lock = spin_lock_init(spin_lock_claim_unused(true));
+
+    Configure_ADC();
+
+    // Launch core 1 for ADC reading
+    multicore_launch_core1(core1_main);
+
+    // Core 0: Send buffered data to USB
+    // __wfi();
+    while (true) {
+        uint32_t avail = 0;
+        {
+            uint32_t irq_state = spin_lock_blocking(buf_lock);
+            avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
+            spin_unlock(buf_lock, irq_state);
+        }
+        int16_t limit = (64*(4+TIMESTAMP_SIZE));
+        if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
+            uint8_t send_buf[limit];
+            uint32_t to_send = limit;
+
+            uint32_t irq_state = spin_lock_blocking(buf_lock);
+            if (rd_idx + to_send > BUF_SIZE) {
+                uint32_t part1 = BUF_SIZE - rd_idx;
+                memcpy(send_buf, &data_buf[rd_idx], part1);
+                memcpy(send_buf + part1, data_buf, to_send - part1);
+                rd_idx = to_send - part1;
+            } else {
+                memcpy(send_buf, &data_buf[rd_idx], to_send);
+                rd_idx = (rd_idx + to_send) % BUF_SIZE;
+            }
+            spin_unlock(buf_lock, irq_state);
+
+            // Send over USB (binary data)
+            size_t written = fwrite(send_buf, 1, to_send, stdout);
+            if (written != to_send) {
+                // printf("USB write error: %u of %u bytes written\n", written, to_send);
+            }
+            fflush(stdout);  // Flush to ensure timely delivery
+        } else {
+            // Report dropped samples periodically
+            if (dropped_samples > 0) {
+                // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
+                dropped_samples = 0;
+            }
+            sleep_us(500);  // Yield if no data
+        }
+    }
+
+    return 0;
+}

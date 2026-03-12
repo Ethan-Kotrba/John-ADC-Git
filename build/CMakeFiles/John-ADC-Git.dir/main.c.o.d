@@ -1,5 +1,5 @@
 CMakeFiles/John-ADC-Git.dir/main.c.o: \
- /home/acid/Clones/pico/John-ADC-Git/main.c \
+ /home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/main.c \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
@@ -42,9 +42,9 @@ CMakeFiles/John-ADC-Git.dir/main.c.o: \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
  /home/acid/pico/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
- /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/version.h \
+ /home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/generated/pico_base/pico/version.h \
  /home/acid/Clones/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
- /home/acid/Clones/pico/John-ADC-Git/build/generated/pico_base/pico/config_autogen.h \
+ /home/acid/Documents/Grad_School/Pico-ADC-Stuff/John-ADC-Git/build/generated/pico_base/pico/config_autogen.h \
  /home/acid/Clones/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/acid/Clones/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \

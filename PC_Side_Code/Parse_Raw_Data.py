@@ -5,7 +5,7 @@ import os
 class Parse_Raw_Data(object):
 
     def __init__(self, file_dir=None, filename=None):
-        self.Sample_Size = 8
+        self.Sample_Size = 6
         self.Time_Res = 3
         self.Raw_Data_Filename = filename
         self.Raw_Data_Dir = file_dir
@@ -123,7 +123,7 @@ class Parse_Raw_Data(object):
     def Get_Next_Valid_Sample(self):
         self.Current_Sample = self.Raw_Data.read(self.Sample_Size)
         # print(self.Current_Sample)
-        if(len(self.Current_Sample) < 8):
+        if(len(self.Current_Sample) < self.Sample_Size):
             self.Is_All_Data_Read = True
             return
         self.Decode_Sample()

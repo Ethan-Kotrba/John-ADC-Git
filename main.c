@@ -371,6 +371,7 @@ int main() {
 
     // Core 0: Send buffered data to USB
     // __wfi();
+    int flush_counter =0;
     while (true) {
         uint32_t avail = 0;
         {
@@ -378,7 +379,7 @@ int main() {
             avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
             spin_unlock(buf_lock, irq_state);
         }
-        int16_t limit = (64*(4+TIMESTAMP_SIZE));
+        int16_t limit = (64*(4+TIMESTAMP_SIZE)*32);
         if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
             uint8_t send_buf[limit];
             uint32_t to_send = limit;
@@ -397,17 +398,21 @@ int main() {
 
             // Send over USB (binary data)
             size_t written = fwrite(send_buf, 1, to_send, stdout);
+            if (++flush_counter >= 8) {     // every ~32–100 kB
+                fflush(stdout);
+                flush_counter = 0;
+            }
             if (written != to_send) {
                 // printf("USB write error: %u of %u bytes written\n", written, to_send);
             }
-            fflush(stdout);  // Flush to ensure timely delivery
+            // fflush(stdout);  // Flush to ensure timely delivery
         } else {
             // Report dropped samples periodically
             if (dropped_samples > 0) {
                 // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
                 dropped_samples = 0;
             }
-            sleep_us(500);  // Yield if no data
+            sleep_us(50);  // Yield if no data
         }
     }
 

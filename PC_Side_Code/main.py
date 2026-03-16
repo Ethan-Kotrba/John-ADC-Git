@@ -1,5 +1,5 @@
 from read_raw_usb import Raw_Read
-from Parse_Raw_Data import Parse_Raw_Data
+from New_Parse_Data import Parse_Raw_Data
 import os
 
 

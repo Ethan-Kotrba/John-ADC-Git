@@ -379,7 +379,7 @@ int main() {
             avail = (wr_idx >= rd_idx) ? (wr_idx - rd_idx) : (BUF_SIZE - rd_idx + wr_idx);
             spin_unlock(buf_lock, irq_state);
         }
-        int16_t limit = (64*(4+TIMESTAMP_SIZE)*32);
+        int16_t limit = (64*(4+TIMESTAMP_SIZE));
         if (avail >= limit) {  // Send in 256-byte chunks for USB efficiency
             uint8_t send_buf[limit];
             uint32_t to_send = limit;
@@ -412,7 +412,7 @@ int main() {
                 // printf("Dropped %u samples due to buffer overflow\n", dropped_samples);
                 dropped_samples = 0;
             }
-            sleep_us(50);  // Yield if no data
+            // sleep_us(50);  // Yield if no data
         }
     }
 

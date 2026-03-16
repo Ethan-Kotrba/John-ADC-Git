@@ -115,7 +115,7 @@ class Parse_Raw_Data(object):
             # print(f"Bad Timestamp {self.Timestamp} | {self.Previous_Timestamp}")
             # print(self.Current_Sample)
             return False
-        print(f"Passes Is Sample Valid {self.Current_Sample}")
+        # print(f"Passes Is Sample Valid {self.Current_Sample}")
         return True
 
 

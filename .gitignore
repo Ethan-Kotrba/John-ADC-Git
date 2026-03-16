@@ -1,1 +1,4 @@
 *.csv
+.vscode
+PC_Side_Code/Collected_Data
+output_file.txt

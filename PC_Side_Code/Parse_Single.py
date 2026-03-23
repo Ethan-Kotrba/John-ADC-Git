@@ -1,37 +1,6 @@
 
 import os
 import csv
-import os
-
-
-class Parse_To_Txt(object):
-    def __init__(self, file_dir=None, filename=None):
-        self.Sample_Size = 6
-        self.Time_Res = 3
-        self.Raw_Data_Filename = filename
-        self.Raw_Data_Dir = file_dir
-        self.Output_File = "Parsed" + filename[3:-4] + ".csv"
-        
-        self.Raw_Data_Path = os.path.join(file_dir, filename)
-        self.Raw_Data = None
-        self.Is_All_Data_Read = False
-
-        self.Sample_Count = 0
-
-        self.VREF = 3.3
-        self.Gain = 1
-
-
-        self.Previous_Sample = None
-        self.Previous_Timestamp = None
-        self.Current_Sample = None
-        self.Tol = 10000
-
-        self.Passed_Sample_Index = 0
-
-
-
-
 
 
 
@@ -69,6 +38,8 @@ class Parse_Raw_Data(object):
         self.Passed_Sample_Index = 0
         self.Bad_Read_Count = 0
         self.Total_Skipped_Bytes = 0
+        self.Max_Bytes_Skipped = 0
+        self.Skipped_Bytes = -1
 
 
 
@@ -90,6 +61,9 @@ class Parse_Raw_Data(object):
     
     def Realign_Data(self):
         print("Start Realigning")
+        if self.Max_Bytes_Skipped < self.Skipped_Bytes:
+            self.Max_Bytes_Skipped = self.Skipped_Bytes
+
         self.Bad_Read_Count += 1
         self.Skipped_Bytes = -1
         while True:
@@ -247,7 +221,7 @@ class Parse_Raw_Data(object):
         self.Close_Files()
         print("Parsing Completed ")
         print(f"\nPassed Samples: #{self.Passed_Sample_Index}\nBad Read Count {self.Bad_Read_Count}\nSkipped Bytes: {self.Total_Skipped_Bytes}")
-
+        print(f"Maxed bytes skipped: {self.Max_Bytes_Skipped}")
 
 
 

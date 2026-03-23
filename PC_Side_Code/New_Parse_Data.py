@@ -2,6 +2,12 @@ import csv
 import os
 
 
+
+#This code was originally designed to be inside the read
+#loop which is way the logic for parsing only looks a 1
+#previous timestamp.
+#It could be done better
+
 class Parse_Raw_Data(object):
 
     def __init__(self, file_dir=None, filename=None):
@@ -131,6 +137,23 @@ class Parse_Raw_Data(object):
             return True
         if self.Previous_Good_Timestamp is None:
             return True
+        
+        Delta_T1 = ((self.Timestamp - self.Previous_Timestamp) % self.Max_Time_Value)
+        Delta_T2 = ((self.Timestamp - self.Previous_Good_Timestamp) % self.Max_Time_Value)
+
+        if(Delta_T1>self.Tol and Delta_T2>self.Tol):
+            print("\nBad Sample: Timestamp")
+            print(f"Sample_Index: {self.Passed_Sample_Index} | Bytes Skipped: {self.Skipped_Bytes}")
+            print(f"Time, PTime, PGTime: {self.Timestamp} | {self.Previous_Timestamp} | {self.Previous_Good_Timestamp}")
+            # print(f"Previous Timestamp: {self.Previous_Timestamp}")
+            # print(f"Previous Goood Timestamp: {self.Previous_Good_Timestamp}")
+            
+            
+            self.Print_Sample()
+            # input("Press Enter To Continue: ")
+            return False
+        
+        return True
 
 
     #This Function could be optimized.

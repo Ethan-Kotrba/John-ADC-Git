@@ -19,7 +19,7 @@
             "openOCDLaunchCommands": ["adapter speed 5000"]
         },
         {
-            "name": "Python: Current File with Variables",
+            "name": "Python Read Pi USB",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/PC_Side_Code/main_var.py",
@@ -29,7 +29,7 @@
                 "DEBUG_MODE": "True"
             },
             "args": [
-                "--Port='/dev/ttyACM0'"
+                "--port='/dev/ttyACM0'"
             ]
         }
     ]

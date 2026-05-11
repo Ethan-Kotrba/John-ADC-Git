@@ -41,6 +41,13 @@ class Parse_Raw_Data(object):
         self.Total_Skipped_Bytes = 0
 
 
+        self.Passed_Sample_Index = 0
+        self.Bad_Read_Count = 0
+        self.Total_Skipped_Bytes = 0
+        self.Max_Bytes_Skipped = 0
+        self.Skipped_Bytes = -1
+
+
 
 
 
@@ -73,6 +80,7 @@ class Parse_Raw_Data(object):
 
     def Decode_Sample(self):
         self.Channel_ID = (self.Current_Sample[0] >> 4)  # Top 2 bits indicate channel
+        self.Sign = (self.Current_Sample[0] & 0xF)
         # Extract 24-bit signed value (2's complement)
         #There might be an issue here since its assuming signed, but I thin,
         #you need the second have of the first byte for the sign
@@ -125,6 +133,12 @@ class Parse_Raw_Data(object):
             # print(f"Bad Channel Bit {self.Channel_ID}")
             # print(self.Current_Sample)
             print("Bad Sample: ID")
+            return False
+
+        if self.Sign not in [0x0, 0xF]:
+
+
+        
             # self.Print_Sample()
             return False
         if 0 > self.Raw_Value or self.Raw_Value > 0xFFFFFF:
@@ -154,39 +168,120 @@ class Parse_Raw_Data(object):
             return False
         
         return True
+    
 
+    def Revolving_Door(self):
 
-    #This Function could be optimized.
-    #I'm guestimating that 30% of our "by reads" throw out a good sample
-    def Realign_Data(self):
-        print("Start Realigning")
-        self.Bad_Read_Count += 1
-        self.Skipped_Bytes = -1
         while True:
-            self.Skipped_Bytes += 1
-            self.Total_Skipped_Bytes += 1
-            data = self.Raw_Data.read(1)
-
-            #Check To See If @ End of File
-            if len(data) != 1:
+            self.Current_Sample = self.Current_Sample[1:] + self.Raw_Data.read(1)
+            print(f"Post Revolution:")
+            self.Print_Sample()
+                #Check To See If @ End of File
+            if len(self.Current_Sample) < self.Sample_Size:
                 self.Is_All_Data_Read = True
                 return None
-
-            if not self.Is_Canidaite_Starting_Byte(data):
-                # print(f"Bad Starting Byte {data}")
-                continue
-
-            self.Current_Sample = data + self.Raw_Data.read((self.Sample_Size-1))
-            # print(f"About to check this sample {self.Current_Sample}")
-
+                
             self.Decode_Sample()
 
             if self.Is_Sample_Valid():
                 print(f"Skipped: {self.Skipped_Bytes} Bytes")
                 break
 
-            self.Skipped_Bytes += (self.Sample_Size-1)
-            self.Total_Skipped_Bytes += (self.Sample_Size-1)
+    
+
+    def Examine_Current_Bad_Sample(self):
+
+    
+        for x in range(0, self.Sample_Size):
+            print("Examining Bad Sample")
+            print(self.Current_Sample)
+            print(self.Current_Sample[x])
+            print(self.Current_Sample[x+1:])
+            channel_id = (self.Current_Sample[x] >> 4)
+            sign = self.Current_Sample[x] & 0x0F
+            # channel_id = (self.Current_Sample >> (8*self.Sample_Size - (4+8*x)))
+            # sign = (self.Current_Sample >> (8*self.Sample_Size - (8+8*x)) & 0x0F)
+            print(channel_id)
+            print(sign)
+            input("Press enter to continue")
+
+            
+
+            if channel_id not in [0, 1]:
+                    # print(f"Channel_ID not equal [0, 1] {channel_id}")
+                continue
+                # print(sign)
+            if sign not in [0xF, 0x0, 0, 15]:
+                    # print(f"The Sign is off {sign}")
+                continue
+                # print(f"This is a potential Good Bit {data}")
+            print(self.Current_Sample[x:])
+            input("Found Salvageable Sample")
+            return (True, x, self.Current_Sample[x:])
+        
+
+
+
+    #This Function could be optimized.
+    #I'm guestimating that 30% of our "by reads" throw out a good sample
+    def Realign_Data(self):
+
+        self.Bad_Read_Count += 1
+        self.Skipped_Bytes = -1
+        self.Revolving_Door()
+        self.Skipped_Bytes += (self.Sample_Size-1)
+        self.Total_Skipped_Bytes += (self.Sample_Size-1)
+
+        # self.Bad_Read_Count += 1
+        # self.Skipped_Bytes = -1
+        # #Check If the Channel ID starts Inside this "Bad Byte"
+        # while True:
+        #     (Is_Salvageable, Displacement, Remaining) = self.Examine_Current_Bad_Sample()
+
+        #     if Is_Salvageable:
+        #         self.Current_Sample = Remaining + self.Raw_Data.read((Displacement))
+        #         #Check To See If @ End of File
+        #         if len(self.Current_Sample) < self.Sample_Size:
+        #             self.Is_All_Data_Read = True
+        #             return None
+                
+        #         self.Decode_Sample()
+
+        #         if self.Is_Sample_Valid():
+        #             print(f"Skipped: {self.Skipped_Bytes} Bytes")
+        #             break
+
+        # self.Skipped_Bytes += (self.Sample_Size-1)
+        # self.Total_Skipped_Bytes += (self.Sample_Size-1)
+
+        # print("Start Realigning")
+        # self.Bad_Read_Count += 1
+        # self.Skipped_Bytes = -1
+        # while True:
+        #     self.Skipped_Bytes += 1
+        #     self.Total_Skipped_Bytes += 1
+        #     data = self.Raw_Data.read(1)
+
+        #     #Check To See If @ End of File
+        #     if len(data) != 1:
+        #         self.Is_All_Data_Read = True
+        #         return None
+
+        #     if not self.Is_Canidaite_Starting_Byte(data):
+        #         # print(f"Bad Starting Byte {data}")
+        #         continue
+
+        #     self.Current_Sample = data + self.Raw_Data.read((self.Sample_Size-1))
+        #     # print(f"About to check this sample {self.Current_Sample}")
+
+        #     self.Decode_Sample()
+
+        #     if self.Is_Sample_Valid():
+        #         print(f"Skipped: {self.Skipped_Bytes} Bytes")
+        #         break
+
+        #     self.Skipped_Bytes += (self.Sample_Size-1)
+        #     self.Total_Skipped_Bytes += (self.Sample_Size-1)
 
 
     def Get_Next_Valid_Sample(self):
